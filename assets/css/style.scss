@@ -24,17 +24,18 @@ a {
     background-color: #910319;
     color: white;
     padding: 3px 7px;
+    text-decoration: none;
     border-radius: 3px;
     display: inline-block;
     border: 2px;
 
     font-size: 15px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     box-shadow: 2px 2px 5px #00000050;
     transition: background-color 0.3s ease;
 
-    width: 150px;     // ancho fijo
-    height: 30px;     // alto fijo
+    width: 137px;     // ancho fijo
+    height: 17px;     // alto fijo
     line-height: 40px; // centra el texto verticalmente
 
     text-align: left;
