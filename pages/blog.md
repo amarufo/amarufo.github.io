@@ -176,7 +176,7 @@ itio está diseñado para ofrecer herramientas, contenidos y formación práctic
   <img src="/images/icon_invierte.png" alt="Mi logo" width="200">
 </p>
 
-## H2
+## Mapa de calor por estudiantes en distritos
 
 <p align="center">
   <img src="/images/icon_invierte.png" alt="Mi logo" width="200">
