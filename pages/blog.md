@@ -5,6 +5,8 @@ title: "Blog"
 
 <link rel="stylesheet" href="/assets/css/style.css">
 
+# Datos sobre educación
+itio está diseñado para ofrecer herramientas, contenidos y formación práctica a profesionales y estudiantes que buscan formular proyectos de inversión pública con profundidad técnica y en menos tiempo. Aquí encontrar
 
 ## H2
 itio está diseñado para ofrecer herramientas, contenidos y formación práctica a profesionales y estudiantes que buscan formular proyectos de inversión pública con profundidad técnica y en menos tiempo. Aquí encontrar
