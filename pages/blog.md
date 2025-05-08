@@ -41,17 +41,45 @@ recer herramientas, contenidos y formación práctica a profesionales y estudian
 
 ## Título
 
-### Título
+<p align="center">
+  <img src="/images/icon_invierte.png" alt="Mi logo" width="200">
+</p>
 
 ### Título
 
+<p align="center">
+  <img src="/images/icon_invierte.png" alt="Mi logo" width="200">
+</p>
+
 ### Título
+
+<p align="center">
+  <img src="/images/icon_invierte.png" alt="Mi logo" width="200">
+</p>
+
+### Título
+
+<p align="center">
+  <img src="/images/icon_invierte.png" alt="Mi logo" width="200">
+</p>
 
 # Título 4
 
-## Título
+<p align="center">
+  <img src="/images/icon_invierte.png" alt="Mi logo" width="200">
+</p>
 
 ## Título
+
+<p align="center">
+  <img src="/images/icon_invierte.png" alt="Mi logo" width="200">
+</p>
+
+## Título
+
+<p align="center">
+  <img src="/images/icon_invierte.png" alt="Mi logo" width="200">
+</p>
 
 ## Título
 
