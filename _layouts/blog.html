@@ -12,19 +12,44 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     {% include head-custom.html %}
-</head>
-    <body>
-        <div class="wrapper">
-        <header>
-            <h1 class="header">{{ page.title | default: site.title }}</h1>
-            <p class="header_2"><small>Descripción de la página</small></p>
-            <ul>
-                <li><a class="buttons github" href="/index.md">Inicio</a></li>
-            </ul>
-        </header>
-        <section>
-            {{ content }}
-        </section>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">{{ site.title | default: site.github.repository_name }}</h1>
+        <p class="header_2"><small>{{ site.description | default: site.github.project_tagline }}</small></p>
+
+        <ul>
+          <li><a class="buttons github" href="{{ site.github.owner_url }}">GitHub Profile</a></li>
+          <li><a class="buttons github" href="/cv.html">Sobre el autor</a></li>
+          <li><a class="buttons github" href="pages/blog.html">📰 Blog</a></li>
+          <li><a class="buttons github" href="/cv.html">📚 Guías</a></li>
+          <li><a class="buttons github" href="/cv.html">💻 Aplicaciones</a></li>
+          <li><a class="buttons github" href="pages/cv.html">📊 Datos</a></li>
+
+        </ul>
+
+        {% if site.github.is_project_page %}
+          <p class="header">This project is maintained by <a class="header name" href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+        {% endif %}
+
+      </header>
+
+      <section>
+        {{ content }}
+      </section>
+
+      <footer>
+        <p style="text-align: center;">
+          <small>
+            <strong>¡Importante!</strong><br>
+            Cambia la tasa de referencia.<br>
+            <a href="https://pages.github.com">[+ info]</a>
+          </small>
+        </p>
+        
+      </footer>
     </div>
-    </body>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+  </body>
 </html>
