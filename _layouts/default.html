@@ -17,9 +17,10 @@
     <div class="wrapper">
       <header>
         <h1 class="header">{{ site.title | default: site.github.repository_name }}</h1>
-        <p class="header"><small>{{ site.description | default: site.github.project_tagline }}</small></p>
+        <p class="header_2"><small>{{ site.description | default: site.github.project_tagline }}</small></p>
 
         <ul>
+          <li><a class="buttons github" href="{{ site.github.owner_url }}">GitHub Profile</a></li>
           <li><a class="buttons github" href="/cv.html">Sobre el autor</a></li>
         </ul>
 
@@ -32,11 +33,11 @@
       </header>
 
       <section>
-        <p><small>¡Importante!</a> Cambia la tasa de referencia. <a href="https://pages.github.com">[Info]</a></small></p>
+        {{ content }}
       </section>
 
       <footer>
-        
+        <p><small>¡Importante!</a> Cambia la tasa de referencia. <a href="https://pages.github.com">[info]</a></small></p>
       </footer>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
