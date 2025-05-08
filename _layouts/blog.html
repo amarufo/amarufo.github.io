@@ -1,44 +1,43 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
-</head>
+<!doctype html>
+<html lang="{{ site.lang | default: "en-US" }}">
+    <head>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<body>
-    <div class="wrapper">
+{% seo %}
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    {% include head-custom.html %}
+    </head>
+    <body>
+        <div class="wrapper">
         <header>
             <h1 class="header">{{ site.title | default: site.github.repository_name }}</h1>
+            <p class="header_2"><small>{{ site.description | default: site.github.project_tagline }}</small></p>
             <ul>
-                <li><a class="buttons github" href="/index.html">Inicio</a></li>
-                <ul id="tabla-de-contenidos">
-                    <!-- Aquí se llenará automáticamente -->
-                </ul>
+            <li><a class="buttons github" href="/index.html">Inicio</a></li>
             </ul>
         </header>
 
-        <main class="contenido">
+        <section>
             {{ content }}
-        </main>
-    </div>
-    <!-- Script para extraer encabezados (h2 y h3) -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const toc = document.getElementById("tabla-de-contenidos");
-            document.querySelectorAll("h2, h3").forEach(el => {
-                const link = document.createElement("a");
-                const item = document.createElement("li");
-                const id = el.innerText.replace(/\s+/g, '-').toLowerCase();
-                el.id = id;
-                link.href = "#" + id;
-                link.textContent = el.innerText;
-                item.classList.add(el.tagName.toLowerCase());
-                item.appendChild(link);
-                toc.appendChild(item);
-            });
-        });
-    </script>
-</body>
+        </section>
+
+        <footer>
+            <p style="text-align: center;">
+            <small>
+                <strong>¡Importante!</strong><br>
+                Cambia la tasa de referencia.<br>
+                <a href="https://pages.github.com">[+ info]</a>
+            </small>
+            </p>
+            
+        </footer>
+        </div>
+        <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    </body>
 </html>

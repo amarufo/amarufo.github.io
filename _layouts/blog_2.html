@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1 class="header">{{ site.title | default: site.github.repository_name }}</h1>
+            <ul>
+                <li><a class="buttons github" href="/index.html">Inicio</a></li>
+                <ul id="tabla-de-contenidos">
+                    <!-- Aquí se llenará automáticamente -->
+                </ul>
+            </ul>
+        </header>
+
+        <main class="contenido">
+            {{ content }}
+        </main>
+    </div>
+    <!-- Script para extraer encabezados (h2 y h3) -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const toc = document.getElementById("tabla-de-contenidos");
+            document.querySelectorAll("h2, h3").forEach(el => {
+                const link = document.createElement("a");
+                const item = document.createElement("li");
+                const id = el.innerText.replace(/\s+/g, '-').toLowerCase();
+                el.id = id;
+                link.href = "#" + id;
+                link.textContent = el.innerText;
+                item.classList.add(el.tagName.toLowerCase());
+                item.appendChild(link);
+                toc.appendChild(item);
+            });
+        });
+    </script>
+</body>
+</html>
