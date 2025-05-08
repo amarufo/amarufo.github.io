@@ -5,15 +5,11 @@ title: "Blog"
 
 <link rel="stylesheet" href="/assets/css/style.css">
 
-# Título 1
 
+## H2
 itio está diseñado para ofrecer herramientas, contenidos y formación práctica a profesionales y estudiantes que buscan formular proyectos de inversión pública con profundidad técnica y en menos tiempo. Aquí encontrar
 
-## Subtítulo 1.1
-
-itio está diseñado para ofrecer herramientas, contenidos y formación práctica a profesionales y estudiantes que buscan formular proyectos de inversión pública con profundidad técnica y en menos tiempo. Aquí encontrar
-
-### Subtítulo 1.2
+### H3
 
 itio está diseñado para ofrecer herramientas, contenidos y formación práctica a profesionales y estudiantes que buscan formular proyectos de inversión pública con profundidad técnica y en menos tiempo. Aquí encontraritio está diseñado para ofrecer herramientas, contenidos y formación práctica a profesionales y estudiantes que buscan formular proyectos de inversión pública con profundidad técnica y en menos tiempo. Aquí encontrar
 
@@ -23,64 +19,43 @@ itio está diseñado para ofrecer herramientas, contenidos y formación práctic
 
 itio está diseñado para ofrecer herramientas, contenidos y formación práctica a profesionales y estudiantes que buscan formular proyectos de inversión pública con profundidad técnica y en menos tiempo. Aquí encontraritio está diseñado pAara ofrecer herramientas, contenidos y formación práctica a profesionales y estudiantes que buscan formular proyectos de inversión pública con profundidad técnica y en menos tiempo. Aquí encontrar
 
-#### Subtítulo 1.2.1
 
-recer herramientas, contenidos y formación práctica a profesionales y estudiantes que buscan formular proyectos de inversión pública con profundidad técnica y en menos tiempo. Aquí encontraritio está diseñado para ofrecer herramientas, contenidos y formación práctica a profesionales y estudiantes que buscan formular proyectos de inversión pública con profundidad técnica y en menos
-
-##### Subtítulo 1.2.1
-
-recer herramientas, contenidos y formación práctica a profesionales y estudiantes que buscan formular proyectos de inversión pública con profundidad técnica y en menos tiempo. Aquí encontraritio está diseñado para ofrecer herramientas, contenidos y formación práctica a profesionales y estudiantes que buscan formular proyectos de inversión pública con profundidad técnica y en menos
-
-###### Título
-
-# Título 3
+## H2
 
 <p align="center">
   <img src="/images/icon_invierte.png" alt="Mi logo" width="200">
 </p>
 
-## Título
+### H3
 
 <p align="center">
   <img src="/images/icon_invierte.png" alt="Mi logo" width="200">
 </p>
 
-### Título
+### H3
 
 <p align="center">
   <img src="/images/icon_invierte.png" alt="Mi logo" width="200">
 </p>
 
-### Título
+### H3
 
 <p align="center">
   <img src="/images/icon_invierte.png" alt="Mi logo" width="200">
 </p>
 
-### Título
+## H2
 
 <p align="center">
   <img src="/images/icon_invierte.png" alt="Mi logo" width="200">
 </p>
 
-# Título 4
+## H2
 
 <p align="center">
   <img src="/images/icon_invierte.png" alt="Mi logo" width="200">
 </p>
 
-## Título
 
-<p align="center">
-  <img src="/images/icon_invierte.png" alt="Mi logo" width="200">
-</p>
-
-## Título
-
-<p align="center">
-  <img src="/images/icon_invierte.png" alt="Mi logo" width="200">
-</p>
-
-## Título
 
 
