@@ -5,13 +5,13 @@
 
 /* Personalización: fondo más oscuro y texto más claro */
 body {
-    background-color: #eceadc;
-    color: #ffffff;
+    background-color: #f3f1e4;
+    color: #000000;
 }
 
 /* Links */
 a {
-    color: #7e0202;
+    color: #5f0101;
 }
 
 /* Opcional: botones */
@@ -38,6 +38,5 @@ a {
 .wrapper > header {
     background-color: #205e63; /* Cambia este color al que desees */
     color: #ffffff;           /* Texto en blanco */
-    border-right: 1px solid #205e63; /* Borde opcional */
 }
 
