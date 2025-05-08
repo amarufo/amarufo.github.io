@@ -16,19 +16,23 @@
     <body>
         <div class="wrapper">
         <header>
-            <h1 class="header">Blog</h1>
-            <p class="header_2"><small>{{ site.description | default: site.github.project_tagline }}</small></p>
+            <h1 class="header">{{ page.title | default: site.title }}</h1>
+            <p class="header_2"><small>Elemento descriptivo</small></p>
             <ul>
                 <li><a class="buttons github" href="/index.html">Inicio</a></li>
             </ul>
         </header>
-        
-        <header>
-            <ul id="tabla-de-contenidos">
-                <!-- Aquí se llenará automáticamente -->
-            </ul>
-        </header>
-
+        <div class="container">
+            <header>
+                <ul id="tabla-de-contenidos">
+                    <!-- Aquí se llenará automáticamente -->
+                </ul>
+            </header>
+    
+            <main class="contenido">
+                {{ content }}
+            </main>
+        </div>
         <section>
             {{ content }}
         </section>
@@ -41,9 +45,23 @@
                 <a href="https://pages.github.com">[+ info]</a>
             </small>
             </p>
-            
         </footer>
         </div>
-        <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const toc = document.getElementById("tabla-de-contenidos");
+                document.querySelectorAll("h2, h3").forEach(el => {
+                    const link = document.createElement("a");
+                    const item = document.createElement("li");
+                    const id = el.innerText.replace(/\s+/g, '-').toLowerCase();
+                    el.id = id;
+                    link.href = "#" + id;
+                    link.textContent = el.innerText;
+                    item.classList.add(el.tagName.toLowerCase());
+                    item.appendChild(link);
+                    toc.appendChild(item);
+                });
+            });
+        </script>
     </body>
 </html>

@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Blog
+title: "Blog"
 ---
 
 <link rel="stylesheet" href="/assets/css/style.css">
