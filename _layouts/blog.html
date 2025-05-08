@@ -1,160 +1,37 @@
 <!doctype html>
-<html lang="{{ site.lang | default: 'en-US' }}">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<html lang="{{ site.lang | default: "en-US" }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        {% seo %}
+        <link rel="icon" type="image/x-icon" href="{{ '/assets/img/logo_1.png' | relative_url }}">
+        <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        {% include head-custom.html %}
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <h1 class="header">{{ site.title | default: site.github.repository_name }}</h1>
+                <p class="header_2"><small>{{ site.description | default: site.github.project_tagline }}</small></p>
 
-  {% seo %}
-  <link rel="icon" type="image/x-icon" href="{{ '/assets/img/logo_1.png' | relative_url }}">
-  <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <!--[if lt IE 9]>
-  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-  {% include head-custom.html %}
+                <ul>
+                <li><a class="buttons github" href="{{ site.github.owner_url }}">GitHub Profile</a></li>
+                <li><a class="buttons github" href="/cv.html">Sobre el autor</a></li>
+                <li><a class="buttons github" href="pages/blog.html">📰 Blog</a></li>
+                <li><a class="buttons github" href="/cv.html">📚 Guías</a></li>
+                <li><a class="buttons github" href="/cv.html">💻 Aplicaciones</a></li>
+                <li><a class="buttons github" href="pages/cv.html">📊 Datos</a></li>
+                </ul>
+            </header>
 
-  <style>
-    /* Layout principal: sidebar izquierdo, contenido, TOC derecho */
-    .layout {
-      display: grid;
-      grid-template-columns: 23vw 1fr 20vw;
-      min-height: 100vh;
-    }
-    /* Sidebar izquierdo */
-    .sidebar-left {
-      background-color: #205e63;
-      color: white;
-      padding: 2rem 1rem;
-      position: sticky;
-      top: 0;
-      overflow-y: auto;
-    }
-    .sidebar-left h1 {
-      margin-top: 0;
-      font-size: 1.8rem;
-      border-bottom: 1px solid #2e7d75;
-      padding-bottom: 0.5rem;
-    }
-    .sidebar-left ul {
-      list-style: none;
-      padding: 0;
-      margin: 1rem 0;
-    }
-    .sidebar-left ul li {
-      margin-bottom: 0.5rem;
-    }
-    .sidebar-left ul li a {
-      display: inline-block;
-      background: #a40000;
-      padding: 0.4rem 0.8rem;
-      border-radius: 4px;
-      color: white;
-      text-decoration: none;
-      font-size: 0.95rem;
-      transition: background 0.2s;
-    }
-    .sidebar-left ul li a:hover {
-      background: #800000;
-    }
-    /* Contenido principal */
-    .content {
-      background-color: #f9f5ec;
-      padding: 2rem;
-      overflow-x: hidden;
-    }
-    .content h2, .content h3 {
-      border-bottom: 1px solid #e0dfdc;
-      padding-bottom: 0.3rem;
-      margin-top: 2rem;
-    }
-    /* TOC derecho */
-    .toc-right {
-      background-color: #ffffff;
-      padding: 1rem;
-      position: sticky;
-      top: 0;
-      max-height: calc(100vh - 2rem);
-      overflow-y: auto;
-      border-left: 1px solid #ddd;
-    }
-    .toc-right h2 {
-      font-size: 1.2rem;
-      margin-top: 0;
-    }
-    .toc-right ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .toc-right li {
-      margin: 0.5rem 0;
-      font-size: 0.9rem;
-    }
-    .toc-right li.h3 {
-      margin-left: 1.5rem;
-      font-size: 0.85rem;
-      color: #555;
-    }
-    .toc-right a {
-      color: #205e63;
-      text-decoration: none;
-    }
-    .toc-right a:hover {
-      text-decoration: underline;
-    }
-    @media (max-width: 900px) {
-      .layout {
-        grid-template-columns: 1fr; /* móvil: solo contenido */
-      }
-      .toc-right, .sidebar-left {
-        display: none;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="layout">
-    <!-- Sidebar izquierdo -->
-    <aside class="sidebar-left">
-      <h1 class="header">{{ site.title | default: site.github.repository_name }}</h1>
-      <p class="header_2"><small>{{ site.description | default: site.github.project_tagline }}</small></p>
-      <ul>
-        <li><a href="{{ site.github.owner_url }}">GitHub Profile</a></li>
-        <li><a href="/cv.html">Sobre el autor</a></li>
-        <li><a href="/pages/blog.html">📰 Blog</a></li>
-        <li><a href="/pages/guias.html">📚 Guías</a></li>
-        <li><a href="/pages/aplicaciones.html">💻 Aplicaciones</a></li>
-        <li><a href="/pages/datos.html">📊 Datos</a></li>
-      </ul>
-    </aside>
-
-    <!-- Contenido principal -->
-    <main class="content">
-      {{ content }}
-    </main>
-
-    <!-- TOC derecho -->
-    <aside class="toc-right">
-      <h2>Contenido</h2>
-      <ul id="tabla-de-contenidos"></ul>
-    </aside>
-  </div>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const toc = document.getElementById("tabla-de-contenidos");
-      document.querySelectorAll("h2, h3").forEach(el => {
-        const link = document.createElement("a");
-        const item = document.createElement("li");
-        const id = el.textContent.trim().replace(/\s+/g, '-').toLowerCase();
-        el.id = id;
-        link.href = "#" + id;
-        link.textContent = el.textContent;
-        item.classList.add(el.tagName.toLowerCase());
-        item.appendChild(link);
-        toc.appendChild(item);
-      });
-    });
-  </script>
-</body>
+            <section>
+                {{ content }}
+            </section>
+        </div>
+        <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    </body>
 </html>
