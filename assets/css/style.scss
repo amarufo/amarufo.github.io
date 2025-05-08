@@ -11,15 +11,33 @@ body {
 
 /* Links */
 a {
-    color: #8c00ff;
+    color: #7e0202;
 }
 
 /* Opcional: botones */
 .button {
-    background-color: #cc0000;
+    background-color: #962e1b;
     color: white;
-    padding: 1px 2px;
+    padding: 6px 12px;
     text-decoration: none;
-    border-radius: 1px;
+    border-radius: 5px;
     display: inline-block;
+
+    font-size: 16px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px #00000050;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #b8452e;
+        cursor: pointer;
+    }
 }
+/* Fondo del sidebar */
+.wrapper > header {
+    background-color: #205e63; /* Cambia este color al que desees */
+    color: #ffffff;           /* Texto en blanco */
+    border-right: 1px solid #205e63; /* Borde opcional */
+}
+
