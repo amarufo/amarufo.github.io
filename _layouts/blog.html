@@ -1,113 +1,50 @@
 <!doctype html>
 <html lang="{{ site.lang | default: "en-US" }}">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  {% seo %}
-  <link rel="icon" type="image/x-icon" href="{{ '/assets/img/logo_1.png' | relative_url }}">
-  <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  {% include head-custom.html %}
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <style>
-    /* Reset rápido del índice */
-    #tabla-de-contenidos { list-style: none; padding: 0; margin: 1rem 0; }
-    #tabla-de-contenidos li { margin: 0.5rem 0; }
-    #tabla-de-contenidos li.h3 { margin-left: 1.5rem; font-size: 0.9em; color: #cfd8dc; }
-    #tabla-de-contenidos a {
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-    #tabla-de-contenidos a:hover {
-      color: #ffeb3b;
-    }
-
-    /* Layout general */
-    .layout {
-      display: grid;
-      grid-template-columns: 23vw 1fr;
-      min-height: 100vh;
-    }
-    .sidebar {
-      background-color: #205e63;
-      padding: 2rem 1rem;
-      position: sticky;
-      top: 0;
-      color: white;
-      overflow-y: auto;
-    }
-    .sidebar h1 {
-      margin-top: 0;
-      font-size: 1.8rem;
-      border-bottom: 1px solid #2e7d75;
-      padding-bottom: 0.5rem;
-    }
-    .sidebar ul.nav {
-      padding: 0;
-      margin: 1rem 0;
-    }
-    .sidebar ul.nav li { margin-bottom: 0.5rem; }
-    .sidebar ul.nav a {
-      display: inline-block;
-      background: #00796b;
-      padding: 0.4rem 0.8rem;
-      border-radius: 4px;
-      color: white;
-      text-decoration: none;
-      font-size: 0.95rem;
-      transition: background 0.2s;
-    }
-    .sidebar ul.nav a:hover {
-      background: #004d40;
-    }
-
-    .content {
-      background-color: #f9f5ec;
-      padding: 2rem;
-    }
-    .content h2, .content h3 {
-      border-bottom: 1px solid #e0dfdc;
-      padding-bottom: 0.3rem;
-      margin-top: 2rem;
-    }
-  </style>
+{% seo %}
+    <link rel="icon" type="image/x-icon" href="{{ '/assets/img/logo_1.png' | relative_url }}">
+    <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    {% include head-custom.html %}
 </head>
+    <body>
+        <div class="wrapper">
+        <header>
+            <h1 class="header">{{ page.title | default: site.title }}</h1>
+            <ul>
+                <li><a class="buttons github" href="/index.md">Inicio</a></li>
+            </ul>
+        </header>
 
-<body>
-  <div class="layout">
-    <!-- Sidebar izquierdo -->
-    <aside class="sidebar">
-      <h1>{{ page.title | default: site.title }}</h1>
-      <ul class="nav">
-        <li><a class="header" href="/index.html">Inicio</a></li>
-      </ul>
-      <p>Tabla de contenido</p>
-      <ul id="tabla-de-contenidos"></ul>
-    </aside>
+        <ul id="tabla-de-contenidos">
+            <!-- Aquí se llenará automáticamente -->
+        </ul>
 
-    <!-- Contenido principal -->
-    <main class="content">
-      {{ content }}
-    </main>
-  </div>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const toc = document.getElementById("tabla-de-contenidos");
-      document.querySelectorAll("h2, h3").forEach(el => {
-        const link = document.createElement("a");
-        const item = document.createElement("li");
-        const id = el.textContent.trim().replace(/\s+/g, '-').toLowerCase();
-        el.id = id;
-        link.href = "#" + id;
-        link.textContent = el.textContent;
-        item.classList.add(el.tagName.toLowerCase());
-        item.appendChild(link);
-        toc.appendChild(item);
-      });
-    });
-  </script>
-</body>
+        <section>
+            {{ content }}
+        </section>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const toc = document.getElementById("tabla-de-contenidos");
+            document.querySelectorAll("h2, h3").forEach(el => {
+                const link = document.createElement("a");
+                const item = document.createElement("li");
+                const id = el.innerText.replace(/\s+/g, '-').toLowerCase();
+                el.id = id;
+                link.href = "#" + id;
+                link.textContent = el.innerText;
+                item.classList.add(el.tagName.toLowerCase());
+                item.appendChild(link);
+                toc.appendChild(item);
+            });
+        });
+    </script>
+    </body>
 </html>
