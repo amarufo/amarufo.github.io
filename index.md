@@ -1,6 +1,6 @@
 # Bienvenido
 
-Este es mi sitio personal de aAmaru Amaru Fernandez Olmedo
+Estoy haciendo el Tercer cambio.
 
 Aquí publicaré análisis, visuasdasdasdalizaciones y avances de mis estudios asd asd asd .asdasdasdasdasdasd
 
