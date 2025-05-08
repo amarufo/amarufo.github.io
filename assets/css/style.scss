@@ -12,20 +12,12 @@ a {
     color: #ff5555;
 }
 
+/* Opcional: botones */
 .button {
-    display: block;
-    width: 100%;
-    text-align: center;
-    background-color: #337ab7;
+    background-color: #cc0000;
     color: white;
     padding: 5px 7px;
-    margin: 5px 0;
     text-decoration: none;
-    font-weight: bold;
-    border-radius: 2px;
-    border: none;
-}  
-.button:hover {
-    background-color: #286090;
-    color: #fff;
+    border-radius: 1px;
+    display: inline-block;
 }
