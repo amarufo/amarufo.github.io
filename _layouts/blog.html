@@ -14,23 +14,29 @@
     {% include head-custom.html %}
     </head>
     <body>
-        <div class="container">
-        <header>
-            <h1 class="header">{{ page.title | default: site.title }}</h1>
-            <p class="header_2"><small>Elemento descriptivo</small></p>
-            <ul>
-                <li><a class="buttons github" href="/index.html">Inicio</a></li>
-            </ul>
-            <ul id="tabla-de-contenidos">
-                <!-- Aquí se llenará automáticamente -->
-            </ul>
-        </header>
-        
-        <section>
-            {{ content }}
-        </section>
-
+        <div class="container" style="display: flex; min-height: 100vh;">
+    
+            <!-- Sidebar izquierdo -->
+            <header style="width: 260px; padding: 20px; overflow-y: auto; background-color: #111; color: white; position: sticky; top: 0;">
+                <h1 class="header">{{ page.title | default: site.title }}</h1>
+                <p class="header_2"><small>Elemento descriptivo</small></p>
+    
+                <ul>
+                    <li><a class="buttons github" href="/index.html">Inicio</a></li>
+                </ul>
+    
+                <ul id="tabla-de-contenidos">
+                    <!-- Aquí se llenará automáticamente -->
+                </ul>
+            </header>
+    
+            <!-- Contenido principal -->
+            <section style="flex: 1; padding: 20px;">
+                {{ content }}
+            </section>
+    
         </div>
+    
         <script>
             document.addEventListener("DOMContentLoaded", () => {
                 const toc = document.getElementById("tabla-de-contenidos");
@@ -47,5 +53,5 @@
                 });
             });
         </script>
-    </body>
+    </body>    
 </html>
