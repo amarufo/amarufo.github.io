@@ -1,9 +1,13 @@
 title: "Versión Botones"
 description: "amaru_fo"
 show_downloads: false
+
 remote_theme: pages-themes/dinky@v0.2.0
 plugins:
   - jekyll-remote-theme
+
 theme: jekyll-theme-dinky
+
 sass:
+  sass_dir: _sass     # ← Puedes añadir esta línea para definir explícitamente el directorio (aunque no es obligatorio)
   style: compressed
