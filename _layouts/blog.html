@@ -1,75 +1,86 @@
 <!doctype html>
 <html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    {% seo %}
-    <link rel="icon" type="image/x-icon" href="{{ '/assets/img/logo_1.png' | relative_url }}">
-    <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    {% include head-custom.html %}
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  {% seo %}
+  <link rel="icon" type="image/x-icon" href="{{ '/assets/img/logo_1.png' | relative_url }}">
+  <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  {% include head-custom.html %}
 
-    <style>
-      #tabla-de-contenidos {
-        list-style: none;
-        padding-left: 0;
-      }
+  <style>
+    #tabla-de-contenidos {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 1rem;
+    }
 
-      #tabla-de-contenidos li {
-        margin-bottom: 6px;
-        font-size: 14px;
-      }
+    #tabla-de-contenidos li {
+      margin: 4px 0;
+      font-size: 14px;
+    }
 
-      #tabla-de-contenidos li.h3 {
-        margin-left: 20px;
-        font-size: 13px;
-        color: #ddd;
-      }
+    #tabla-de-contenidos li.h3 {
+      margin-left: 20px;
+      font-size: 13px;
+      color: #e0e0e0;
+    }
 
-      #tabla-de-contenidos a {
-        text-decoration: none;
-        color: white;
-      }
+    #tabla-de-contenidos a {
+      color: white;
+      text-decoration: none;
+    }
 
-      #tabla-de-contenidos a:hover {
-        text-decoration: underline;
-        color: #ffcece;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container" style="display: flex; min-height: 100vh;">
-      <!-- Sidebar izquierdo -->
-      <header style="width: 23vw; padding: 20px; overflow-y: auto; background-color: #205e63; color: white; position: sticky; top: 0;">
-        <h1 class="header">{{ page.title | default: site.title }}</h1>
-        <ul>
-          <li><a href="/index.html">Inicio</a></li>
-        </ul>
-        <p class="header">Tabla de contenido</p>    
-        <ul id="tabla-de-contenidos"></ul>
-      </header>
+    #tabla-de-contenidos a:hover {
+      text-decoration: underline;
+      color: #ffc;
+    }
 
-      <!-- Contenido principal -->
-      <section style="flex: 1; padding: 20px;">
-        {{ content }}
-      </section>
-    </div>
+    /* Elimina borde y fondo rojo si algún estilo anterior lo forzó */
+    #tabla-de-contenidos li,
+    #tabla-de-contenidos li a {
+      background: none !important;
+      border: none !important;
+      padding: 0 !important;
+      display: inline !important;
+    }
+  </style>
+</head>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const toc = document.getElementById("tabla-de-contenidos");
-        document.querySelectorAll("h2, h3").forEach(el => {
-          const link = document.createElement("a");
-          const item = document.createElement("li");
-          const id = el.innerText.replace(/\s+/g, '-').toLowerCase();
-          el.id = id;
-          link.href = "#" + id;
-          link.textContent = el.innerText;
-          item.classList.add(el.tagName.toLowerCase());
-          item.appendChild(link);
-          toc.appendChild(item);
-        });
+<body>
+  <div class="container" style="display: flex; min-height: 100vh;">
+    <!-- Sidebar izquierdo -->
+    <header style="width: 23vw; padding: 20px; overflow-y: auto; background-color: #205e63; color: white; position: sticky; top: 0;">
+      <h1 class="header">{{ page.title | default: site.title }}</h1>
+      <ul>
+        <li><a href="/index.html">Inicio</a></li>
+      </ul>
+      <p class="header">Tabla de contenido</p>
+      <ul id="tabla-de-contenidos"></ul>
+    </header>
+
+    <!-- Contenido principal -->
+    <section style="flex: 1; padding: 20px;">
+      {{ content }}
+    </section>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toc = document.getElementById("tabla-de-contenidos");
+      document.querySelectorAll("h2, h3").forEach(el => {
+        const link = document.createElement("a");
+        const item = document.createElement("li");
+        const id = el.innerText.replace(/\s+/g, '-').toLowerCase();
+        el.id = id;
+        link.href = "#" + id;
+        link.textContent = el.innerText;
+        item.classList.add(el.tagName.toLowerCase());
+        item.appendChild(link);
+        toc.appendChild(item);
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
 </html>
