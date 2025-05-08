@@ -17,36 +17,14 @@
         <div class="wrapper">
         <header>
             <h1 class="header">{{ page.title | default: site.title }}</h1>
+            <p class="header_2"><small>Descripción de la página</small></p>
             <ul>
-                <li><a class="button" href="/index.md">Inicio</a></li>
-            </ul>
-
-            <ul id="tabla-de-contenidos">
-                <!-- Aquí se llenará automáticamente -->
+                <li><a class="buttons github" href="/index.md">Inicio</a></li>
             </ul>
         </header>
-
-        
-
         <section>
             {{ content }}
         </section>
     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const toc = document.getElementById("tabla-de-contenidos");
-            document.querySelectorAll("h2, h3").forEach(el => {
-                const link = document.createElement("a");
-                const item = document.createElement("li");
-                const id = el.innerText.replace(/\s+/g, '-').toLowerCase();
-                el.id = id;
-                link.href = "#" + id;
-                link.textContent = el.innerText;
-                item.classList.add(el.tagName.toLowerCase());
-                item.appendChild(link);
-                toc.appendChild(item);
-            });
-        });
-    </script>
     </body>
 </html>
