@@ -1,55 +1,85 @@
 <!doctype html>
 <html lang="{{ site.lang | default: "en-US" }}">
-    <head>
-        <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-{% seo %}
-<link rel="icon" type="image/x-icon" href="{{ '/assets/img/logo_1.png' | relative_url }}">
+    {% seo %}
+    <link rel="icon" type="image/x-icon" href="{{ '/assets/img/logo_1.png' | relative_url }}">
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     {% include head-custom.html %}
-    </head>
-    <body>
-        <div class="container" style="display: flex; min-height: 100vh;">
-    
-            <!-- Sidebar izquierdo -->
-            <header style="width: 23vw; padding: 20px; overflow-y: auto; background-color: #205e63; color: white; position: sticky; top: 0;">
-                <h1 class="header">{{ page.title | default: site.title }}</h1>
-                <ul>
-                    <li><a class="buttons github" href="/index.html">Inicio</a></li>
-                </ul>
-                <p class="header">Elemento descriptivo</p>    
-                <ul id="tabla-de-contenidos">
-                    <!-- Aquí se llenará automáticamente -->
-                </ul>
-            </header>
-    
-            <!-- Contenido principal -->
-            <section style="flex: 1; padding: 20px;">
-                {{ content }}
-            </section>
-    
-        </div>
-    
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                const toc = document.getElementById("tabla-de-contenidos");
-                document.querySelectorAll("h2, h3").forEach(el => {
-                    const link = document.createElement("a");
-                    const item = document.createElement("li");
-                    const id = el.innerText.replace(/\s+/g, '-').toLowerCase();
-                    el.id = id;
-                    link.href = "#" + id;
-                    link.textContent = el.innerText;
-                    item.classList.add(el.tagName.toLowerCase());
-                    item.appendChild(link);
-                    toc.appendChild(item);
-                });
-            });
-        </script>
-    </body>    
+
+    <style>
+      #tabla-de-contenidos {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      #tabla-de-contenidos li {
+        margin-bottom: 6px;
+      }
+
+      #tabla-de-contenidos a {
+        display: block;
+        background-color: #a40000;
+        color: white;
+        padding: 6px 10px;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 14px;
+        width: 80%;
+        word-wrap: break-word;
+        white-space: normal;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        transition: background-color 0.3s ease;
+      }
+
+      #tabla-de-contenidos a:hover {
+        background-color: #cc2f2f;
+        cursor: pointer;
+      }
+
+      #tabla-de-contenidos li.h3 {
+        margin-left: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" style="display: flex; min-height: 100vh;">
+      <!-- Sidebar izquierdo -->
+      <header style="width: 23vw; padding: 20px; overflow-y: auto; background-color: #205e63; color: white; position: sticky; top: 0;">
+        <h1 class="header">{{ page.title | default: site.title }}</h1>
+        <ul>
+          <li><a class="buttons github" href="/index.html">Inicio</a></li>
+        </ul>
+        <p class="header">Tabla de contenido</p>    
+        <ul id="tabla-de-contenidos"></ul>
+      </header>
+
+      <!-- Contenido principal -->
+      <section style="flex: 1; padding: 20px;">
+        {{ content }}
+      </section>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const toc = document.getElementById("tabla-de-contenidos");
+        document.querySelectorAll("h2, h3").forEach(el => {
+          const link = document.createElement("a");
+          const item = document.createElement("li");
+          const id = el.innerText.replace(/\s+/g, '-').toLowerCase();
+          el.id = id;
+          link.href = "#" + id;
+          link.textContent = el.innerText;
+          item.classList.add(el.tagName.toLowerCase());
+          item.appendChild(link);
+          toc.appendChild(item);
+        });
+      });
+    </script>
+  </body>
 </html>
