@@ -7,9 +7,6 @@
     <link rel="icon" type="image/x-icon" href="{{ '/assets/img/logo_1.png' | relative_url }}">
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
     {% include head-custom.html %}
 
     <style>
@@ -20,30 +17,23 @@
 
       #tabla-de-contenidos li {
         margin-bottom: 6px;
-      }
-
-      #tabla-de-contenidos a {
-        display: block;
-        background-color: #a40000;
-        color: white;
-        padding: 6px 10px;
-        text-decoration: none;
-        border-radius: 4px;
         font-size: 14px;
-        width: 80%;
-        word-wrap: break-word;
-        white-space: normal;
-        box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-        transition: background-color 0.3s ease;
-      }
-
-      #tabla-de-contenidos a:hover {
-        background-color: #cc2f2f;
-        cursor: pointer;
       }
 
       #tabla-de-contenidos li.h3 {
-        margin-left: 15px;
+        margin-left: 20px;
+        font-size: 13px;
+        color: #ddd;
+      }
+
+      #tabla-de-contenidos a {
+        text-decoration: none;
+        color: white;
+      }
+
+      #tabla-de-contenidos a:hover {
+        text-decoration: underline;
+        color: #ffcece;
       }
     </style>
   </head>
@@ -53,7 +43,7 @@
       <header style="width: 23vw; padding: 20px; overflow-y: auto; background-color: #205e63; color: white; position: sticky; top: 0;">
         <h1 class="header">{{ page.title | default: site.title }}</h1>
         <ul>
-          <li><a class="buttons github" href="/index.html">Inicio</a></li>
+          <li><a href="/index.html">Inicio</a></li>
         </ul>
         <p class="header">Tabla de contenido</p>    
         <ul id="tabla-de-contenidos"></ul>
