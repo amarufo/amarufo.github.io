@@ -31,6 +31,20 @@
             <section>
                 {{ content }}
             </section>
+
+            <header>
+                <h1 class="header">{{ site.title | default: site.github.repository_name }}</h1>
+                <p class="header_2"><small>{{ site.description | default: site.github.project_tagline }}</small></p>
+
+                <ul>
+                <li><a class="buttons github" href="{{ site.github.owner_url }}">GitHub Profile</a></li>
+                <li><a class="buttons github" href="/cv.html">Sobre el autor</a></li>
+                <li><a class="buttons github" href="pages/blog.html">📰 Blog</a></li>
+                <li><a class="buttons github" href="/cv.html">📚 Guías</a></li>
+                <li><a class="buttons github" href="/cv.html">💻 Aplicaciones</a></li>
+                <li><a class="buttons github" href="pages/cv.html">📊 Datos</a></li>
+                </ul>
+            </header>
         </div>
         <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     </body>
