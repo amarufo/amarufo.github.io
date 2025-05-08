@@ -7,7 +7,7 @@ title: Bienvenido
 
 # Academia de Inversión Pública
 
-**Bienvenido a mi espacio sobre inversión pública**
+***Bienvenido a mi espacio sobre inversión pública***
 
 Este sitio está diseñado para brindar herramientas, contenidos y formación práctica a profesionales y estudiantes interesados en formular proyectos de inversión pública con mayor eficiencia y profundidad técnica.
 
