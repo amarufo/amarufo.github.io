@@ -50,14 +50,15 @@ a {
     background-color: #205e63; /* Cambia este color al que desees */
     color: #ffffff;           /* Texto en blanco */
 }
+/* A PARTIR DE ACÁ ES PARA EL BLOG*/
 .container {
     display: flex;
     flex-direction: row;
 }
 .sidebar {
-    width: 250px;
-    background-color: #222;
-    color: #fff;
+    width: 20vw;
+    background-color: #205e63;
+    color: #ffffff;
     padding: 1rem;
     height: 100vh;
     overflow-y: auto;
@@ -65,14 +66,13 @@ a {
     top: 0;
 }
 .sidebar a {
-    color: #00d0ff;
+    color: #205e63;
     text-decoration: none;
 }
 .contenido {
     flex-grow: 1;
-    padding: 2rem;
+    padding: 1rem;
 }  
 .sidebar li.h2 { margin-left: 0; font-weight: bold; }
 .sidebar li.h3 { margin-left: 1rem; font-weight: normal; }
-.sidebar li.h4 { margin-left: 2rem; font-style: italic; }
 
