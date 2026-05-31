@@ -1,0 +1,56 @@
+{%- comment -%}
+  Nodo recursivo del árbol de recursos (estilo explorador de archivos).
+  Parámetro: nodo (objeto del _data/arbol.yml)
+{%- endcomment -%}
+{%- assign n = include.nodo -%}
+{%- if n.children -%}
+<li class="tree-branch">
+  <details{% if n.open %} open{% endif %}>
+    <summary class="tree-row tree-folder">
+      <span class="tree-twist" aria-hidden="true"></span>
+      <span class="tree-ico ico-folder" aria-hidden="true">📁</span>
+      <span class="tree-text">
+        <span class="tree-label">{{ n.label }}</span>
+        {%- if n.desc %}<span class="tree-desc">{{ n.desc }}</span>{% endif -%}
+      </span>
+    </summary>
+    <ul class="tree-children">
+      {%- for hijo in n.children -%}
+        {%- include arbol-nodo.html nodo=hijo -%}
+      {%- endfor -%}
+    </ul>
+  </details>
+</li>
+{%- else -%}
+{%- assign ext = false -%}
+{%- if n.url contains '://' -%}{%- assign ext = true -%}{%- endif -%}
+<li class="tree-leaf">
+  <a class="tree-row tree-link is-{{ n.type }}" href="{{ n.url }}"{% if ext %} target="_blank" rel="noopener"{% endif %}>
+    {%- if n.thumb -%}
+      <img class="tree-thumb" src="{{ n.thumb }}" alt="" loading="lazy" width="28" height="28">
+    {%- elsif n.type == 'pdf' -%}
+      <span class="tree-ico ico-pdf" aria-hidden="true">PDF</span>
+    {%- elsif n.type == 'app' -%}
+      <span class="tree-ico ico-app" aria-hidden="true">▦</span>
+    {%- elsif n.type == 'db' -%}
+      <span class="tree-ico ico-db" aria-hidden="true">🗄️</span>
+    {%- elsif n.type == 'article' -%}
+      <span class="tree-ico ico-article" aria-hidden="true">📝</span>
+    {%- elsif n.type == 'video' -%}
+      <span class="tree-ico ico-video" aria-hidden="true">▶</span>
+    {%- elsif n.type == 'contact' -%}
+      <span class="tree-ico ico-contact" aria-hidden="true">💬</span>
+    {%- else -%}
+      <span class="tree-ico ico-web" aria-hidden="true">🔗</span>
+    {%- endif -%}
+    <span class="tree-text">
+      <span class="tree-label">
+        {{ n.label }}
+        {%- if n.badge %}<span class="tree-badge">{{ n.badge }}</span>{% endif -%}
+        {%- if ext %}<span class="tree-ext" aria-hidden="true">↗</span>{% endif -%}
+      </span>
+      {%- if n.desc %}<span class="tree-desc">{{ n.desc }}</span>{% endif -%}
+    </span>
+  </a>
+</li>
+{%- endif -%}

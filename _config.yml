@@ -4,13 +4,16 @@
 # ============================================================
 
 # --- Identidad del sitio ---
-title: "Amaru FO"
+title: "Amaru Fernandez"
 tagline: "Centro de Recursos del Formulador de Inversión Pública"
+handle: "amaru_fo"
 description: >-
-  Normativa, metodologías y herramientas de datos para la formulación
-  y evaluación de proyectos de inversión pública (Invierte.pe) en el Perú.
+  Normativa, metodologías, aplicativos y herramientas de ciencia de datos
+  para la formulación y evaluación de proyectos de inversión pública
+  (Invierte.pe) en el Perú. Por Wilbert Amaru Fernández Olmedo.
 author:
-  name: "Wilbert Amaru Fernández Olmedo"
+  name: "Wilbert Amaru Fernandez Olmedo"
+  short: "Amaru Fernandez"
   email: "amaruf9523@gmail.com"
 
 # --- URL (GitHub Pages) ---
@@ -19,16 +22,18 @@ baseurl: ""
 lang: es
 
 # --- Imagen por defecto para Open Graph / redes ---
-image: "/assets/img/logo_1.png"
-logo: "/images/icon_invierte.png"
+image: "/images/icono2.webp"
+logo: "/images/icono2.webp"
+redirect_site: "https://inviertepe.com"
 
 # --- Redes y contacto ---
 social:
   whatsapp: "51934657378"
-  youtube: "https://youtube.com/@amarufo"
-  linkedin: "https://linkedin.com/in/amarufo"
-  facebook: "https://facebook.com/amarufo"
+  whatsapp_display: "+51 934 657 378"
+  youtube: "https://www.youtube.com/@amaru_fo_inversiones"
+  linkedin: "https://www.linkedin.com/in/amarufo/"
   github: "https://github.com/amarufo"
+  email: "amaruf9523@gmail.com"
 formspree: "https://formspree.io/f/REEMPLAZAR"
 
 # --- Construcción ---

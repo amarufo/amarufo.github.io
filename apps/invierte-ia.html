@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Invierte-IA: colección de aplicaciones web de análisis cuantitativo para la formulación de proyectos de inversión pública en Perú (Invierte.pe).">
+    <meta name="keywords" content="Invierte-IA, Invierte.pe, formulación PIP, análisis territorial, riesgos, app, inversión pública, Perú">
+    <meta name="author" content="Wilbert Amaru Fernández Olmedo">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://amarufo.github.io/PAGE-AIP/pages/invierte-ia.html">
+    <meta property="og:title" content="Invierte-IA | Aplicaciones para formuladores de PIPs">
+    <meta property="og:description" content="Herramientas de análisis geoespacial, riesgos y diagnóstico territorial para la formulación de proyectos de inversión pública.">
+    <meta property="og:image" content="https://amarufo.github.io/PAGE-AIP/images/icono.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Invierte-IA | Aplicaciones para formuladores de PIPs">
+    <meta name="twitter:description" content="Herramientas de análisis geoespacial, riesgos y diagnóstico territorial para la formulación de PIPs.">
+    <meta name="twitter:image" content="https://amarufo.github.io/PAGE-AIP/images/icono.webp">
+
+    <link rel="manifest" href="../manifest.json">
+    <link rel="icon" href="/images/icono2.webp" type="image/webp">
+    <title>Invierte-IA | amaru_fo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
+</head>
+<body data-pagina="invierte-ia">
+
+<a href="#main-content" class="skip-to-main">Ir al contenido</a>
+
+<div class="layout">
+    <div id="sidebar-root"></div>
+
+    <main class="content" id="main-content">
+
+        <!-- HERO -->
+        <section class="hero" aria-label="Invierte-IA presentación">
+            <img src="../images/icono.png" alt="Logo Invierte-IA" class="hero-icon" loading="eager">
+            <div class="hero-text">
+                <h1>Invierte&#x2011;IA</h1>
+                <p class="hero-sub">
+                    Colección de aplicaciones de análisis cuantitativo desarrolladas para apoyar la formulación de
+                    Proyectos de Inversión Pública (PIPs) en el marco del sistema Invierte.pe.
+                    Cada app es una herramienta independiente que cubre un módulo específico del ciclo de inversión.
+                </p>
+            </div>
+        </section>
+
+        <!-- GRID DE APLICACIONES -->
+        <section class="section-publicacion" aria-label="Aplicaciones disponibles">
+            <h2>Aplicaciones disponibles</h2>
+            <p style="color:var(--text-2);font-size:.93rem;margin:.2rem 0 1.4rem;">
+                Cada aplicación se ejecuta en la nube — no requiere instalación.
+            </p>
+
+            <div class="ia-apps-grid">
+
+                <!--
+                  ── PLANTILLA PARA AGREGAR UNA NUEVA APP ──────────────────
+                  Copia el bloque <article class="ia-app-card"> de abajo,
+                  reemplaza el contenido y cambia ia-status-soon → ia-status-active
+                  cuando la app esté en producción.
+                  ────────────────────────────────────────────────────────── -->
+
+                <!-- APP 1: Analizador de Riesgos Territoriales -->
+                <article class="ia-app-card">
+                    <div class="ia-app-head">
+                        <span class="ia-app-icon" aria-hidden="true">&#x26A0;&#xFE0F;</span>
+                        <span class="ia-status-badge ia-status-active">&#x1F7E2; Disponible</span>
+                    </div>
+                    <h3>Analizador de Riesgos Territoriales</h3>
+                    <p>
+                        Ingresa las coordenadas de tu proyecto y obtén un diagnóstico completo de 18 tipos de riesgo:
+                        sísmico, tsunami, heladas, friajes, deshielo glaciar, movimientos en masa, incendios forestales
+                        y urbanos, erosión hídrica, sequías, nevadas, calidad del aire, botaderos y más.
+                        Genera mapas PNG y reportes TXT descargables en ZIP.
+                    </p>
+                    <div class="ia-app-tags" aria-label="Categorías">
+                        <span class="ia-tag">#riesgos</span>
+                        <span class="ia-tag">#geoespacial</span>
+                        <span class="ia-tag">#INDECI</span>
+                        <span class="ia-tag">#SENAMHI</span>
+                        <span class="ia-tag">#Invierte.pe</span>
+                    </div>
+                    <a href="https://invierteia-riesgos-amarufo.streamlit.app/"
+                       class="panel-link"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Abrir Analizador de Riesgos Territoriales (nueva pestaña)">
+                        Abrir app →
+                    </a>
+                </article>
+
+                <!-- PLACEHOLDER: próxima app -->
+                <article class="ia-app-card ia-app-card--soon" aria-label="Próxima aplicación">
+                    <div class="ia-app-head">
+                        <span class="ia-app-icon" aria-hidden="true">&#x1F51C;</span>
+                        <span class="ia-status-badge ia-status-soon">Próximamente</span>
+                    </div>
+                    <h3>Nueva aplicación</h3>
+                    <p>
+                        Se están desarrollando nuevas herramientas de análisis para el sistema Invierte.pe.
+                        Sigue el canal de YouTube para enterarte de cada lanzamiento.
+                    </p>
+                    <div class="ia-app-tags">
+                        <span class="ia-tag">#Invierte.pe</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<script src="../js/sidebar.js"></script>
+</body>
+</html>

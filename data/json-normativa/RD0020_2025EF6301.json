@@ -1,0 +1,118 @@
+{
+  "id": "RD0020_2025EF6301",
+  "archivo_pdf": "RD0020_2025EF6301.pdf",
+  "tipo_norma": "resolucion_directoral",
+  "numero": "0020-2025-EF/63.01",
+  "titulo_oficial": "Resolución Directoral que aprueba la Nota Técnica de Introducción a las Estructuras de Gestión de Proyectos",
+  "titulo_corto": "RD 0020-2025-EF/63.01 — Nota Técnica EGP (PMO) del SNPMGI",
+  "fecha_publicacion": "2025-12-31",
+  "entidad_emisora": "Dirección General de Programación Multianual de Inversiones — DGPMI (MEF)",
+  "estado": "vigente",
+  "fase_ciclo_inversion": [
+    "programacion",
+    "formulacion_evaluacion",
+    "ejecucion",
+    "funcionamiento",
+    "transversal"
+  ],
+  "temas_clave": [
+    "EGP (Estructura de Gestión de Proyectos) — equivalente a PMO",
+    "Nota Técnica de Introducción a las EGP — instrumento metodológico",
+    "DGPMI como Centro de Excelencia en dirección de proyectos",
+    "Estándares internacionales de dirección de proyectos en el SNPMGI",
+    "DL 1553 — base legal de las EGP",
+    "Adopción progresiva de EGP en entidades de los 3 niveles de gobierno",
+    "Lineamientos de Política Nacional de Inversión Pública (DS 020-2025-EF)"
+  ],
+  "resumen_ejecutivo": "La RD 0020-2025-EF/63.01, emitida por la DGPMI del MEF el 31 de diciembre de 2025, aprueba la 'Nota Técnica de Introducción a las Estructuras de Gestión de Proyectos (EGP)'. La Nota Técnica es un instrumento metodológico introductorio de alcance general —no tiene rango de norma jurídica vinculante— que orienta a las entidades públicas de los tres niveles de gobierno sujetas al SNPMGI en la adopción progresiva de EGP adaptadas al SNPMGI, incorporando estándares internacionales de dirección de proyectos y buenas prácticas nacionales. Las EGP equivalen a las PMO (Project Management Office) del sector privado, adaptadas al contexto peruano. Su base legal principal es el Art. 6 del DL 1553, que las creó. Los problemas que busca abordar (identificados por los Lineamientos de Política Nacional de Inversión Pública DS 020-2025-EF) incluyen: débil articulación de inversiones con el planeamiento estratégico, baja calidad en la formulación y evaluación de proyectos, débil sistema de control de calidad, limitadas capacidades institucionales y alta rotación de operadores. La DGPMI actúa en su rol de 'Centro de Excelencia', facultad asignada por el DL 1252 (modificado por DL 1664) y el DS 284-2018-EF.",
+  "objetivo": "Aprobar la Nota Técnica de Introducción a las EGP para orientar a las entidades públicas del SNPMGI en la adopción progresiva de Estructuras de Gestión de Proyectos que incorporen estándares internacionales de dirección de proyectos.",
+  "ambito_aplicacion": "Entidades públicas de los tres niveles de gobierno sujetas al SNPMGI (DL 1252). Adopción progresiva.",
+  "normas_que_modifica": [],
+  "normas_que_deroga": [],
+  "normas_referenciadas": [
+    "DL 1252 — Ley base del SNPMGI; Art. 5.2 faculta a la DGPMI como ente rector y Centro de Excelencia en dirección de proyectos",
+    "DL 1553 — Art. 6 crea las EGP como instancias para la aplicación de estándares de dirección de proyectos en el SNPMGI; base legal directa de esta RD",
+    "DS 284-2018-EF — Reglamento del SNPMGI; Art. 8.2 numeral 1 habilita a la DGPMI para aprobar instrumentos metodológicos",
+    "DS 020-2025-EF (LPNIP) — Lineamientos de Política Nacional de Inversión Pública; identificó los problemas que la EGP busca abordar",
+    "DS 203-2024-EF — Plan Nacional de Competitividad y Productividad 2024-2030; Medida de Política 1.2: PMO para mayor dinamismo en ejecución de inversiones",
+    "RD 0019-2025-EF/63.01 — Aprueba 4 documentos técnicos BIM; instrumento metodológico paralelo de la misma DGPMI",
+    "RM 331-2023-EF/41 (ROF del MEF) — Arts. 208.c y 208.d: facultades de la DGPMI"
+  ],
+  "estructura": [
+    {
+      "tipo": "articulo",
+      "numero": "Art. 1",
+      "titulo": "Objeto",
+      "contenido_resumen": "Aprueba la 'Nota Técnica de Introducción a las Estructuras de Gestión de Proyectos', que como Anexo forma parte integrante de esta Resolución Directoral.",
+      "hijos": []
+    },
+    {
+      "tipo": "articulo",
+      "numero": "Art. 2",
+      "titulo": "Publicación",
+      "contenido_resumen": "Dispone la publicación de la RD y su Anexo en la sede digital del MEF (www.gob.pe/mef) el mismo día de publicación en el Diario Oficial El Peruano.",
+      "hijos": []
+    }
+  ],
+  "conceptos_clave": [
+    {
+      "termino": "EGP (Estructura de Gestión de Proyectos)",
+      "definicion": "Instancias creadas por el DL 1553 (Art. 6) para la aplicación de estándares de dirección de proyectos en el SNPMGI. Equivalentes a las PMO (Project Management Office) del sector privado, adaptadas al contexto del SNPMGI.",
+      "articulo_fuente": "Preámbulo y Art. 1"
+    },
+    {
+      "termino": "PMO (Project Management Office)",
+      "definicion": "Estructura organizacional de gestión de proyectos del sector privado cuyo enfoque de buenas prácticas adoptan las EGP en el sector público peruano.",
+      "articulo_fuente": "Preámbulo"
+    },
+    {
+      "termino": "DGPMI como Centro de Excelencia",
+      "definicion": "Rol de la DGPMI asignado por el DL 1252 (modificado por DL 1664) para desarrollar estándares de dirección de proyectos, brindar acompañamiento especializado y aprobar instrumentos metodológicos como esta Nota Técnica.",
+      "articulo_fuente": "Preámbulo (DL 1252 Art. 5.2)"
+    },
+    {
+      "termino": "Nota Técnica de Introducción a las EGP",
+      "definicion": "Instrumento metodológico introductorio de alcance general aprobado por esta RD. No tiene rango de norma jurídica vinculante; constituye una guía técnica orientadora para las entidades del SNPMGI sobre EGP.",
+      "articulo_fuente": "Art. 1"
+    },
+    {
+      "termino": "Estándares internacionales de dirección de proyectos",
+      "definicion": "Marcos de referencia internacionales (como el PMBOK del PMI o similares) que las EGP adaptan al contexto del SNPMGI para mejorar la gestión de inversiones públicas.",
+      "articulo_fuente": "Art. 1"
+    },
+    {
+      "termino": "Adopción progresiva de EGP",
+      "definicion": "Las entidades de los tres niveles de gobierno adoptan gradualmente las EGP conforme a su capacidad institucional. La Nota Técnica orienta el inicio de ese proceso.",
+      "articulo_fuente": "Art. 1"
+    },
+    {
+      "termino": "Lineamientos de Política Nacional de Inversión Pública (LPNIP)",
+      "definicion": "Política aprobada por DS 020-2025-EF que identificó 6 problemas estructurales de la gestión de inversiones públicas que las EGP buscan resolver: débil articulación con planeamiento, baja calidad en formulación, débil control de calidad, limitadas capacidades institucionales y alta rotación de operadores.",
+      "articulo_fuente": "Preámbulo (DS 020-2025-EF)"
+    },
+    {
+      "termino": "DL 1553 — Creación de las EGP",
+      "definicion": "Decreto Legislativo que en su Art. 6 crea las Estructuras de Gestión de Proyectos (EGP) como instancias para la aplicación de estándares de dirección de proyectos en el SNPMGI. Base legal directa de esta RD.",
+      "articulo_fuente": "Preámbulo"
+    }
+  ],
+  "actores_institucionales": [
+    {
+      "nombre": "DGPMI (Dirección General de Programación Multianual de Inversiones)",
+      "tipo": "organismo_rector",
+      "rol_en_norma": "Emite la presente RD en su rol de Centro de Excelencia. Aprueba la Nota Técnica de Introducción a las EGP como instrumento metodológico de alcance general para el SNPMGI."
+    },
+    {
+      "nombre": "Entidades públicas de los tres niveles de gobierno sujetas al SNPMGI",
+      "tipo": "entidad_publica",
+      "rol_en_norma": "Destinatarias de la Nota Técnica. Adoptan progresivamente las EGP en su gestión de inversiones, con el apoyo metodológico de la DGPMI como Centro de Excelencia."
+    }
+  ],
+  "plazos_importantes": [],
+  "metadata_analisis": {
+    "version_esquema": "3",
+    "fecha_analisis": "2026-02-21",
+    "fuente": "RD0020_2025EF6301.pdf",
+    "observaciones": "Archivo migrado de esquema v1.0 a v3. PDF de 1 página del El Peruano (31-dic-2025). El Anexo de la Nota Técnica (contenido completo) no está incluido en el PDF analizado; solo el cuerpo de la RD. El Anexo está publicado en la sede digital del MEF (www.gob.pe/mef). La fecha de publicación 2025-12-31 pudo verificarse en el PDF. Esta RD es complementaria a la RD 0019-2025-EF/63.01 (documentos técnicos BIM); ambas son instrumentos metodológicos de la DGPMI publicados en 2025."
+  }
+}

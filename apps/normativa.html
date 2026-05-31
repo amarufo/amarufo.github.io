@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explorador interactivo de normativa del Sistema Invierte.pe. Estudia decretos, reglamentos y resoluciones de inversión pública.">
+  <meta name="keywords" content="normativa, Invierte.pe, decreto legislativo, reglamento, inversión pública, MEF, Perú">
+  <meta name="author" content="Wilbert Amaru Fernández Olmedo">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://amarufo.github.io/pages/normativa.html">
+  <meta property="og:title" content="Explorador de Normativa | amaru_fo">
+  <meta property="og:description" content="Estudia y consulta la normativa del Sistema Nacional de Programación Multianual y Gestión de Inversiones.">
+  <meta property="og:image" content="https://amarufo.github.io/images/icono.webp">
+
+  <link rel="manifest" href="../manifest.json">
+  <title>Explorador de Normativa | amaru_fo</title>
+  <link rel="icon" href="/images/icono2.webp" type="image/webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link href="../css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/normativa.css">
+</head>
+<body>
+<a href="#main-content" class="skip-to-main">Ir al contenido</a>
+<div class="layout">
+  <div id="sidebar-root"></div>
+
+  <main id="main-content" class="content">
+
+    <div class="norm-hero">
+      <h1>📜 Explorador de Normativa</h1>
+      <p>Estudia, busca y comprende la normativa del Sistema Nacional de Programación Multianual y Gestión de Inversiones (<strong>Invierte.pe</strong>). Consulta artículos, glosarios, plazos y actores de cada norma.</p>
+    </div>
+
+    <div class="norm-toolbar">
+      <div class="norm-search-wrap">
+        <input type="search" id="norm-search" placeholder="Buscar por título, número, tema o concepto…" autocomplete="off">
+      </div>
+      <select id="filter-tipo" class="norm-select" aria-label="Filtrar por tipo de norma">
+        <option value="">Todos los tipos</option>
+        <option value="decreto_legislativo">Decreto Legislativo</option>
+        <option value="decreto_supremo">Decreto Supremo</option>
+        <option value="resolucion_directoral">Resolución Directoral</option>
+      </select>
+      <select id="filter-estado" class="norm-select" aria-label="Filtrar por estado">
+        <option value="">Todos los estados</option>
+        <option value="vigente">Vigente</option>
+        <option value="modificado">Modificado</option>
+        <option value="parcialmente_modificado">Parcialmente modificado</option>
+        <option value="parcialmente_derogado">Parcialmente derogado</option>
+      </select>
+      <select id="filter-fase" class="norm-select" aria-label="Filtrar por fase del ciclo">
+        <option value="">Todas las fases</option>
+        <option value="programacion">Programación</option>
+        <option value="formulacion_evaluacion">Formulación / Evaluación</option>
+        <option value="ejecucion">Ejecución</option>
+        <option value="funcionamiento">Funcionamiento</option>
+        <option value="transversal">Transversal</option>
+      </select>
+      <button id="filter-clear" aria-label="Limpiar filtros">✕ Limpiar</button>
+    </div>
+
+    <div class="norm-meta">
+      <span id="norm-counter"></span>
+    </div>
+
+    <div id="norm-loading">
+      <div class="norm-spinner"></div>
+      <p>Cargando documentos normativos…</p>
+    </div>
+    <p id="norm-error" role="alert"></p>
+
+    <div id="norm-grid" role="list" aria-label="Documentos normativos"></div>
+
+  <!-- Botón flotante WhatsApp -->
+  <a href="https://wa.me/51934657378?text=Hola%20Amaru%2C%20vi%20tu%20explorador%20de%20normativa." class="whatsapp-float-global" aria-label="Contactar por WhatsApp">
+      💬
+      <span class="wsp-tooltip">¿Necesitas ayuda?</span>
+  </a>
+  </main>
+</div>
+
+<!-- Panel de detalle deslizante -->
+<div id="norm-overlay" aria-hidden="true"></div>
+<div id="norm-panel" role="dialog" aria-modal="true" aria-label="Detalle del documento normativo"></div>
+
+<script src="../js/sidebar.js"></script>
+<script src="../js/normativa.js"></script>
+</body>
+</html>

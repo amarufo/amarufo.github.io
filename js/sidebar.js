@@ -1,0 +1,133 @@
+/**
+ * sidebar.js
+ * Componente compartido de barra lateral.
+ * Inyecta el HTML del sidebar, gestiona el menú hamburguesa y marca el enlace activo.
+ * Uso: añadir <div id="sidebar-root"></div> al inicio del .layout y cargar este script.
+ */
+(function () {
+  'use strict';
+
+  // Rutas absolutas desde la raíz del sitio
+  const ROOT = '/';
+
+  // Definición de páginas de navegación (sitio Jekyll)
+  const PAGES = [
+    { href: '/',                       label: 'Inicio',                  id: 'inicio'     },
+    { href: '/sobre-mi/',              label: 'Sobre mí',                id: 'sobre-mi'   },
+    { href: '/apps/normativa.html',    label: 'Explorador de Normativa', id: 'normativa'  },
+    { href: '/apps/metodos.html',      label: 'Guía de Métodos',         id: 'metodos'    },
+    { href: '/apps/invierte-ia.html',  label: 'InvierteIA',              id: 'invierte-ia' },
+    { href: '/proyectos/',             label: 'Proyectos',               id: 'proyectos'  },
+    { href: '/recursos/',              label: 'Recursos',                id: 'recursos'   },
+    { href: '/blog/',                  label: 'Blog',                    id: 'blog'       },
+  ];
+
+  // Redes sociales
+  const SOCIAL = [
+    { href: 'mailto:amaruf9523@gmail.com',                       img: '/images/mailito.webp', alt: 'Email'     },
+    { href: 'https://www.youtube.com/@amaru_fo_inversiones',     img: '/images/yt.webp',      alt: 'YouTube',   ext: true },
+    { href: 'https://www.linkedin.com/in/amarufo/',              img: '/images/lk.webp',      alt: 'LinkedIn',  ext: true },
+    { href: 'https://github.com/amarufo',                        img: '/images/gh.png',       alt: 'GitHub',    ext: true },
+    { href: 'https://wa.me/51934657378',                         img: '/images/wsp.webp',     alt: 'WhatsApp',  ext: true },
+  ];
+
+  /**
+   * Determina el id de la página actual basándose en la URL.
+   */
+  function getCurrentPageId() {
+    const path = window.location.pathname;
+    if (path === '/' || path.endsWith('/index.html') || path.endsWith('/')) return 'inicio';
+    const m = path.match(/\/([^/]+)\.html$/);
+    return m ? m[1] : '';
+  }
+
+  const currentId = getCurrentPageId();
+
+  /**
+   * Construye y devuelve el HTML completo del sidebar.
+   */
+  function buildSidebarHTML() {
+    const navLinks = PAGES.map(p => {
+      const active = (p.id === currentId);
+      return `<a href="${p.href}"${active ? ' class="nav-active" aria-current="page"' : ''}>${p.label}</a>`;
+    }).join('');
+
+    const socialLinks = SOCIAL.map(s => {
+      const ext = s.ext ? ' target="_blank" rel="noopener noreferrer"' : '';
+      return `<a href="${s.href}"${ext} aria-label="${s.alt}">
+        <img src="${s.img}" alt="${s.alt}" loading="lazy" width="32" height="32">
+      </a>`;
+    }).join('');
+
+    return `
+      <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="sidebar-aside">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
+      <aside class="sidebar" id="sidebar-aside" role="complementary" aria-label="Navegación principal">
+        <a href="${ROOT}" aria-label="Ir a inicio" class="sidebar-logo-link">
+          <img src="/images/amaru01.jpg" alt="Perfil Amaru" class="profile-img" loading="eager">
+        </a>
+        <div class="sidebar-identity">
+          <h1 class="sidebar-title">Amaru Fernandez Olmedo</h1>
+          <p class="sidebar-name">@amaru_fo</p>
+          <p class="sidebar-tagline">Data Science · Inversión Pública · Dev</p>
+        </div>
+        <nav class="sidebar-nav" aria-label="Menú principal">
+          ${navLinks}
+        </nav>
+        <div class="sidebar-social">
+          ${socialLinks}
+        </div>
+      </aside>`;
+  }
+
+  /**
+   * Inicializa el sidebar en el elemento #sidebar-root
+   */
+  function init() {
+    const root = document.getElementById('sidebar-root');
+    if (!root) return;
+
+    root.innerHTML = buildSidebarHTML();
+
+    const btn     = document.getElementById('hamburger-btn');
+    const aside   = document.getElementById('sidebar-aside');
+    const overlay = document.getElementById('sidebar-overlay');
+
+    function openMenu() {
+      aside.classList.add('open');
+      overlay.classList.add('visible');
+      overlay.removeAttribute('aria-hidden');
+      btn.setAttribute('aria-expanded', 'true');
+      btn.classList.add('is-active');
+      document.body.classList.add('menu-open');
+    }
+
+    function closeMenu() {
+      aside.classList.remove('open');
+      overlay.classList.remove('visible');
+      overlay.setAttribute('aria-hidden', 'true');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.classList.remove('is-active');
+      document.body.classList.remove('menu-open');
+    }
+
+    btn.addEventListener('click', () =>
+      aside.classList.contains('open') ? closeMenu() : openMenu()
+    );
+
+    overlay.addEventListener('click', closeMenu);
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeMenu();
+    });
+  }
+
+  // Ejecutar cuando el DOM esté listo
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
