@@ -4,7 +4,7 @@
 {%- endcomment -%}
 {%- assign n = include.nodo -%}
 {%- if n.children -%}
-<li class="tree-branch">
+<li class="tree-branch"{% if n.color %} style="--cat: {{ n.color }}"{% endif %}>
   <details{% if n.open %} open{% endif %}>
     <summary class="tree-row tree-folder">
       <span class="tree-twist" aria-hidden="true"></span>
@@ -30,14 +30,18 @@
       <img class="tree-thumb" src="{{ n.thumb }}" alt="" loading="lazy" width="28" height="28">
     {%- elsif n.type == 'pdf' -%}
       <span class="tree-ico ico-pdf" aria-hidden="true">PDF</span>
+    {%- elsif n.type == 'law' -%}
+      <span class="tree-ico ico-law" aria-hidden="true">⚖️</span>
+    {%- elsif n.type == 'form' -%}
+      <span class="tree-ico ico-form" aria-hidden="true">📋</span>
     {%- elsif n.type == 'app' -%}
-      <span class="tree-ico ico-app" aria-hidden="true">▦</span>
-    {%- elsif n.type == 'db' -%}
+      <span class="tree-ico ico-app" aria-hidden="true">🖥️</span>
+    {%- elsif n.type == 'data' or n.type == 'db' -%}
       <span class="tree-ico ico-db" aria-hidden="true">🗄️</span>
-    {%- elsif n.type == 'article' -%}
-      <span class="tree-ico ico-article" aria-hidden="true">📝</span>
     {%- elsif n.type == 'video' -%}
       <span class="tree-ico ico-video" aria-hidden="true">▶</span>
+    {%- elsif n.type == 'article' -%}
+      <span class="tree-ico ico-article" aria-hidden="true">📝</span>
     {%- elsif n.type == 'contact' -%}
       <span class="tree-ico ico-contact" aria-hidden="true">💬</span>
     {%- else -%}

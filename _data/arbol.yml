@@ -1,165 +1,104 @@
 # ============================================================
-#  Árbol de recursos — Página de inicio (estilo explorador)
-#  Cada hoja enlaza directamente a su recurso.
-#  type: folder | app | pdf | db | article | web | video | contact
+#  Árbol de recursos OFICIALES de Invierte.pe (MEF / Estado)
+#  Solo normativa, metodologías, aplicativos del Estado, fichas
+#  y anexos oficiales. NO incluye aplicaciones propias.
+#  type:  folder | law | pdf | app | web | video | form | data
+#  color: color identificador de la categoría (acento del nodo)
 # ============================================================
 
 - label: "Normatividad"
   type: folder
+  color: "#dc2626"
   open: true
-  desc: "Decretos, reglamentos y directivas de Invierte.pe"
+  desc: "Marco legal de la Programación Multianual y Gestión de Inversiones"
   children:
-    - label: "Explorador de Normativa (22 documentos)"
-      type: app
-      url: "/apps/normativa.html"
-      thumb: "/images/bd.webp"
-      desc: "Busca, filtra y estudia decretos, reglamentos y resoluciones"
-    - label: "Ley Invierte.pe — Decreto Legislativo N° 1252"
-      type: app
-      url: "/apps/normativa.html"
-    - label: "Reglamento — DS N° 284-2018-EF"
-      type: app
-      url: "/apps/normativa.html"
-    - label: "Directiva General — RD N° 0020-2025-EF/63.01"
-      type: app
-      url: "/apps/normativa.html"
-    - label: "Portal de normas del MEF (gob.pe)"
+    - label: "Decreto Legislativo N° 1252 — Crea el Invierte.pe"
+      type: law
+      url: "https://www.mef.gob.pe/es/normatividad-sp-9867"
+    - label: "Reglamento — D.S. N° 284-2018-EF"
+      type: law
+      url: "https://www.mef.gob.pe/es/normatividad-sp-9867"
+    - label: "Directiva General del Invierte.pe"
+      type: law
+      url: "https://www.mef.gob.pe/es/normatividad-sp-9867"
+    - label: "Portal de Normatividad del MEF"
       type: web
-      url: "https://www.gob.pe/mef"
+      url: "https://www.mef.gob.pe/es/normatividad-sp-9867"
 
-- label: "Metodologías y Métodos Cuantitativos"
+- label: "Metodologías Generales"
   type: folder
+  color: "#ea580c"
   open: true
-  desc: "Guía interactiva y fichas metodológicas"
+  desc: "Guías y lineamientos para la formulación y evaluación de inversiones"
   children:
-    - label: "Guía Interactiva de Métodos Cuantitativos (69 métodos)"
-      type: app
-      url: "/apps/metodos.html"
-      thumb: "/images/bd.webp"
-      desc: "Wizard que recomienda el método estadístico según tu objetivo"
-    - label: "Correlación de Pearson"
+    - label: "Guía General de Identificación, Formulación y Evaluación"
       type: pdf
-      url: "https://drive.google.com/file/d/14cfBYH1X0bjzBvphqJhV34szifTJQ9NT/view"
-    - label: "Regresión Lineal Simple"
+      url: "https://www.mef.gob.pe/es/metodologias-generales"
+    - label: "Lineamientos para IOARR"
       type: pdf
-      url: "https://drive.google.com/file/d/1Hj491_t7jSODdommODlxpd7JFpoxnWzO/view"
-    - label: "Regresión Lineal Múltiple"
+      url: "https://www.mef.gob.pe/es/metodologias-generales"
+    - label: "Evaluación Ex Post de inversiones"
       type: pdf
-      url: "https://drive.google.com/file/d/1AHy8EipYEwdT1GWVJ2gWwLIWkPdgxAqp/view"
-    - label: "ANOVA"
-      type: pdf
-      url: "https://drive.google.com/file/d/1SjNExBfOHamq4QEgAfh4GbRX8gw3v2uJ/view"
-    - label: "PCA — Componentes Principales"
-      type: pdf
-      url: "https://drive.google.com/file/d/1NFku6HS9_3eXxEiyVqDp9qSnIe5YM_iK/view"
-    - label: "ARIMA — Series de tiempo"
-      type: pdf
-      url: "https://drive.google.com/file/d/1PKqXTdQHtXRaB3pJoYMyz5Ohv9s6vc2X/view"
-    - label: "VAR — Vectorial Autorregresivo"
-      type: pdf
-      url: "https://drive.google.com/file/d/1VGiKRQHlbOut9_7CWk2dy1IljVpipxdR/view"
-    - label: "Datos de Panel (Efectos Fijos/Aleatorios)"
-      type: pdf
-      url: "https://drive.google.com/file/d/1YDwNBQx4nKqiIcz7RMrVBXih-eLXMZ6O/view"
-
-- label: "Aplicativos y Herramientas propias"
-  type: folder
-  open: true
-  desc: "Software desarrollado para la inversión pública"
-  children:
-    - label: "InvierteIA Beta — 31 motores automáticos"
-      type: app
-      url: "/apps/invierte-ia.html"
-      thumb: "/images/programas.webp"
-      badge: "Beta"
-      desc: "Asistente de IA para formulación y evaluación de inversiones"
-    - label: "App EVA PIPS EBR (escritorio)"
-      type: app
-      url: "https://drive.google.com/file/d/1kFvVQuWzwbyoum2GyKN6C3Cr4w-rUSQD/view?usp=sharing"
-      thumb: "/images/250705_app_evapipedu.webp"
-      badge: "Beta"
-      desc: "Evaluación de PIP de educación básica regular (descarga)"
-    - label: "Módulo de Cálculo de Demanda Educativa (web)"
-      type: app
-      url: "https://zero1-modulo-calculo-demanda.onrender.com/"
-      thumb: "/images/app_calculo_demanda2.webp"
-      badge: "Beta"
-      desc: "Estima la demanda educativa en línea"
-    - label: "Explorador de Normativa"
-      type: app
-      url: "/apps/normativa.html"
-      thumb: "/images/bd.webp"
-    - label: "Guía de Métodos Cuantitativos"
-      type: app
-      url: "/apps/metodos.html"
-      thumb: "/images/bd.webp"
-
-- label: "Bases de Datos"
-  type: folder
-  open: true
-  desc: "Datasets abiertos para análisis y formulación"
-  children:
-    - label: "Data poblacional 2007–2040 (San Pablo, Cajamarca)"
-      type: db
-      url: "https://drive.google.com/drive/folders/1Rv603xKK_vO2F20fS-iC1f3ygsY-Mtp0?usp=sharing"
-      thumb: "/images/pub001_proypob.webp"
-      desc: "Carpeta de acceso libre con proyecciones poblacionales"
-    - label: "Proyecciones poblacionales (hoja de cálculo)"
-      type: db
-      url: "https://docs.google.com/spreadsheets/d/1I7fqYOiW4el11JEl13YzDOTxxeUmtB9L/edit"
-    - label: "Datos generales distritales"
-      type: db
-      url: "https://docs.google.com/spreadsheets/d/13jf3lJpp9SqFKXKsM32-7zQVbfj-fk02/edit"
-      thumb: "/images/pub002_generales_dist.webp"
-
-- label: "Artículos y Ponencias"
-  type: folder
-  desc: "Publicaciones técnicas y de divulgación"
-  children:
-    - label: "Ponencia: Ciencia de Datos e IA para la Inversión Pública"
-      type: pdf
-      url: "https://drive.google.com/file/d/1ebUeiigtAlPtrQiTIBf0edAKIja7g35f/view?usp=sharing"
-      thumb: "/images/articulo.webp"
-    - label: "Identificar IOARR vs PIP"
-      type: article
-      url: "/2026/05/20/identificar-ioarr-vs-pip/"
-    - label: "Ver todos los artículos del blog"
+      url: "https://www.mef.gob.pe/es/metodologias-generales"
+    - label: "Portal de Metodologías Generales del MEF"
       type: web
-      url: "/blog/"
+      url: "https://www.mef.gob.pe/es/metodologias-generales"
 
-- label: "Aplicativos oficiales (MEF / Estado)"
+- label: "Fichas Técnicas y Metodologías Específicas"
   type: folder
-  desc: "Plataformas oficiales del ciclo de inversión"
+  color: "#ca8a04"
+  desc: "Fichas técnicas estándar y simplificadas por sector"
+  children:
+    - label: "Fichas técnicas estándar y simplificadas"
+      type: form
+      url: "https://www.mef.gob.pe/es/fichas-tecnicas"
+    - label: "Portal de Fichas Técnicas del MEF"
+      type: web
+      url: "https://www.mef.gob.pe/es/fichas-tecnicas"
+
+- label: "Aplicativos del Estado"
+  type: folder
+  color: "#0891b2"
+  open: true
+  desc: "Plataformas oficiales del ciclo de inversión pública"
   children:
     - label: "Banco de Inversiones (Invierte.pe)"
-      type: web
+      type: app
       url: "https://ofi5.mef.gob.pe/inviertepe/"
-    - label: "Consulta Amigable del Gasto Público"
-      type: web
-      url: "https://apps5.mineco.gob.pe/transparencia/Navegador/default.aspx"
-    - label: "GEOInvierte"
-      type: web
+      desc: "Registro y seguimiento de inversiones públicas"
+    - label: "Consulta de Inversiones — Seguimiento Público"
+      type: app
+      url: "https://ofi5.mef.gob.pe/inviertews/SeguimientoPublico/"
+    - label: "Sistema de Seguimiento de Inversiones (SSI)"
+      type: app
+      url: "https://ssi.mef.gob.pe/"
+    - label: "GEOInvierte — Visor georreferenciado"
+      type: app
       url: "https://geoinvierte.mef.gob.pe/"
+    - label: "Consulta Amigable del Gasto Público (SIAF)"
+      type: app
+      url: "https://apps5.mineco.gob.pe/transparencia/Navegador/default.aspx"
+
+- label: "Anexos y Formatos"
+  type: folder
+  color: "#7c3aed"
+  desc: "Formatos y anexos oficiales del Invierte.pe"
+  children:
+    - label: "Formatos y anexos oficiales del MEF"
+      type: form
+      url: "https://www.mef.gob.pe/es/normatividad-sp-9867"
     - label: "Portal de Inversión Pública del MEF"
       type: web
       url: "https://www.mef.gob.pe/es/"
 
-- label: "Sobre el autor y contacto"
+- label: "Capacitaciones del MEF"
   type: folder
-  desc: "Wilbert Amaru Fernandez Olmedo"
+  color: "#16a34a"
+  desc: "Recursos formativos y videos oficiales"
   children:
-    - label: "Perfil profesional (Sobre mí)"
+    - label: "Portal de capacitaciones del MEF"
       type: web
-      url: "/sobre-mi/"
-    - label: "Canal de YouTube — @amaru_fo_inversiones"
+      url: "https://www.mef.gob.pe/es/"
+    - label: "Canal oficial del MEF (YouTube)"
       type: video
-      url: "https://www.youtube.com/@amaru_fo_inversiones"
-    - label: "LinkedIn — in/amarufo"
-      type: web
-      url: "https://www.linkedin.com/in/amarufo/"
-    - label: "WhatsApp — +51 934 657 378"
-      type: contact
-      url: "https://wa.me/51934657378?text=Hola%20Amaru%2C%20vi%20tu%20sitio%20web."
-    - label: "Correo — amaruf9523@gmail.com"
-      type: contact
-      url: "mailto:amaruf9523@gmail.com"
+      url: "https://www.youtube.com/@MEFPeru"

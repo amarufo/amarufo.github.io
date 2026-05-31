@@ -1,8 +1,8 @@
 ---
 layout: default
 title: "Centro de Recursos del Formulador de Inversión Pública"
-description: "Todo en una sola página: normativa, metodologías, aplicativos, bases de datos y artículos del sistema Invierte.pe, organizados como un árbol de recursos con acceso directo."
-keywords: [Invierte.pe, IOARR, PIP, MEF, inversión pública, formulación de proyectos, Python, ciencia de datos, Perú, normativa, métodos cuantitativos]
+description: "Árbol de recursos oficiales del sistema Invierte.pe: normatividad, metodologías generales, fichas técnicas, aplicativos del Estado y anexos del MEF, con acceso directo."
+keywords: [Invierte.pe, IOARR, PIP, MEF, inversión pública, normativa, metodologías, fichas técnicas, aplicativos del Estado, Perú]
 body_class: home
 ---
 
@@ -12,7 +12,7 @@ body_class: home
     <img src="{{ '/images/icono2.webp' | relative_url }}" alt="Logo Amaru Fernandez" class="hero-logo" width="72" height="72">
     <div class="hero-text">
       <h1>Centro de recursos del formulador de inversión pública</h1>
-      <p>Normativa, metodologías, aplicativos, bases de datos y artículos del sistema <strong>Invierte.pe</strong>, reunidos en una sola página. Haz clic en cualquier recurso para abrirlo directamente.</p>
+      <p>Normatividad, metodologías, fichas técnicas, aplicativos del Estado y anexos oficiales del sistema <strong>Invierte.pe</strong> (MEF), reunidos en un solo árbol. Haz clic en cualquier recurso para abrirlo directamente.</p>
     </div>
   </div>
 </section>
@@ -23,7 +23,7 @@ body_class: home
     <h2 id="arbol-title">Árbol de recursos</h2>
     <p>Explora como en un gestor de archivos: expande una categoría y accede al recurso con un clic.</p>
     <div class="tree-toolbar">
-      <input type="search" id="tree-search" class="tree-search" placeholder="Buscar recurso… (normativa, ANOVA, app, base de datos)" autocomplete="off" aria-label="Buscar en el árbol de recursos">
+      <input type="search" id="tree-search" class="tree-search" placeholder="Buscar recurso… (normativa, metodología, ficha, aplicativo)" autocomplete="off" aria-label="Buscar en el árbol de recursos">
       <button type="button" id="tree-expand" class="tree-btn">Expandir todo</button>
       <button type="button" id="tree-collapse" class="tree-btn">Colapsar todo</button>
     </div>
@@ -31,9 +31,11 @@ body_class: home
 
   <div class="tree-legend" aria-hidden="true">
     <span><span class="tree-ico ico-folder">📁</span> Categoría</span>
-    <span><span class="tree-ico ico-pdf">PDF</span> Documento</span>
-    <span><span class="tree-ico ico-app">▦</span> Aplicativo</span>
-    <span><span class="tree-ico ico-db">🗄️</span> Base de datos</span>
+    <span><span class="tree-ico ico-law">⚖️</span> Normativa</span>
+    <span><span class="tree-ico ico-pdf">PDF</span> Metodología</span>
+    <span><span class="tree-ico ico-form">📋</span> Ficha / formato</span>
+    <span><span class="tree-ico ico-app">🖥️</span> Aplicativo</span>
+    <span><span class="tree-ico ico-video">▶</span> Video</span>
     <span><span class="tree-ico ico-web">🔗</span> Enlace externo</span>
   </div>
 

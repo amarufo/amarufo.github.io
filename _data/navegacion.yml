@@ -1,19 +1,6 @@
 # Menú principal del sitio
 - title: "Inicio"
   url: "/"
-- title: "Recursos"
-  url: "/recursos/"
-  children:
-    - title: "Normativa Invierte.pe"
-      url: "/recursos/normativa/"
-    - title: "Metodologías MEF"
-      url: "/recursos/metodologias/"
-    - title: "Anexos y Formatos"
-      url: "/recursos/anexos/"
-    - title: "Aplicativos MEF"
-      url: "/recursos/aplicativos/"
-- title: "Métodos"
-  url: "/metodos/"
 - title: "Aplicativos"
   url: "/apps/normativa.html"
   children:
