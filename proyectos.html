@@ -1,0 +1,23 @@
+---
+layout: page
+title: "Portafolio de proyectos"
+subtitle: "Aplicaciones en vivo y bases de datos descargables para la inversión pública y el análisis de datos."
+permalink: /proyectos/
+description: "Portafolio de proyectos: Invierte IA y otras aplicaciones de ciencia de datos con apps en vivo y bases de datos descargables."
+keywords: [portafolio, Invierte IA, Streamlit, Python, ciencia de datos, apps, bases de datos]
+---
+
+<div class="grid grid-3">
+{%- assign proyectos = site.projects | sort: 'orden' -%}
+{%- for p in proyectos %}
+  {% include card.html
+      titulo=p.title
+      descripcion=p.subtitle
+      url=p.url
+      imagen=p.image
+      etiqueta=p.estado %}
+{%- endfor %}
+{%- if site.projects.size == 0 %}
+  <p>Pronto publicaré los proyectos.</p>
+{%- endif %}
+</div>

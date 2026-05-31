@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<article class="post">
+  <div class="page-wrap narrow">
+    <header class="post-header">
+      {%- if page.categoria %}<a href="{{ '/blog/' | relative_url }}" class="card-tag">{{ page.categoria }}</a>{%- endif %}
+      <h1>{{ page.title }}</h1>
+      <p class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d de %B de %Y" }}</time>
+        {%- if page.author %} · {{ page.author }}{%- endif %}
+      </p>
+      {%- if page.image %}
+      <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="post-cover">
+      {%- endif %}
+    </header>
+
+    <div class="post-content prose">
+      {{ content }}
+    </div>
+
+    {%- if page.tags %}
+    <footer class="post-footer">
+      <div class="tag-list">
+        {%- for tag in page.tags %}<span class="tag">#{{ tag }}</span>{%- endfor %}
+      </div>
+    </footer>
+    {%- endif %}
+
+    <a href="{{ '/blog/' | relative_url }}" class="back-link">← Volver al blog</a>
+  </div>
+</article>

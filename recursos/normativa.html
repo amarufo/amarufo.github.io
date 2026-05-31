@@ -1,0 +1,24 @@
+---
+layout: page
+title: "Normativa Invierte.pe"
+subtitle: "La base legal del Sistema Nacional de Programación Multianual y Gestión de Inversiones."
+permalink: /recursos/normativa/
+description: "Normativa del sistema Invierte.pe: Ley DL 1252, Reglamento y Directiva General. Consulta y descarga los dispositivos legales clave."
+keywords: [normativa, Invierte.pe, DL 1252, reglamento, directiva, MEF, inversión pública]
+---
+
+> **Próximamente:** el Explorador de Normativa interactivo (glosario, quiz, búsqueda full-text y línea de tiempo) se integrará en esta página. Por ahora encuentras aquí los documentos clave con enlace oficial.
+
+<div class="grid grid-2" style="margin-top:1.5rem">
+{%- for n in site.data.recursos.normativa %}
+  <div class="doc-card">
+    <div class="doc-meta">
+      <span class="pill">{{ n.tipo }}</span>
+      <span class="pill ok">{{ n.estado }}</span>
+    </div>
+    <h3>{{ n.titulo }}</h3>
+    <p>{{ n.descripcion }}</p>
+    <a href="{{ n.url }}" class="card-link" rel="noopener">Consultar documento ↗</a>
+  </div>
+{%- endfor %}
+</div>

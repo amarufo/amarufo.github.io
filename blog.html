@@ -1,0 +1,23 @@
+---
+layout: page
+title: "Blog"
+subtitle: "Artículos sobre formulación de PIP/IOARR, economía pública y automatización con Python."
+permalink: /blog/
+description: "Blog técnico sobre formulación de proyectos de inversión pública (PIP/IOARR), economía y automatización con Python y ciencia de datos."
+keywords: [blog, PIP, IOARR, Invierte.pe, Python, automatización, economía, formulación de proyectos]
+---
+
+<div class="grid grid-3">
+{%- for post in site.posts %}
+  {% include card.html
+      titulo=post.title
+      descripcion=post.description
+      url=post.url
+      imagen=post.image
+      fecha=post.date
+      etiqueta=post.categoria %}
+{%- endfor %}
+{%- if site.posts.size == 0 %}
+  <p>Pronto publicaré los primeros artículos.</p>
+{%- endif %}
+</div>

@@ -1,0 +1,14 @@
+<article class="card">
+  {%- if include.imagen %}
+  <a href="{{ include.url | relative_url }}" class="card-media">
+    <img src="{{ include.imagen | relative_url }}" alt="{{ include.titulo }}" loading="lazy">
+  </a>
+  {%- endif %}
+  <div class="card-body">
+    {%- if include.etiqueta %}<span class="card-tag">{{ include.etiqueta }}</span>{%- endif %}
+    <h3 class="card-title"><a href="{{ include.url | relative_url }}">{{ include.titulo }}</a></h3>
+    {%- if include.fecha %}<time class="card-date">{{ include.fecha | date: "%d %b %Y" }}</time>{%- endif %}
+    <p class="card-text">{{ include.descripcion }}</p>
+    <a href="{{ include.url | relative_url }}" class="card-link">Leer más →</a>
+  </div>
+</article>

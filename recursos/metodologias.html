@@ -1,0 +1,18 @@
+---
+layout: page
+title: "Metodologías MEF"
+subtitle: "Guías y lineamientos metodológicos para la formulación y evaluación de inversiones."
+permalink: /recursos/metodologias/
+description: "Metodologías del MEF para Invierte.pe: guía general, lineamientos IOARR, evaluación ex post y fichas técnicas sectoriales."
+keywords: [metodologías, guía general, IOARR, evaluación ex post, fichas técnicas, MEF, Invierte.pe]
+---
+
+<div class="grid grid-2">
+{%- for m in site.data.recursos.metodologias %}
+  <div class="doc-card">
+    <h3>{{ m.titulo }}</h3>
+    <p>{{ m.descripcion }}</p>
+    <a href="{{ m.url }}" class="card-link" rel="noopener">Ver en el MEF ↗</a>
+  </div>
+{%- endfor %}
+</div>

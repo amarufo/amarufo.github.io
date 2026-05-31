@@ -1,0 +1,30 @@
+<header class="navbar">
+  <div class="navbar-inner">
+    <a href="{{ '/' | relative_url }}" class="brand">
+      <img src="{{ site.logo | relative_url }}" alt="Logo {{ site.title }}" class="brand-logo">
+      <span class="brand-name">amaru<span class="brand-accent">_fo</span></span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-menu" aria-label="Navegación principal">
+      <ul>
+        {%- for item in site.data.navegacion %}
+        <li class="{% if item.children %}has-children{% endif %}">
+          <a href="{{ item.url | relative_url }}"
+             {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.title }}</a>
+          {%- if item.children %}
+          <ul class="submenu">
+            {%- for child in item.children %}
+            <li><a href="{{ child.url | relative_url }}">{{ child.title }}</a></li>
+            {%- endfor %}
+          </ul>
+          {%- endif %}
+        </li>
+        {%- endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

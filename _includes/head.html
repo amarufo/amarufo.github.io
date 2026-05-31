@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'es' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0F3D5C">
+
+  {%- comment -%} SEO automático: título, description, keywords, Open Graph y Twitter
+  se generan desde el Front Matter de cada página/post vía jekyll-seo-tag {%- endcomment -%}
+  {% seo %}
+
+  {%- if page.keywords %}
+  <meta name="keywords" content="{{ page.keywords | join: ', ' }}">
+  {%- endif %}
+
+  <link rel="icon" href="{{ site.logo | relative_url }}" type="image/png">
+  <link rel="apple-touch-icon" href="{{ site.logo | relative_url }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  {% feed_meta %}
+</head>

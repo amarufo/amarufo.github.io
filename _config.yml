@@ -1,7 +1,78 @@
-title: "amaru_fo"
-description: "MSc. en Proyectos de Inversión"
-show_downloads: false
-remote_theme: pages-themes/dinky@v0.2.0
+# ============================================================
+#  Configuración del sitio — amaru_fo
+#  Centro de recursos para el formulador de inversión pública
+# ============================================================
+
+# --- Identidad del sitio ---
+title: "Amaru FO"
+tagline: "Centro de Recursos del Formulador de Inversión Pública"
+description: >-
+  Normativa, metodologías y herramientas de datos para la formulación
+  y evaluación de proyectos de inversión pública (Invierte.pe) en el Perú.
+author:
+  name: "Wilbert Amaru Fernández Olmedo"
+  email: "amaruf9523@gmail.com"
+
+# --- URL (GitHub Pages) ---
+url: "https://amarufo.github.io"
+baseurl: ""
+lang: es
+
+# --- Imagen por defecto para Open Graph / redes ---
+image: "/assets/img/logo_1.png"
+logo: "/images/icon_invierte.png"
+
+# --- Redes y contacto ---
+social:
+  whatsapp: "51934657378"
+  youtube: "https://youtube.com/@amarufo"
+  linkedin: "https://linkedin.com/in/amarufo"
+  facebook: "https://facebook.com/amarufo"
+  github: "https://github.com/amarufo"
+formspree: "https://formspree.io/f/REEMPLAZAR"
+
+# --- Construcción ---
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+timezone: America/Lima
+
+# --- Plugins (compatibles con GitHub Pages) ---
 plugins:
-  - jekyll-remote-theme
-theme: jekyll-theme-dinky
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# --- Colecciones (proyectos dinámicos vía Markdown) ---
+collections:
+  projects:
+    output: true
+    permalink: /proyectos/:name/
+
+# --- Valores por defecto del Front Matter ---
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+# --- Paginación / orden ---
+show_excerpts: true
+
+# --- Exclusiones del build ---
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
+  - .gitignore

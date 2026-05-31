@@ -1,0 +1,138 @@
+---
+layout: default
+title: "Centro de Recursos del Formulador de Inversión Pública"
+description: "Normativa, metodologías y herramientas de datos para formular y evaluar proyectos de inversión pública (Invierte.pe) en el Perú."
+keywords: [Invierte.pe, IOARR, PIP, MEF, inversión pública, formulación de proyectos, Python, ciencia de datos, Perú]
+body_class: home
+---
+
+<!-- ===== HERO ===== -->
+<section class="hero" aria-label="Bienvenida">
+  <div class="hero-inner">
+    <h1>Centro de recursos para el formulador de inversión pública en el Perú</h1>
+    <p>Normativa, metodologías y herramientas de datos del sistema <strong>Invierte.pe</strong>, reunidas en un solo lugar y potenciadas con ciencia de datos y automatización.</p>
+    <div class="hero-actions">
+      <a href="{{ '/recursos/normativa/' | relative_url }}" class="btn btn-primary">Explorar normativa →</a>
+      <a href="{{ '/proyectos/' | relative_url }}" class="btn btn-outline">Ver herramientas</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ACCESOS DIRECTOS ===== -->
+<section class="section" aria-labelledby="accesos-title">
+  <div class="section-head">
+    <h2 id="accesos-title">Accesos directos</h2>
+    <p>Las cuatro puertas de entrada al sistema de inversión pública.</p>
+  </div>
+  <div class="grid grid-4">
+    {%- for a in site.data.recursos.accesos %}
+    <a href="{{ a.url | relative_url }}" class="acceso">
+      <span class="acceso-icono">{{ a.icono }}</span>
+      <h3>{{ a.titulo }}</h3>
+      <p>{{ a.descripcion }}</p>
+    </a>
+    {%- endfor %}
+  </div>
+</section>
+
+<!-- ===== DOCUMENTOS CLAVE DEL MEF ===== -->
+<section class="section soft-bg" aria-labelledby="norma-title">
+  <div class="section-head">
+    <a href="{{ '/recursos/normativa/' | relative_url }}" class="more">Ver toda la normativa →</a>
+    <h2 id="norma-title">Documentos normativos clave</h2>
+    <p>La base legal del Sistema Nacional de Programación Multianual y Gestión de Inversiones.</p>
+  </div>
+  <div class="grid grid-3">
+    {%- for n in site.data.recursos.normativa %}
+    <div class="doc-card">
+      <div class="doc-meta">
+        <span class="pill">{{ n.tipo }}</span>
+        <span class="pill ok">{{ n.estado }}</span>
+      </div>
+      <h3>{{ n.titulo }}</h3>
+      <p>{{ n.descripcion }}</p>
+      <a href="{{ n.url }}" class="card-link" rel="noopener">Consultar documento ↗</a>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+
+<!-- ===== HERRAMIENTAS PROPIAS ===== -->
+<section class="section" aria-labelledby="tools-title">
+  <div class="section-head">
+    <h2 id="tools-title">Herramientas propias</h2>
+    <p>Aplicaciones y recursos interactivos desarrollados para acelerar tu trabajo.</p>
+  </div>
+  <div class="grid grid-3">
+    {%- for h in site.data.recursos.herramientas %}
+    <a href="{{ h.url | relative_url }}" class="acceso">
+      <span class="acceso-icono">{{ h.icono }}</span>
+      <h3>{{ h.titulo }}</h3>
+      <p>{{ h.descripcion }}</p>
+    </a>
+    {%- endfor %}
+  </div>
+</section>
+
+<!-- ===== ÚLTIMAS ENTRADAS (dinámico desde Markdown) ===== -->
+<section class="section soft-bg" aria-labelledby="ultimas-title">
+  <div class="section-head">
+    <a href="{{ '/blog/' | relative_url }}" class="more">Ver todo el blog →</a>
+    <h2 id="ultimas-title">Últimas entradas</h2>
+    <p>Artículos sobre formulación de PIP/IOARR, economía y automatización.</p>
+  </div>
+  <div class="grid grid-3">
+    {%- assign recientes = site.posts | slice: 0, 3 -%}
+    {%- for post in recientes %}
+    {% include card.html
+        titulo=post.title
+        descripcion=post.description
+        url=post.url
+        imagen=post.image
+        fecha=post.date
+        etiqueta=post.categoria %}
+    {%- endfor %}
+    {%- if site.posts.size == 0 %}
+    <p>Pronto publicaré los primeros artículos.</p>
+    {%- endif %}
+  </div>
+</section>
+
+<!-- ===== PROYECTOS DESTACADOS (dinámico desde colección) ===== -->
+<section class="section" aria-labelledby="proj-title">
+  <div class="section-head">
+    <a href="{{ '/proyectos/' | relative_url }}" class="more">Ver portafolio →</a>
+    <h2 id="proj-title">Proyectos destacados</h2>
+    <p>Aplicaciones en vivo y bases de datos descargables.</p>
+  </div>
+  <div class="grid grid-3">
+    {%- assign destacados = site.projects | slice: 0, 3 -%}
+    {%- for p in destacados %}
+    {% include card.html
+        titulo=p.title
+        descripcion=p.subtitle
+        url=p.url
+        imagen=p.image
+        etiqueta="Proyecto" %}
+    {%- endfor %}
+  </div>
+</section>
+
+<!-- ===== VIDEOS EDUCATIVOS ===== -->
+<section class="section soft-bg" aria-labelledby="video-title">
+  <div class="section-head">
+    <h2 id="video-title">Videos educativos</h2>
+    <p>Explicaciones paso a paso del ciclo de inversión.</p>
+  </div>
+  <div class="grid grid-2">
+    <div class="video-embed">
+      <iframe src="https://www.youtube.com/embed?listType=user_uploads&list=amarufo"
+        title="Canal de YouTube" loading="lazy" allowfullscreen></iframe>
+    </div>
+    <div>
+      <h3>Suscríbete al canal</h3>
+      <p>Tutoriales sobre formulación de PIP, IOARR, fichas técnicas y uso de herramientas de datos aplicadas a la inversión pública.</p>
+      <a href="{{ site.social.youtube }}" class="btn btn-ghost" rel="noopener">Ir al canal de YouTube ↗</a>
+    </div>
+  </div>
+</section>

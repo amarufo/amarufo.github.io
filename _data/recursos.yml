@@ -1,0 +1,98 @@
+# ============================================================
+#  Recursos del formulador — datos editables sin tocar HTML
+#  Edita este archivo para añadir/cambiar tarjetas de recursos.
+# ============================================================
+
+# --- Accesos directos del Home (grid superior) ---
+accesos:
+  - titulo: "Normativa"
+    descripcion: "Explorador interactivo de la normativa Invierte.pe"
+    icono: "⚖️"
+    url: "/recursos/normativa/"
+  - titulo: "Metodologías"
+    descripcion: "Guías y lineamientos metodológicos del MEF"
+    icono: "📐"
+    url: "/recursos/metodologias/"
+  - titulo: "Anexos y Formatos"
+    descripcion: "Formatos oficiales de la Directiva General"
+    icono: "📄"
+    url: "/recursos/anexos/"
+  - titulo: "Aplicativos MEF"
+    descripcion: "Accesos rápidos a los sistemas del MEF"
+    icono: "🖥️"
+    url: "/recursos/aplicativos/"
+
+# --- Documentos normativos clave (descarga directa) ---
+normativa:
+  - titulo: "Ley de creación — DL 1252"
+    descripcion: "Decreto Legislativo que crea el Sistema Nacional de Programación Multianual y Gestión de Inversiones."
+    tipo: "Ley"
+    estado: "Vigente"
+    url: "https://www.mef.gob.pe/es/normatividad-sp-9867/por-instrumento/decretos-legislativos"
+  - titulo: "Reglamento del DL 1252 — DS 284-2018-EF"
+    descripcion: "Reglamento del Decreto Legislativo 1252 y sus modificatorias."
+    tipo: "Decreto Supremo"
+    estado: "Vigente"
+    url: "https://www.mef.gob.pe/es/normatividad-sp-9867"
+  - titulo: "Directiva General — N° 001-2019-EF/63.01"
+    descripcion: "Directiva General del Sistema Nacional de Programación Multianual y Gestión de Inversiones."
+    tipo: "Directiva"
+    estado: "Vigente"
+    url: "https://www.mef.gob.pe/es/normatividad-sp-9867"
+
+# --- Metodologías destacadas del MEF ---
+metodologias:
+  - titulo: "Guía General de Proyectos de Inversión"
+    descripcion: "Identificación, formulación y evaluación de proyectos de inversión."
+    url: "https://www.mef.gob.pe/es/metodologias-generales"
+  - titulo: "Lineamientos IOARR"
+    descripcion: "Identificación y registro de Inversiones de Optimización, Ampliación Marginal, Reposición y Rehabilitación."
+    url: "https://www.mef.gob.pe/es/metodologias-generales"
+  - titulo: "Evaluación Ex Post de Inversiones"
+    descripcion: "Lineamientos metodológicos para la evaluación ex post (general y de corto plazo)."
+    url: "https://www.mef.gob.pe/es/metodologias-generales"
+  - titulo: "Fichas Técnicas Sectoriales"
+    descripcion: "Fichas estándar y simplificadas aprobadas a nivel sectorial."
+    url: "https://www.mef.gob.pe/es/fichas-tecnicas"
+
+# --- Aplicativos del MEF (accesos rápidos) ---
+aplicativos:
+  - titulo: "Consulta de Inversiones"
+    descripcion: "Búsqueda pública por CUI o nombre en el Banco de Inversiones."
+    acceso: "Público"
+    url: "https://ofi5.mef.gob.pe/inviertews/SeguimientoPublico/"
+  - titulo: "Consulta Avanzada de Inversiones"
+    descripcion: "Filtros múltiples y exportación a hoja de cálculo."
+    acceso: "Público"
+    url: "https://ofi5.mef.gob.pe/inviertews/"
+  - titulo: "SSI — Seguimiento de Inversiones"
+    descripcion: "Seguimiento de la ejecución física y financiera de inversiones."
+    acceso: "Público"
+    url: "https://ssi.mef.gob.pe/"
+  - titulo: "GEOInvierte"
+    descripcion: "Datos georreferenciados de las inversiones en tiempo real."
+    acceso: "Público"
+    url: "https://geoinvierte.mef.gob.pe/"
+  - titulo: "Banco de Inversiones"
+    descripcion: "Registro y gestión de inversiones (operadores acreditados)."
+    acceso: "Operadores"
+    url: "https://ofi5.mef.gob.pe/inviertews/"
+  - titulo: "Consulta Amigable (SIAF)"
+    descripcion: "Seguimiento de la ejecución presupuestal del gasto público."
+    acceso: "Público"
+    url: "https://apps5.mineco.gob.pe/transparencia/Navegador/default.aspx"
+
+# --- Herramientas propias destacadas ---
+herramientas:
+  - titulo: "Invierte IA"
+    descripcion: "Automatización de estudios de preinversión con ciencia de datos e IA."
+    icono: "🤖"
+    url: "/proyectos/invierte-ia/"
+  - titulo: "Explorador de Normativa"
+    descripcion: "Estudia 22+ normas con glosario, quiz y búsqueda full-text."
+    icono: "📚"
+    url: "/recursos/normativa/"
+  - titulo: "Guía de Métodos Cuantitativos"
+    descripcion: "69 métodos en 11 categorías + wizard recomendador."
+    icono: "🧮"
+    url: "/metodos/"

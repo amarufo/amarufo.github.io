@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<article class="project">
+  <div class="page-wrap narrow">
+    <header class="post-header">
+      <span class="card-tag">Proyecto{% if page.estado %} · {{ page.estado }}{% endif %}</span>
+      <h1>{{ page.title }}</h1>
+      {%- if page.subtitle %}<p class="page-subtitle">{{ page.subtitle }}</p>{%- endif %}
+      {%- if page.image %}
+      <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="post-cover">
+      {%- endif %}
+    </header>
+
+    <div class="project-actions">
+      {%- if page.app_url %}<a href="{{ page.app_url }}" class="btn btn-primary" rel="noopener">Ver app en vivo ↗</a>{%- endif %}
+      {%- if page.dataset_url %}<a href="{{ page.dataset_url }}" class="btn btn-outline" rel="noopener">Descargar base de datos ↓</a>{%- endif %}
+      {%- if page.repo_url %}<a href="{{ page.repo_url }}" class="btn btn-ghost" rel="noopener">Código fuente</a>{%- endif %}
+    </div>
+
+    {%- if page.stack %}
+    <ul class="stack-list">
+      {%- for tech in page.stack %}<li>{{ tech }}</li>{%- endfor %}
+    </ul>
+    {%- endif %}
+
+    <div class="post-content prose">
+      {{ content }}
+    </div>
+
+    <a href="{{ '/proyectos/' | relative_url }}" class="back-link">← Volver al portafolio</a>
+  </div>
+</article>
