@@ -11,3 +11,8 @@ vendor/
 # Sistema
 .DS_Store
 Thumbs.db
+
+
+# Específicos
+
+GUIA_MANTENIMIENTO.md

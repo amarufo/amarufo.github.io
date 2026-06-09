@@ -3,102 +3,184 @@
 #  Solo normativa, metodologías, aplicativos del Estado, fichas
 #  y anexos oficiales. NO incluye aplicaciones propias.
 #  type:  folder | law | pdf | app | web | video | form | data
+# otros types:  book | course | tutorial | tool | dataset | report | article
 #  color: color identificador de la categoría (acento del nodo)
 # ============================================================
 
 - label: "Normatividad"
   type: folder
   color: "#dc2626"
-  open: true
+  open: false
   desc: "Marco legal de la Programación Multianual y Gestión de Inversiones"
   children:
-    - label: "Decreto Legislativo N° 1252 — Crea el Invierte.pe"
-      type: law
-      url: "https://www.mef.gob.pe/es/normatividad-sp-9867"
-    - label: "Reglamento — D.S. N° 284-2018-EF"
-      type: law
-      url: "https://www.mef.gob.pe/es/normatividad-sp-9867"
-    - label: "Directiva General del Invierte.pe"
-      type: law
-      url: "https://www.mef.gob.pe/es/normatividad-sp-9867"
-    - label: "Portal de Normatividad del MEF"
-      type: web
-      url: "https://www.mef.gob.pe/es/normatividad-sp-9867"
+      - label: "Normatividad general del Invierte.pe"
+        type: folder
+        color: "#b91c1c"
+        open: false
+        desc: "Normatividad general del Invierte.pe y marco legal de la inversión pública"
+        children:
+            - label: "Decreto Legislativo N° 1252 — Crea el Invierte.pe"
+              type: law
+              url: "https://www.mef.gob.pe/es/normatividad-inv-publica/instrumento/decretos-legislativos/15603-decreto-legislativo-n-1252/file"
+            - label: "Decreto Supremo N° 284-2018-EF - Reglamento del Decreto Legislativo Nº 1252"
+              type: law
+              url: "https://www.mef.gob.pe/es/normatividad-inv-publica/temas/sistema-nacional-de-programacion-multianual-y-gestion-de-inversiones-invierte-pe/18648-decreto-supremo-n-284-2018-ef-2/file"
+      - label: "Normatividad OXI"
+        type: folder
+        color: "#b91c1c"
+        open: false
+        desc: "Normatividad para la formulación mediante OXI"
+        children:
+            - label: "Decreto Supremo n.° 038-2026-EF"
+              type: law
+              url: "https://www.gob.pe/institucion/mef/normas-legales/7895406-038-2026-ef"
+              desc: "Nuevo reglamento de la Ley N° 29230, Ley que impulsa la Inversión Pública Regional y Local con Participación del Sector Privado."
+            - label: "Ley N° 29230"
+              type: law
+              url: "https://www.gob.pe/institucion/presidencia/normas-legales/425980-29230"
+              desc: "Ley que impulsa la inversión pública regional y local con la participación del sector privado"
+      - label: "Portal de Normatividad de la Inversión Pública del MEF"
+        type: web
+        url: "https://www.mef.gob.pe/es/normatividad-inv-publica/instrumento/decretos-legislativos"
 
-- label: "Metodologías Generales"
+- label: "Metodologías"
   type: folder
   color: "#ea580c"
-  open: true
+  open: false
   desc: "Guías y lineamientos para la formulación y evaluación de inversiones"
   children:
-    - label: "Guía General de Identificación, Formulación y Evaluación"
-      type: pdf
-      url: "https://www.mef.gob.pe/es/metodologias-generales"
-    - label: "Lineamientos para IOARR"
-      type: pdf
-      url: "https://www.mef.gob.pe/es/metodologias-generales"
-    - label: "Evaluación Ex Post de inversiones"
-      type: pdf
-      url: "https://www.mef.gob.pe/es/metodologias-generales"
-    - label: "Portal de Metodologías Generales del MEF"
-      type: web
-      url: "https://www.mef.gob.pe/es/metodologias-generales"
-
-- label: "Fichas Técnicas y Metodologías Específicas"
-  type: folder
-  color: "#ca8a04"
-  desc: "Fichas técnicas estándar y simplificadas por sector"
-  children:
-    - label: "Fichas técnicas estándar y simplificadas"
-      type: form
-      url: "https://www.mef.gob.pe/es/fichas-tecnicas"
-    - label: "Portal de Fichas Técnicas del MEF"
-      type: web
-      url: "https://www.mef.gob.pe/es/fichas-tecnicas"
-
+      - label: "Generales"
+        type: folder
+        color: "#ea580c"
+        open: false
+        desc: "Metodologías y recursos generales para la formulación y evaluación de inversiones públicas"
+        children:
+            - label: "PIP - Guia general"
+              type: pdf
+              url: "https://www.mef.gob.pe/contenidos/inv_publica/docs/Metodologias_Generales_PI/GUIA_EX_ANTE_InviertePe.pdf"
+              desc: "Guia general para la formulación y evaluación de proyectos de inversión pública"  
+            - label: "IOARR - Lineamientos metodológicos"
+              type: pdf
+              url: "https://www.mef.gob.pe/contenidos/inv_publica/docs/Metodologias_Generales_PI/Lineamientos_IOARR.pdf"
+              desc: "Lineamientos metodológicos para la formulación y evaluación de Inversiones con Resultados Asegurados (IOARR)"
+            - label: "Anexo 11 - Parametros para la evaluación social"
+              type: pdf
+              url: "https://www.mef.gob.pe/contenidos/inv_publica/anexos/anexo11_directiva001_2019EF6301.pdf"
+              desc: "Factores de conversión social, parámetros de evaluación social, entre otros parámetros para la evaluación social de proyectos de inversión pública"              
+            - label: "Nota técnica para el uso de precios sociales"
+              type: pdf
+              url: "https://www.mef.gob.pe/contenidos/inv_publica/docs/Metodologias_Generales_PI/1_Nota_tecnica_uso_precios_sociales_2021.pdf"
+              desc: "Nota técnica para el uso de precios sociales en la evaluación social de proyectos de inversión pública"
+              
+            - label: "Niveles y estándares de servicio"
+              type: pdf
+              url: "https://www.mef.gob.pe/es/metodologias/niveles-de-servicio-y-estandares-de-calidad"
+              desc: "Nota técnica para el uso de precios sociales en la evaluación social de proyectos de inversión pública"              
+      - label: "Educación"
+        type: folder
+        color: "#ea580c"
+        open: false
+        desc: "Metodologías y recursos para proyectos Educativos"
+        children:
+            - label: "OPMI Minedu"
+              type: web
+              url: "https://www.minedu.gob.pe/programacion-multianual-inversiones/"
+              desc: "Ingresar en la 'Fase de Formulación y Evaluación', allí hallarás guías, fichas técnicas y otros recursos específicos para proyectos educativos"
+      - label: "Seguridad Ciudadana"
+        type: folder
+        color: "#ea580c"
+        open: false
+        desc: "Metodologías y recursos para proyectos de seguridad ciudadana"
+        children:
+            - label: "Información relacionada al FESC"
+              type: web
+              url: "https://drive.google.com/drive/u/0/folders/1Fpw7wSsZlT_LS_KqiCtcBrxFqTzq8u3u"
+              desc: "Dentro de 'Estudios de Preinversión' encontrarás "              
+            - label: "Lineamientos para Seguridad Ciudadana"
+              type: web
+              url: "https://www.mef.gob.pe/contenidos/inv_publica/docs/novedades/2014/Anexo_Lineamientos-PIP-seguridad-ciudadana-VFf%20(2)-(3).pdf"
+              desc: "Aprobado por Resolución Directoral Nº 001-2014-EF/63.01"   
+      - label: "Metodologías sectoriales oficiales"
+        type: web
+        url: "https://www.mef.gob.pe/es/metodologias"
+        desc: "Acceso a las metodologías sectoriales oficiales para la formulación y evaluación de proyectos de inversión pública"
 - label: "Aplicativos del Estado"
   type: folder
   color: "#0891b2"
-  open: true
+  open: false
   desc: "Plataformas oficiales del ciclo de inversión pública"
   children:
-    - label: "Banco de Inversiones (Invierte.pe)"
-      type: app
-      url: "https://ofi5.mef.gob.pe/inviertepe/"
-      desc: "Registro y seguimiento de inversiones públicas"
-    - label: "Consulta de Inversiones — Seguimiento Público"
-      type: app
-      url: "https://ofi5.mef.gob.pe/inviertews/SeguimientoPublico/"
-    - label: "Sistema de Seguimiento de Inversiones (SSI)"
-      type: app
-      url: "https://ssi.mef.gob.pe/"
-    - label: "GEOInvierte — Visor georreferenciado"
-      type: app
-      url: "https://geoinvierte.mef.gob.pe/"
-    - label: "Consulta Amigable del Gasto Público (SIAF)"
-      type: app
-      url: "https://apps5.mineco.gob.pe/transparencia/Navegador/default.aspx"
+      - label: "🔐 Banco de Inversiones"
+        type: app
+        url: "https://ofi5.mef.gob.pe/invierte#!/login"
+        desc: "Planificación, registro y seguimiento de inversiones públicas"
+      - label: "⛓️‍💥 SSI - Sistema de Seguimiento de Inversiones"
+        type: app
+        url: "https://ofi5.mef.gob.pe/ssi/"
+        desc: "Plataforma de seguimiento y monitoreo de inversiones públicas"
+      - label: "⛓️‍💥 Consulta de Inversiones por CUI"
+        type: app
+        url: "https://ofi5.mef.gob.pe/invierte/consultapublica/consultainversiones"
+        desc: "Consulta de Inversiones a través de Código Único de Inversión (CUI)"
+      - label: "⛓️‍💥 Consulta Avanzada de Inversiones"
+        type: app
+        url: "https://ofi5.mef.gob.pe/inviertePub/ConsultaPublica/ConsultaAvanzada"
+        desc: "Consulta avanzada de inversiones públicas por tipología, sector, ubicación, entre otros filtros"
+      - label: "⛓️‍💥 Consulta de Ideas de Inversiones"
+        type: app
+        url: "https://ofi5.mef.gob.pe/inviertePub/ConsultaPublica/ConsultaAvanzadaIdeas"
+        desc: "Consulta de ideas de inversiones públicas por tipología, sector, ubicación, entre otros filtros"
+      - label: "⛓️‍💥 Consulta de Carteras PMI de Inversiones"
+        type: app
+        url: "https://ofi5.mef.gob.pe/invierte/pmi/consultapmi"
+        desc: "Consulta de carteras PMI de inversiones públicas"
+      - label: "Otras aplicaciones oficiales del Invierte.pe"
+        type: app
+        url: "https://www.mef.gob.pe/es/aplicativos-invierte-pe"
 
 - label: "Anexos y Formatos"
   type: folder
   color: "#7c3aed"
-  desc: "Formatos y anexos oficiales del Invierte.pe"
+  desc: "Principales formatos y anexos oficiales del Invierte.pe"
   children:
-    - label: "Formatos y anexos oficiales del MEF"
-      type: form
-      url: "https://www.mef.gob.pe/es/normatividad-sp-9867"
-    - label: "Portal de Inversión Pública del MEF"
-      type: web
-      url: "https://www.mef.gob.pe/es/"
-
-- label: "Capacitaciones del MEF"
-  type: folder
-  color: "#16a34a"
-  desc: "Recursos formativos y videos oficiales"
-  children:
-    - label: "Portal de capacitaciones del MEF"
-      type: web
-      url: "https://www.mef.gob.pe/es/"
-    - label: "Canal oficial del MEF (YouTube)"
-      type: video
-      url: "https://www.youtube.com/@MEFPeru"
+      - label: "Anexos"
+        type: folder
+        color: "#7c3aed"
+        children:
+            - label: "Anexo n.° 2: Clasificador de Responsabilidad Funcional"
+              type: form
+              url: "https://www.mef.gob.pe/contenidos/inv_publica/anexos/Anexo_02-Clasificador_Responsabilidad_Funcional.xls"
+              desc: "Archivo Excel con la tipología de proyectos existentes"
+            - label: "Anexo n.° 7: Contenido Mínimo para Perfiles"
+              type: form
+              url: "https://www.mef.gob.pe/contenidos/inv_publica/anexos/anexo7_directiva001_2019EF6301.pdf"
+              desc: "Contenido mínimo del contenido de un estudio de preinversión cuando el nivel de complejidad es de perfil"
+            - label: "Anexo n.° 11: Parámetros para la Evaluación Social"
+              type: form
+              url: "https://www.mef.gob.pe/contenidos/inv_publica/anexos/anexo11_directiva001_2019EF6301.pdf"
+              desc: "Factores de conversión social, parámetros de evaluación social, entre otros parámetros para la evaluación social de proyectos de inversión pública"
+      - label: "Formatos"
+        type: folder
+        color: "#7c3aed"
+        children:
+            - label: "Formato n.° 5-A: Registro de idea de Proyecto o Programa de Inversión"
+              type: form
+              url: "https://www.mef.gob.pe/contenidos/inv_publica/anexos/formato5a_directiva001_2019EF6301.xlsx"
+            - label: "Formato n.° 5-B: Registro de ideas de IOARR"
+              type: form
+              url: "https://www.mef.gob.pe/contenidos/inv_publica/anexos/formato5b_directiva001_2019EF6301.xlsx"
+            - label: "Formato n.° 7-A: Ficha Técnica General Simplificada"
+              type: form
+              url: "https://www.mef.gob.pe/contenidos/inv_publica/anexos/formato7a_directiva001_2019EF6301.xlsx"
+            - label: "Formato n.° 7-C: Registro IOARR"
+              type: form
+              url: "https://www.mef.gob.pe/contenidos/inv_publica/anexos/formato7c_directiva001_2019EF6301.xlsx"
+            - label: "Formato n.° 8-A: Registros en la Fase de Ejecución en Proyectos de Inversión"
+              type: form
+              url: "https://www.mef.gob.pe/contenidos/inv_publica/anexos/formato8a_directiva001_2019EF6301_2026_1.xlsx"
+            - label: "Formato n.° 8-C: Registro en la Fase de Ejecución para IOARR"
+              type: form
+              url: "https://www.mef.gob.pe/contenidos/inv_publica/anexos/formato8c_directiva001_2019EF6301_2026_1.xlsx"
+      - label: "Otros anexos y formatos oficiales del Invierte.pe"
+        type: form
+        url: "https://www.mef.gob.pe/es/anexos-y-formatos"

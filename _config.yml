@@ -5,7 +5,7 @@
 
 # --- Identidad del sitio ---
 title: "Amaru Fernandez"
-tagline: "Centro de Recursos del Formulador de Inversión Pública"
+tagline: "INVIERTE.PE"
 handle: "amaru_fo"
 description: >-
   Normativa, metodologías, aplicativos y herramientas de ciencia de datos
@@ -48,11 +48,11 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
 
-# --- Colecciones (proyectos dinámicos vía Markdown) ---
+# --- Colecciones (herramientas dinámicas vía Markdown) ---
 collections:
   projects:
     output: true
-    permalink: /proyectos/:name/
+    permalink: /herramientas/:name/
 
 # --- Valores por defecto del Front Matter ---
 defaults:
@@ -78,6 +78,9 @@ show_excerpts: true
 exclude:
   - Gemfile
   - Gemfile.lock
+  - GUIA_MANTENIMIENTO.md
+  - README.md
+  - vendor/
   - vendor
   - README.md
   - .gitignore

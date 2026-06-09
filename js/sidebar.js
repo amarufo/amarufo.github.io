@@ -17,7 +17,7 @@
     { href: '/apps/normativa.html',    label: 'Explorador de Normativa', id: 'normativa'  },
     { href: '/apps/metodos.html',      label: 'Guía de Métodos',         id: 'metodos'    },
     { href: '/apps/invierte-ia.html',  label: 'InvierteIA',              id: 'invierte-ia' },
-    { href: '/proyectos/',             label: 'Proyectos',               id: 'proyectos'  },
+    { href: '/herramientas/',             label: 'Proyectos',               id: 'proyectos'  },
     { href: '/recursos/',              label: 'Recursos',                id: 'recursos'   },
     { href: '/blog/',                  label: 'Blog',                    id: 'blog'       },
   ];

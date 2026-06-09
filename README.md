@@ -1,24 +1,22 @@
 # amaru_fo — Centro de Recursos del Formulador de Inversión Pública
 
-Sitio personal construido con **Jekyll** sobre **GitHub Pages**. Funciona como un centro
-de recursos para el formulador de proyectos de inversión pública en el Perú (Invierte.pe),
-potenciado con herramientas de ciencia de datos y automatización.
+Centro de recursos para el formulador de proyectos de inversión pública en el Perú (Invierte.pe), potenciado con herramientas de ciencia de datos y automatización.
 
-🌐 https://amarufo.github.io
+🖥️ https://amarufo.github.io 
+🖥️ https://inviertepe.com
 👤 Wilbert Amaru Fernández Olmedo
 
----
 
 ## Arquitectura del sitio
 
-| Sección | URL | Contenido |
-|---|---|---|
-| Inicio (Bolsón) | `/` | Accesos directos, normativa clave, herramientas, últimas entradas |
-| Recursos | `/recursos/` | Normativa, metodologías, anexos, aplicativos del MEF |
-| Métodos | `/metodos/` | Guía de métodos cuantitativos |
-| Proyectos | `/proyectos/` | Portafolio (colección Markdown) |
-| Blog | `/blog/` | Artículos técnicos (posts Markdown) |
-| Sobre mí | `/sobre-mi/` | Perfil + contacto |
+| Sección         | URL           | Contenido                                                         |
+|-----------------|---------------|-------------------------------------------------------------------|
+| Inicio (Bolsón) | `/`           | Accesos directos, normativa clave, herramientas, últimas entradas |
+| Recursos        | `/recursos/`  | Normativa, metodologías, anexos, aplicativos del MEF              |
+| Métodos         | `/metodos/`   | Guía de métodos cuantitativos                                     |
+| Proyectos       | `/herramientas/` | Portafolio (colección Markdown)                                   |
+| Blog            | `/blog/`      | Artículos técnicos (posts Markdown)                               |
+| Sobre mí        | `/sobre-mi/`  | Perfil + contacto                                                 |
 
 ---
 
@@ -47,7 +45,7 @@ Contenido en Markdown...
 ### Un proyecto
 1. Crea un archivo en `_projects/` (ej. `mi-app.md`).
 2. Front Matter con `app_url`, `dataset_url`, `repo_url`, `stack`, etc.
-3. `git push`. Aparece solo en `/proyectos/` y en "Proyectos destacados".
+3. `git push`. Aparece solo en `/herramientas/` y en "Proyectos destacados".
 
 ### Recursos del Home (sin tocar HTML)
 Edita `_data/recursos.yml` para añadir o cambiar tarjetas de normativa, metodologías,
