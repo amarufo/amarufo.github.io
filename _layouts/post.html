@@ -14,6 +14,9 @@ layout: default
       <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="post-cover">
       {%- endif %}
     </header>
+    <div class="project-actions">
+      {%- if page.app_url %}<a href="{{ page.app_url }}" class="btn btn-primary" rel="noopener">Ver app en vivo ↗</a>{%- endif %}
+    </div>    
 
     <div class="post-content prose">
       {{ content }}
