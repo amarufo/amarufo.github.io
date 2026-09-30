@@ -1,0 +1,150 @@
+---
+layout: default
+title: "Portafolio de proyectos | inviertepe.com"
+description: "Portafolio de proyectos desarrollados por Amaru Fernandez: dashboards interactivos, automatización de preinversión y herramientas de análisis territorial para proyectos de inversión pública en Perú."
+keywords: [portafolio, Streamlit, diagnóstico territorial, Invierte IA, PDF Tool, Mancomunidad Lima Sur, formulación PIP]
+permalink: /portafolio/
+---
+
+<div class="page-wrap">
+  <header class="page-header">
+    <h1>Portafolio de proyectos</h1>
+    <p class="page-subtitle">Aplicaciones, dashboards y herramientas de análisis de datos desarrolladas para la inversión pública y la formulación de proyectos en Perú. Haz clic en cada tarjeta para ver los detalles.</p>
+  </header>
+
+  <div class="pf-grid">
+
+    <!-- Proyecto 1: Diagnóstico Territorial -->
+    <div class="pf-card">
+      <div class="pf-card-banner">🗺️</div>
+      <details>
+        <summary class="pf-summary">
+          <div class="pf-sum-left">
+            <span class="pf-tag">Automatización · Streamlit</span>
+            <h3>Diagnóstico Territorial Automatizado</h3>
+          </div>
+          <span class="pf-toggle">▼</span>
+        </summary>
+        <div class="pf-detail">
+          <p>Aplicación que, dada la ubicación de un proyecto de inversión pública (latitud, longitud y ubigeo), ejecuta un pipeline georreferenciado de más de 50 motores de análisis y entrega en menos de 5 minutos un documento Word de ~40 páginas listo para integrar en el expediente técnico.</p>
+          <ul class="pf-stack">
+            <li>Python</li><li>Streamlit</li><li>GeoPandas</li><li>Folium</li><li>Matplotlib</li><li>Pandas</li><li>NumPy</li>
+          </ul>
+          <p style="font-weight:700;color:var(--navy);margin:.3rem 0 .4rem;font-size:.88rem">Principales resultados</p>
+          <ul class="pf-result-list">
+            <li>Reduce de 40-80 horas a menos de 5 minutos la generación del diagnóstico territorial</li>
+            <li>Integra +15 fuentes oficiales: INEI, CENEPRED, ANA, SENAMHI, INGEMMET, OEFA, MINEDU, INDECI, MINCETUR, entre otras</li>
+            <li>Genera mapas temáticos exportables (peligros, uso de suelo, vías, demografía)</li>
+            <li>El documento Word sigue el contenido mínimo exigido para el diagnóstico en la Directiva N° 001-2019-EF/63.01</li>
+          </ul>
+          <div class="pf-links">
+            <a href="https://amarufo-diagterritorial.streamlit.app/" class="pf-primary" rel="noopener" target="_blank">🚀 Abrir app</a>
+            <a href="https://wa.me/{{ site.social.whatsapp }}?text=Hola%20Amaru%2C%20quiero%20usar%20el%20diagn%C3%B3stico%20territorial%20para%20mi%20proyecto..." rel="noopener" target="_blank">💬 Solicitar como servicio</a>
+          </div>
+        </div>
+      </details>
+    </div>
+
+    <!-- Proyecto 2: Mancomunidad Lima Sur -->
+    <div class="pf-card">
+      <div class="pf-card-banner">🏙️</div>
+      <details>
+        <summary class="pf-summary">
+          <div class="pf-sum-left">
+            <span class="pf-tag">Dashboard · Seguridad ciudadana</span>
+            <h3>Dashboard — Mancomunidad Municipal Lima Sur</h3>
+          </div>
+          <span class="pf-toggle">▼</span>
+        </summary>
+        <div class="pf-detail">
+          <p>Dashboard interactivo en Streamlit para la Mancomunidad Municipal de Lima Sur (Villa El Salvador, Villa María del Triunfo, San Juan de Miraflores, Pachacámac y Cieneguilla). Consolida registros delictivos georreferenciados de la PNP, proyecciones del INEI y capacidades logísticas del RENAMU para sustentar un PIP de seguridad ciudadana ante el MEF.</p>
+          <ul class="pf-stack">
+            <li>Python</li><li>Streamlit</li><li>GeoPandas</li><li>H3 (Uber)</li><li>Folium</li><li>Mermaid</li><li>Pandas</li>
+          </ul>
+          <p style="font-weight:700;color:var(--navy);margin:.3rem 0 .4rem;font-size:.88rem">Principales resultados</p>
+          <ul class="pf-result-list">
+            <li>Análisis espacial de hotspots delictivos con celdas H3 a nivel de manzana</li>
+            <li>Indicadores de Presión Criminal, Capacidad Operativa y Brecha de Inversión por distrito</li>
+            <li>Comparativa de incidencia delictiva frente a Lima Metropolitana (tasa por 10,000 hab.)</li>
+            <li>Auditoría estadística interna de inconsistencias en registros RENAMU</li>
+            <li>Diagrama interactivo de arquitectura tecnológica propuesta (Mermaid)</li>
+          </ul>
+          <div class="pf-links">
+            <a href="https://mancomunidadlimasur-app.streamlit.app/" class="pf-primary" rel="noopener" target="_blank">🚀 Abrir dashboard</a>
+            <a href="/2026/06/25/pip_idea_mancomunidad_Lima_sur/">📝 Leer artículo</a>
+          </div>
+        </div>
+      </details>
+    </div>
+
+    <!-- Proyecto 3: Invierte IA -->
+    <div class="pf-card">
+      <div class="pf-card-banner">🤖</div>
+      <details>
+        <summary class="pf-summary">
+          <div class="pf-sum-left">
+            <span class="pf-tag">Automatización · IA · Streamlit</span>
+            <h3>Invierte IA</h3>
+          </div>
+          <span class="pf-toggle">▼</span>
+        </summary>
+        <div class="pf-detail">
+          <p>Aplicación que aplica ciencia de datos e inteligencia artificial para acelerar la elaboración de estudios de preinversión en el marco INVIERTE.PE. Automatiza los análisis técnicos más repetitivos para que el formulador se concentre en el criterio técnico y la argumentación.</p>
+          <ul class="pf-stack">
+            <li>Python</li><li>Streamlit</li><li>Pandas</li><li>Scikit-learn</li><li>Monte Carlo</li>
+          </ul>
+          <p style="font-weight:700;color:var(--navy);margin:.3rem 0 .4rem;font-size:.88rem">Funcionalidades</p>
+          <ul class="pf-result-list">
+            <li>Análisis de demanda con proyecciones automáticas por método estadístico</li>
+            <li>Simulación Monte Carlo de costos y riesgos del proyecto</li>
+            <li>Modelado de incertidumbre en variables críticas</li>
+            <li>Generación de resultados listos para integrar al estudio de preinversión</li>
+          </ul>
+          <div class="pf-links">
+            <a href="https://invierte-ia.streamlit.app/" class="pf-primary" rel="noopener" target="_blank">🚀 Abrir app</a>
+          </div>
+        </div>
+      </details>
+    </div>
+
+    <!-- Proyecto 4: PDF Tool -->
+    <div class="pf-card">
+      <div class="pf-card-banner">📄</div>
+      <details>
+        <summary class="pf-summary">
+          <div class="pf-sum-left">
+            <span class="pf-tag">Herramienta · CLI · Documentos</span>
+            <h3>PDF Tool</h3>
+          </div>
+          <span class="pf-toggle">▼</span>
+        </summary>
+        <div class="pf-detail">
+          <p>Herramienta CLI con interfaz visual de texto para trabajo documental intensivo con PDFs: foliado, firma digital, unión, división, protección por contraseña, conversión a texto y generación de salidas Markdown/JSON para agentes de IA. Diseñada especialmente para el armado de expedientes técnicos de inversión pública.</p>
+          <ul class="pf-stack">
+            <li>Python</li><li>CLI / TUI</li><li>PyMuPDF</li><li>Tesseract OCR</li><li>Docling</li><li>Marker PDF</li>
+          </ul>
+          <p style="font-weight:700;color:var(--navy);margin:.3rem 0 .4rem;font-size:.88rem">Funciones principales</p>
+          <ul class="pf-result-list">
+            <li>Foliar y firmar PDFs con vista previa interactiva</li>
+            <li>Unir, dividir, extraer, insertar, rotar y eliminar páginas</li>
+            <li>Agregar marca de agua, editar metadatos, proteger PDFs</li>
+            <li>Convertir PDF/DOCX a TXT, Markdown y JSON para agentes IA</li>
+            <li>Compatible con Windows y Linux. Instalación con un clic (batch/script)</li>
+          </ul>
+          <div class="pf-links">
+            <a href="https://github.com/amarufo/amaru_fo_pdf_tool/archive/refs/heads/main.zip" class="pf-primary" rel="noopener" target="_blank">⬇️ Descargar</a>
+            <a href="https://github.com/amarufo/amaru_fo_pdf_tool" rel="noopener" target="_blank">🐙 GitHub</a>
+          </div>
+        </div>
+      </details>
+    </div>
+
+  </div><!-- /pf-grid -->
+
+  <div style="margin-top:3rem;text-align:center;padding:2rem;background:var(--bg-soft);border-radius:var(--radius)">
+    <p style="color:var(--slate-2);margin:0 0 1rem">¿Quieres saber cómo estas herramientas pueden apoyar tu proyecto?</p>
+    <a href="https://wa.me/{{ site.social.whatsapp }}?text=Hola%20Amaru%2C%20vi%20tu%20portafolio%20en%20inviertepe.com%20y%20quiero%20consultar..."
+       class="btn btn-wa" rel="noopener" target="_blank">💬 Consultar por WhatsApp</a>
+  </div>
+
+</div>

@@ -10,14 +10,14 @@ handle: "amaru_fo"
 description: >-
   Normativa, metodologías, aplicativos y herramientas de ciencia de datos
   para la formulación y evaluación de proyectos de inversión pública
-  (Invierte.pe) en el Perú. Por Wilbert Amaru Fernández Olmedo.
+  (Invierte.pe) en el Perú. Por Wilbert Amaru Fernandez Olmedo.
 author:
   name: "Wilbert Amaru Fernandez Olmedo"
-  short: "Amaru Fernandez"
+  short: "amaru_fo"
   email: "amaruf9523@gmail.com"
 
-# --- URL (GitHub Pages) ---
-url: "https://amarufo.github.io"
+# --- URL (dominio propio) ---
+url: "https://inviertepe.com"
 baseurl: ""
 lang: es
 
@@ -34,7 +34,6 @@ social:
   linkedin: "https://www.linkedin.com/in/amarufo/"
   github: "https://github.com/amarufo"
   email: "amaruf9523@gmail.com"
-formspree: "https://formspree.io/f/REEMPLAZAR"
 
 # --- Construcción ---
 markdown: kramdown

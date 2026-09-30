@@ -8,12 +8,11 @@ image: /images/dash_idea_mancomunidadlimasur.png
 tags: [PIP, Invierte.pe, formulación, dashboard, seguridad ciudadana, interoperabilidad]
 app_url: "https://mancomunidadlimasur-app.streamlit.app/"
 ---
-
 El diseño de proyectos de inversión pública (PIP) modernos exige el uso intensivo de datos territoriales para sustentar de manera irrefutable la brecha y el planteamiento técnico. En esta línea, he desarrollado un **Dashboard interactivo en Streamlit** para la **Mancomunidad Municipal de Lima Sur** (Villa El Salvador, Villa María del Triunfo, San Juan de Miraflores, Pachacámac y Cieneguilla). El objetivo fundamental es consolidar y procesar analíticamente los registros delictivos georreferenciados de la PNP, la proyección demográfica del INEI y las capacidades logísticas-presupuestales declaradas en el RENAMU.
 
 ## Intención
 
-El corazón del aplicativo es transformar datos crudos dispersos en indicadores estructurados de **Presión Criminal, Capacidad Operativa y Brecha de Inversión**. 
+El corazón del aplicativo es transformar datos crudos dispersos en indicadores estructurados de **Presión Criminal, Capacidad Operativa y Brecha de Inversión**.
 
 > El dashboard permite simular el dimensionamiento óptimo de una plataforma interoperable unificada, ayudando al formulador a sustentar la alternativa tecnológica frente al MEF.
 
