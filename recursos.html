@@ -1,0 +1,101 @@
+---
+layout: default
+title: "Recursos para formuladores"
+description: "Herramientas, links, formatos, accesos, guías, normativa, metodologías, aplicativos del Estado y otros
+recursos para formuladores de proyectos de inversión pública."
+keywords: [Inviertepe, formulación PIP, ficha técnica, IOARR, diagnóstico territorial, banco de proyectos, inversión
+pública, Perú]
+---
+<!-- ===== RECURSOS PARA FORMULADORES ===== -->
+<section class="section section--tree" aria-labelledby="arbol-title">
+    <div class="section-head">
+        <h2 id="arbol-title">Recursos para formuladores</h2>
+        <p>Acceso directo a normativa, metodologías, aplicativos del Estado, fichas y formatos del MEF: todo en un solo
+            lugar. Todos los recursos son de acceso público y gratuito.</p>
+        <div class="resource-cats" role="group" aria-label="Filtrar por categoría">
+            <button class="rcat-btn active" data-cat="">📂 Todos</button>
+            <button class="rcat-btn" data-cat="Normatividad">⚖️ Normatividad</button>
+            <button class="rcat-btn" data-cat="Metodologías">📐 Metodologías</button>
+            <button class="rcat-btn" data-cat="Aplicativos del Estado">🖥️ Aplicativos</button>
+            <button class="rcat-btn" data-cat="Anexos y Formatos">📋 Anexos y Formatos</button>
+        </div>
+        <div class="tree-toolbar">
+            <input type="search" id="tree-search" class="tree-search"
+                placeholder="Buscar recurso… (normativa, metodología, ficha, aplicativo)" autocomplete="off"
+                aria-label="Buscar en el árbol de recursos">
+            <button type="button" id="tree-expand" class="tree-btn">Expandir todo</button>
+            <button type="button" id="tree-collapse" class="tree-btn">Colapsar todo</button>
+        </div>
+    </div>
+
+    <ul class="tree" id="resource-tree" role="tree">
+        {%- for nodo in site.data.arbol -%}
+        {%- include arbol-nodo.html nodo=nodo -%}
+        {%- endfor -%}
+    </ul>
+    <p class="tree-empty" id="tree-empty" hidden>No se encontraron recursos para tu búsqueda.</p>
+</section>
+
+<script>
+    (function () {
+        var tree = document.getElementById('resource-tree');
+        if (!tree) return;
+        var search = document.getElementById('tree-search');
+        var empty = document.getElementById('tree-empty');
+        var expandBtn = document.getElementById('tree-expand');
+        var collapseBtn = document.getElementById('tree-collapse');
+        var catBtns = document.querySelectorAll('.rcat-btn');
+
+        tree.querySelectorAll('details[open]').forEach(function (d) { d.setAttribute('data-default-open', ''); });
+
+        function setAll(open) {
+            tree.querySelectorAll('details').forEach(function (d) { d.open = open; });
+        }
+        if (expandBtn) expandBtn.addEventListener('click', function () { setAll(true); });
+        if (collapseBtn) collapseBtn.addEventListener('click', function () { setAll(false); });
+
+        // Category filter
+        catBtns.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                catBtns.forEach(function (b) { b.classList.remove('active'); });
+                btn.classList.add('active');
+                if (search) search.value = '';
+                var cat = btn.getAttribute('data-cat');
+                tree.querySelectorAll(':scope > .tree-branch').forEach(function (branch) {
+                    var labelEl = branch.querySelector(':scope > details > summary .tree-label');
+                    var match = !cat || (labelEl && labelEl.textContent.trim() === cat);
+                    branch.hidden = !match;
+                });
+                empty.hidden = true;
+            });
+        });
+
+        // Text search
+        if (search) {
+            search.addEventListener('input', function () {
+                var q = search.value.trim().toLowerCase();
+                catBtns.forEach(function (b) { b.classList.remove('active'); });
+                document.querySelector('.rcat-btn[data-cat=""]').classList.add('active');
+                if (!q) {
+                    tree.querySelectorAll('li').forEach(function (li) { li.hidden = false; });
+                    tree.querySelectorAll('details').forEach(function (d) { d.open = d.hasAttribute('data-default-open'); });
+                    empty.hidden = true;
+                    return;
+                }
+                var anyVisible = false;
+                tree.querySelectorAll('.tree-leaf').forEach(function (leaf) {
+                    var match = leaf.textContent.toLowerCase().indexOf(q) !== -1;
+                    leaf.hidden = !match;
+                    if (match) anyVisible = true;
+                });
+                tree.querySelectorAll('.tree-branch').forEach(function (branch) {
+                    var hasVisible = branch.querySelector('.tree-leaf:not([hidden])');
+                    branch.hidden = !hasVisible;
+                    var det = branch.querySelector('details');
+                    if (det) det.open = !!hasVisible;
+                });
+                empty.hidden = anyVisible;
+            });
+        }
+    })();
+</script>

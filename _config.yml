@@ -5,16 +5,16 @@
 
 # --- Identidad del sitio ---
 title: "Amaru Fernandez"
-tagline: "INVIERTE.PE"
+tagline: "INVIERTEPE.COM"
 handle: "amaru_fo"
 description: >-
-  Normativa, metodologías, aplicativos y herramientas de ciencia de datos
-  para la formulación y evaluación de proyectos de inversión pública
-  (Invierte.pe) en el Perú. Por Wilbert Amaru Fernandez Olmedo.
+    Normativa, metodologías, aplicativos y herramientas de ciencia de datos
+    para la formulación y evaluación de proyectos de inversión pública
+    (Invierte.pe) en el Perú. Por Wilbert Amaru Fernandez Olmedo.
 author:
-  name: "Wilbert Amaru Fernandez Olmedo"
-  short: "amaru_fo"
-  email: "amaruf9523@gmail.com"
+    name: "Wilbert Amaru Fernandez Olmedo"
+    short: "amaru_fo"
+    email: "amaruf9523@gmail.com"
 
 # --- URL (dominio propio) ---
 url: "https://inviertepe.com"
@@ -28,12 +28,12 @@ redirect_site: "https://inviertepe.com"
 
 # --- Redes y contacto ---
 social:
-  whatsapp: "51934657378"
-  whatsapp_display: "+51 934 657 378"
-  youtube: "https://www.youtube.com/@amaru_fo_inversiones"
-  linkedin: "https://www.linkedin.com/in/amarufo/"
-  github: "https://github.com/amarufo"
-  email: "amaruf9523@gmail.com"
+    whatsapp: "51934657378"
+    whatsapp_display: "+51 934 657 378"
+    youtube: "https://www.youtube.com/@amaru_fo_inversiones"
+    linkedin: "https://www.linkedin.com/in/amarufo/"
+    github: "https://github.com/amarufo"
+    email: "amaruf9523@gmail.com"
 
 # --- Construcción ---
 markdown: kramdown
@@ -43,43 +43,35 @@ timezone: America/Lima
 
 # --- Plugins (compatibles con GitHub Pages) ---
 plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-feed
+    - jekyll-seo-tag
+    - jekyll-sitemap
+    - jekyll-feed
 
 # --- Colecciones (herramientas dinámicas vía Markdown) ---
 collections:
-  projects:
-    output: true
-    permalink: /herramientas/:name/
+    projects:
+        output: true
+        permalink: /herramientas/:name/
 
 # --- Valores por defecto del Front Matter ---
 defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: post
-  - scope:
-      path: ""
-      type: projects
-    values:
-      layout: project
-  - scope:
-      path: ""
-    values:
-      layout: page
+    - scope:
+          path: ""
+          type: posts
+      values:
+          layout: post
+    - scope:
+          path: ""
+          type: projects
+      values:
+          layout: project
+    - scope:
+          path: ""
+      values:
+          layout: page
 
 # --- Paginación / orden ---
 show_excerpts: true
 
 # --- Exclusiones del build ---
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - GUIA_MANTENIMIENTO.md
-  - README.md
-  - vendor/
-  - vendor
-  - README.md
-  - .gitignore
+exclude: [Gemfile, Gemfile.lock, GUIA_MANTENIMIENTO.md, README.md, vendor/, .gitignore, deprecated/]

@@ -1,12 +1,13 @@
 ---
 title: "PDF Tool"
 subtitle: "Herramienta en CLI visual para trabajar con PDFs: numerar, firmar, unir, dividir, proteger, convertir a texto y generar salidas Markdown/JSON para agentes IA."
-estado: "Disponible"
-orden: 1
-image: /images/pdf_tool2.png
-app_url: "https://github.com/amarufo/amaru_fo_pdf_tool/archive/refs/heads/main.zip"
-repo_url: "https://github.com/amarufo/amaru_fo_pdf_tool"
-dataset_url: ""
+estado: ["Aplicativo", "Descargar", "Funcionando", "Libre"]
+orden: [1]
+image: images/pdf_tool/animacion.webp
+# app_url: ""
+# repo_url: "https://github.com/amarufo/amaru_fo_pdf_tool/archive/refs/heads/main.zip"
+solicitar : true
+descargar: "https://github.com/amarufo/amaru_fo_pdf_tool/archive/refs/heads/main.zip"
 stack: ["Python", "CLI", "PyMuPDF", "Tesseract OCR", "Docling", "Marker PDF"]
 description: "PDF Tool automatiza partes del trabajo documental: numerar, firmar, unir, dividir, proteger, convertir a texto y generar salidas Markdown/JSON para agentes IA. Útil para entregar expedientes técnicos."
 keywords: [PDF Tool, automatización, PDFs, CLI, Python, OCR, Markdown, JSON]

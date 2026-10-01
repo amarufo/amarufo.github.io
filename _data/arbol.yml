@@ -10,13 +10,13 @@
 - label: "Normatividad"
   type: folder
   color: "#dc2626"
-  open: false
+  open: true
   desc: "Marco legal de la Programación Multianual y Gestión de Inversiones"
   children:
       - label: "Normatividad general del Invierte.pe"
         type: folder
         color: "#b91c1c"
-        open: false
+        open: true
         desc: "Normatividad general del Invierte.pe y marco legal de la inversión pública"
         children:
             - label: "Decreto Legislativo N° 1252 — Crea el Invierte.pe"
@@ -28,7 +28,7 @@
       - label: "Normatividad OXI"
         type: folder
         color: "#b91c1c"
-        open: false
+        open: true
         desc: "Normatividad para la formulación mediante OXI"
         children:
             - label: "Decreto Supremo n.° 038-2026-EF"
@@ -46,13 +46,13 @@
 - label: "Metodologías"
   type: folder
   color: "#ea580c"
-  open: false
+  open: true
   desc: "Guías y lineamientos para la formulación y evaluación de inversiones"
   children:
       - label: "Generales"
         type: folder
         color: "#ea580c"
-        open: false
+        open: true
         desc: "Metodologías y recursos generales para la formulación y evaluación de inversiones públicas"
         children:
             - label: "PIP - Guia general"
@@ -79,7 +79,7 @@
       - label: "Educación"
         type: folder
         color: "#ea580c"
-        open: false
+        open: true
         desc: "Metodologías y recursos para proyectos Educativos"
         children:
             - label: "OPMI Minedu"
@@ -89,7 +89,7 @@
       - label: "Seguridad Ciudadana"
         type: folder
         color: "#ea580c"
-        open: false
+        open: true
         desc: "Metodologías y recursos para proyectos de seguridad ciudadana"
         children:
             - label: "Información relacionada al FESC"
@@ -107,7 +107,7 @@
 - label: "Aplicativos del Estado"
   type: folder
   color: "#0891b2"
-  open: false
+  open: true
   desc: "Plataformas oficiales del ciclo de inversión pública"
   children:
       - label: "🔐 Banco de Inversiones"
@@ -142,10 +142,12 @@
   type: folder
   color: "#7c3aed"
   desc: "Principales formatos y anexos oficiales del Invierte.pe"
+  open: true
   children:
       - label: "Anexos"
         type: folder
         color: "#7c3aed"
+        open: true
         children:
             - label: "Anexo n.° 2: Clasificador de Responsabilidad Funcional"
               type: form
@@ -162,6 +164,7 @@
       - label: "Formatos"
         type: folder
         color: "#7c3aed"
+        open: true
         children:
             - label: "Formato n.° 5-A: Registro de idea de Proyecto o Programa de Inversión"
               type: form

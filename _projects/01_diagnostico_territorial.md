@@ -1,12 +1,13 @@
 ---
 title: "Automatización: diagnóstico territorial para PIPs"
 subtitle: "Aplicación beta que automatiza el diagnóstico territorial para proyectos de inversión pública en Perú."
-estado: "Disponible"
-orden: 1
-image: /images/app_diagnostico_territorial.png
+estado: ["Aplicativo", "Descargar", "Funcionando", "Libre"]
+orden: [2]
+image: images/diag_territorial/animacion.webp
 app_url: "https://amarufo-diagterritorial.streamlit.app/"
-repo_url: ""
-dataset_url: ""
+# repo_url: ""
+# dataset_url: ""
+solicitar: true
 stack: ["Python", "Streamlit", "Geopandas", "Folium", "Matplotlib", "Pandas", "NumPy"]
 description: "Aplicación que, dada la ubicación de un proyecto de inversión pública (PIP) en Perú, ejecuta un pipeline georreferenciado y entrega un documento Word listo para integrar en el expediente técnico, con mapas, tablas e indicadores producidos por más de 50 motores de análisis territorial y de riesgo."
 keywords: [INVIERTEPE, Invierte IA, automatización, preinversión, Streamlit, Python, riesgos, Invierte.pe, territorial, MEF, IOARR]
