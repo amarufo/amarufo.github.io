@@ -17,6 +17,8 @@
 #   url: "/project/"
 - title: "Recursos"
   url: "/recursos/"
+- title: "Data Libre"
+  url: "/data/"  
 - title: "Portafolio"
   url: "/herramientas/"
 # - title: "Portafolio"
