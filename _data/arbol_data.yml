@@ -1,25 +1,35 @@
-- label: "Generales"
-  type: folder
-  color: "#991b1b"
-  open: true
-  desc: "Datos útiles para cualquier tipo de proyecto"
-  children:
-    - label: "Información general sobre distritos, provincias y departamentos"
-      type: data
-      desc: "Act Oct26. Límites administrativos de departamentos, provincias y distritos del Perú, incluyendo capitales, áreas y otros datos administrativos. Contiene 1,891 distritos."
-      url: "https://github.com/amarufo/data_inviertepe/releases/download/descriptivos_distritos/descriptivos_distritos.zip"
+  - label: "Generales"
+    clave: "generales"
+    type: folder
+    color: "#991b1b"
+    open: true
+    desc: "Datos útiles para cualquier tipo de proyecto"
+    children:
+      - label: "Información general sobre distritos, provincias y departamentos"
+        clave: "descriptivos_distritos"
+        type: data
+        desc: "Act Oct26. Límites administrativos de departamentos, provincias y distritos del Perú, incluyendo capitales, áreas y otros datos administrativos. Contiene 1,891 distritos."
+        url: "https://github.com/amarufo/data_inviertepe/releases/download/descriptivos_distritos/descriptivos_distritos.zip"
 
-- label: "Seguridad Ciudadana"
-  type: folder
-  color: "#000dff"
-  open: true
-  desc: "Relacionados hechos delictivos, gestión del delito, unidades de Seguridad Ciudadana en municipalidades, etc."
-  children:
-    - label: "Registro de hechos delictivos en SIDPOL"
-      type: data
-      desc: "Act Oct26. Registro de hechos delictivos reportados en el sistema SIDPOL - MININTER. Catalogado de lugar de registro, lugar del hecho, comisaría, coordenadas, etc."
-      url: "https://github.com/amarufo/data_inviertepe/releases/download/sidpol_delitos_total/sidpol_delitos_total.zip"
-    - label: "Datos sobre seguridad ciudadana por Municipalidad - RENAMU 2026"
-      type: data
-      desc: "Act Oct26. Información registrada por la Municipalidades sobre la seguridad ciudadana en su administración: estado de equipamiento, cámaras, personal, hechos delictivos, programas, etc."
-      url: "https://github.com/amarufo/data_inviertepe/releases/download/renamu_seguridad_ciudadana/renamu_seguridad_ciudadana.zip"
+      - label: "Centros poblados del Perú"
+        clave: "centros_poblados"
+        type: data
+        desc: "Act Oct26. Listado de centros poblados con ubicación administrativa y coordenadas."
+        url: "https://github.com/amarufo/data_inviertepe/releases/download/centros_poblados/centros_poblados.zip"
+  - label: "Seguridad Ciudadana"
+    clave: "seguridad_ciudadana"
+    type: folder
+    color: "#000dff"
+    open: true
+    desc: "Relacionados hechos delictivos, gestión del delito, unidades de Seguridad Ciudadana en municipalidades, etc."
+    children:
+      - label: "Registro de hechos delictivos en SIDPOL"
+        clave: "sidpol_delitos_total"
+        type: data
+        desc: "Act Oct26. Registro de hechos delictivos reportados en el sistema SIDPOL - MININTER. Catalogado de lugar de registro, lugar del hecho, comisaría, coordenadas, etc."
+        url: "https://github.com/amarufo/data_inviertepe/releases/download/sidpol_delitos_total/sidpol_delitos_total.zip"
+      - label: "Datos sobre seguridad ciudadana por Municipalidad - RENAMU 2026"
+        clave: "renamu_seguridad_ciudadana"
+        type: data
+        desc: "Act Oct26. Información registrada por la Municipalidades sobre la seguridad ciudadana en su administración: estado de equipamiento, cámaras, personal, hechos delictivos, programas, etc."
+        url: "https://github.com/amarufo/data_inviertepe/releases/download/renamu_seguridad_ciudadana/renamu_seguridad_ciudadana.zip"
