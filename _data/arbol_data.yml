@@ -16,6 +16,11 @@
         type: data
         desc: "Act Oct26. Listado de centros poblados con ubicación administrativa y coordenadas."
         url: "https://github.com/amarufo/data_inviertepe/releases/download/centros_poblados/centros_poblados.zip"
+      - label: "Capitales de departamento"
+        clave: "capitales_departamento"
+        type: data
+        desc: "Act Oct26. Listado de capitales con ubicación administrativa y coordenadas."
+        url: "https://github.com/amarufo/data_inviertepe/releases/download/capitales_departamento/capitales_departamento.zip"
   - label: "Seguridad Ciudadana"
     clave: "seguridad_ciudadana"
     type: folder
