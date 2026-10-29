@@ -27,17 +27,16 @@
     open: true
     desc: "Datos territoriales sobre proyecciones de riesgos por eventos naturales y humanos"
     children:
-      - label: ""
-        clave: ""
-        type:
-        desc: ""
-        url: ""
-
       - label: "Riesgos territoriales (movimientos en masa) ante el Fenómeno del niño"
         clave: "riesgo_mmasa"
         type: data
         desc: "Act Oct26. Posible afección que pueden sufrir elementos expuestos ante movimientos en masa en contextos de Fenómeno del Niño (Informe Técnico N° 69-2026/SENAMHI-DMA-SPC). CENEPRED"
         url: "https://github.com/amarufo/data_inviertepe/releases/download/riesgo_mmasa/riesgo_mmasa.zip"
+      - label: "Riesgo ante inundaciones por distritos ante el Fenómeno del niño"
+        clave: "riesgo_inundacion"
+        type: data
+        desc: "Act Oct26. Posible afección que pueden sufrir elementos expuestos ante inundaciones en contextos de Fenómeno del Niño (Informe Técnico N° 69-2026/SENAMHI-DMA-SPC). CENEPRED"
+        url: "https://github.com/amarufo/data_inviertepe/releases/download/riesgo_inundacion/riesgo_inundacion.zip"
   - label: "Seguridad Ciudadana"
     clave: "seguridad_ciudadana"
     type: folder
