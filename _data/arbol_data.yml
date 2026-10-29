@@ -42,6 +42,11 @@
         type: data
         desc: "Act Oct26. Posible afección que pueden sufrir elementos expuestos ante sismo. CENEPRED, 22-05-2025"
         url: "https://github.com/amarufo/data_inviertepe/releases/download/riesgo_sismo/riesgo_sismo.zip"
+      - label: "Riesgo ante tsunamis a nivel distrital"
+        clave: "riesgo_tsunami"
+        type: data
+        desc: "Act Oct26. Posible afección que pueden sufrir elementos expuestos ante tsunamis. CENEPRED, 22-05-2025"
+        url: "https://github.com/amarufo/data_inviertepe/releases/download/riesgo_tsunami/riesgo_tsunami.zip"
   - label: "Seguridad Ciudadana"
     clave: "seguridad_ciudadana"
     type: folder
