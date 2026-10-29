@@ -37,6 +37,11 @@
         type: data
         desc: "Act Oct26. Posible afección que pueden sufrir elementos expuestos ante inundaciones en contextos de Fenómeno del Niño (Informe Técnico N° 69-2026/SENAMHI-DMA-SPC). CENEPRED"
         url: "https://github.com/amarufo/data_inviertepe/releases/download/riesgo_inundacion/riesgo_inundacion.zip"
+      - label: "Riesgo ante sismos a nivel distrital"
+        clave: "riesgo_sismo"
+        type: data
+        desc: "Act Oct26. Posible afección que pueden sufrir elementos expuestos ante sismo. CENEPRED, 22-05-2025"
+        url: "https://github.com/amarufo/data_inviertepe/releases/download/riesgo_sismo/riesgo_sismo.zip"
   - label: "Seguridad Ciudadana"
     clave: "seguridad_ciudadana"
     type: folder
