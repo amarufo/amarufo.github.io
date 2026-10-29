@@ -5,12 +5,11 @@
     open: true
     desc: "Datos útiles para cualquier tipo de proyecto"
     children:
-      - label: "Información general sobre distritos, provincias y departamentos"
+      - label: "Límites administrativos del Perú"
         clave: "descriptivos_distritos"
         type: data
-        desc: "Act Oct26. Límites administrativos de departamentos, provincias y distritos del Perú, incluyendo capitales, áreas y otros datos administrativos. Contiene 1,891 distritos."
+        desc: "Act Oct26. Límites administrativos de departamentos, provincias y distritos del Perú."
         url: "https://github.com/amarufo/data_inviertepe/releases/download/descriptivos_distritos/descriptivos_distritos.zip"
-
       - label: "Centros poblados del Perú"
         clave: "centros_poblados"
         type: data
@@ -20,7 +19,7 @@
         clave: "capitales_departamento"
         type: data
         desc: "Act Oct26. Listado de capitales con ubicación administrativa y coordenadas."
-        url: "https://github.com/amarufo/data_inviertepe/releases/download/capitales_departamento/capitales_departamento.zip"
+        url: "https://github.com/amarufo/data_inviertepe/releases/download/capilatales_departamento/capitales_departamento.zip"
   - label: "Seguridad Ciudadana"
     clave: "seguridad_ciudadana"
     type: folder
