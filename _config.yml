@@ -51,7 +51,7 @@ plugins:
 collections:
     projects:
         output: true
-        permalink: /herramientas/:name/
+        permalink: /projects/:name/
 
 # --- Valores por defecto del Front Matter ---
 defaults:
@@ -74,4 +74,13 @@ defaults:
 show_excerpts: true
 
 # --- Exclusiones del build ---
-exclude: [Gemfile, Gemfile.lock, GUIA_MANTENIMIENTO.md, README.md, vendor/, .gitignore, deprecated/]
+exclude:
+    [
+        Gemfile,
+        Gemfile.lock,
+        GUIA_MANTENIMIENTO.md,
+        README.md,
+        vendor/,
+        .gitignore,
+        deprecated/,
+    ]

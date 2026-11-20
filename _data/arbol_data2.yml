@@ -1,0 +1,37 @@
+- label: "Territorio"
+  clave: "territorio"
+  type: folder
+  color: "#127800"
+  open: false
+  desc: "Información geográfica del Perú."
+  children:
+      - label: "Límites administrativos"
+        clave: "descriptivos_distritos"
+        fecha: 2025-07-22
+        type: data
+        desc: "Visualización estadística de indicadores territoriales."
+        imagen: assets/images/mama.png
+        analysis_url: "/assets/analyses/territorio/boxplot.html"
+        etiqueta: ["Aplicativo", "Descargar", "Funcionando", "Libre"]
+        url_descarga: "https://github.com/..."
+        solicitar: false
+        url_ref: true
+
+- label: "Territorio"
+  clave: "territorio"
+  type: folder
+  color: "rgb(10, 65, 247)"
+  open: false
+  desc: "Información geográfica del Perú."
+  children:
+      - label: "Límites administrativos"
+        clave: "descriptivos_distritos"
+        fecha: 2025-07-22
+        type: data
+        desc: "Visualización estadística de indicadores territoriales."
+        imagen: assets/images/mama.png
+        analysis_url: "/assets/analyses/territorio/boxplot.html"
+        etiqueta: ["Aplicativo", "Descargar", "Funcionando", "Libre"]
+        url_descarga: "https://github.com/..."
+        solicitar: false
+        url_ref: true

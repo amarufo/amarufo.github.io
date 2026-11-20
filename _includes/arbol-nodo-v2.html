@@ -1,0 +1,49 @@
+{%- comment -%}
+Nodo recursivo del árbol de recursos.
+Parámetro: nodo (objeto del _data/arbol.yml)
+{%- endcomment -%}
+
+{%- assign n = include.nodo -%}
+
+{%- if n.children -%}
+
+<li class="tree-branch" {% if n.color %}style="--cat: {{ n.color }}" {% endif %}>
+
+    <details{% if n.open %} open{% endif %}>
+
+        <!-- Encabezado de carpeta -->
+        <summary class="tree-row tree-folder">
+            <span class="tree-twist" aria-hidden="true"></span>
+            <span class="tree-ico ico-folder" aria-hidden="true">📁</span>
+
+            <span class="tree-text">
+                <span class="tree-label">{{ n.label | escape }}</span>
+                {% if n.desc %}
+                <span class="tree-desc">{{ n.desc | escape }}</span>
+                {% endif %}
+            </span>
+        </summary>
+
+        <!-- Nodos hijos -->
+        <div class="grid grid-3">
+            {% for hijo in n.children %}
+            {% include card-data.html
+            color = n.color
+            url = hijo.url
+            etiqueta = hijo.etiqueta
+            label = hijo.label
+            fecha = hijo.fecha
+            analysis_url = hijo.analysis_url
+            descargar = hijo.descargar
+            solicitar = hijo.solicitar
+            url_descarga = hijo.url_descarga
+            imagen = hijo.imagen
+            desc = hijo.desc%}
+            {% endfor %}
+        </div>
+
+        </details>
+</li>
+
+
+{%- endif -%}

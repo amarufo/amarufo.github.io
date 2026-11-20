@@ -1,10 +1,10 @@
-  - label: "Generales"
-    clave: "generales"
-    type: folder
-    color: "#991b1b"
-    open: true
-    desc: "Datos útiles para cualquier tipo de proyecto"
-    children:
+- label: "Territorio"
+  clave: "territorio"
+  type: folder
+  color: "#127800"
+  open: false
+  desc: "Distritos, provincias, centros poblados, coordenadas"
+  children:
       - label: "Límites administrativos del Perú"
         clave: "descriptivos_distritos"
         type: data
@@ -20,13 +20,66 @@
         type: data
         desc: "Act Oct26. Listado de capitales con ubicación administrativa y coordenadas."
         url: "https://github.com/amarufo/data_inviertepe/releases/download/capilatales_departamento/capitales_departamento.zip"
-  - label: "Riesgos"
-    clave: "riesgos"
-    type: folder
-    color: "#991b1b"
-    open: true
-    desc: "Datos territoriales sobre proyecciones de riesgos por eventos naturales y humanos"
-    children:
+
+- label: "Población"
+  clave: "poblacion"
+  type: folder
+  color: "#991b1b"
+  open: false
+  desc: "Censos, población, indicadores demográficos"
+  children:
+      - label:
+        clave:
+        type:
+        desc:
+        url:
+
+# - label: "Servicios Públicos"
+#   clave: "servicios_publicos"
+#   type: folder
+#   color: "#78038c"
+#   open: false
+#   desc: "Educación, salud, saneamiento"
+#   children:
+#       - label:
+#         clave:
+#         type:
+#         desc:
+#         url:
+
+# - label: "Economía"
+#   clave: "territorio"
+#   type: folder
+#   color: "rgb(0, 162, 165)"
+#   open: false
+#   desc: "Pobreza, empleo, actividades económicas"
+#   children:
+#       - label:
+#         clave:
+#         type:
+#         desc:
+#         url:
+
+# - label: "Infraestructura"
+#   clave: "territorio"
+#   type: folder
+#   color: "#a14600"
+#   open: false
+#   desc: "Equipamiento, establecimientos, redes"
+#   children:
+#       - label:
+#         clave:
+#         type:
+#         desc:
+#         url:
+
+- label: "Riesgos"
+  clave: "riesgos"
+  type: folder
+  color: "#ff0000"
+  open: false
+  desc: "Inundaciones, sismos, movimientos en masa, entre otros"
+  children:
       - label: "Riesgos territoriales (movimientos en masa) ante el Fenómeno del niño"
         clave: "riesgo_mmasa"
         type: data
@@ -47,13 +100,14 @@
         type: data
         desc: "Act Oct26. Posible afección que pueden sufrir elementos expuestos ante tsunamis. CENEPRED, 22-05-2025"
         url: "https://github.com/amarufo/data_inviertepe/releases/download/riesgo_tsunami/riesgo_tsunami.zip"
-  - label: "Seguridad Ciudadana"
-    clave: "seguridad_ciudadana"
-    type: folder
-    color: "#000dff"
-    open: true
-    desc: "Relacionados hechos delictivos, gestión del delito, unidades de Seguridad Ciudadana en municipalidades, etc."
-    children:
+
+- label: "Seguridad Ciudadana"
+  clave: "seguridad_ciudadana"
+  type: folder
+  color: "#000dff"
+  open: false
+  desc: "Relacionados hechos delictivos, gestión del delito, unidades de Seguridad Ciudadana en municipalidades, etc."
+  children:
       - label: "Registro de hechos delictivos en SIDPOL"
         clave: "sidpol_delitos_total"
         type: data

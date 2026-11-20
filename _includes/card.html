@@ -6,9 +6,9 @@
     {%- endif %}
     <div class="card-body">
         {%- if include.etiqueta %}
-            <div>
-                {%- for etiqueta in include.etiqueta %}<span class="card-tag">{{ etiqueta }}</span>{%- endfor %}
-            </div>
+        <div>
+            {%- for etiqueta in include.etiqueta %}<span class="card-tag">{{ etiqueta }}</span>{%- endfor %}
+        </div>
         {%- endif %}
         <h3 class="card-title"><a href="{{ include.url | relative_url }}">{{ include.titulo }}</a></h3>
         {%- if include.fecha %}<time class="card-date">{{ include.fecha | date: "%d %b %Y" }}</time>{%- endif %}

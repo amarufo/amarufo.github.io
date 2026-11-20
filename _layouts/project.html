@@ -15,17 +15,16 @@ layout: default
         <div class="project-actions">
             {%- if page.app_url %}<a href="{{ page.app_url }}" class="btn btn-primary" rel="noopener">Ver app en vivo
                 ↗</a>{%- endif %}
-            {%- if page.descargar %}<a href="{{ page.descargar }}" class="btn btn-primary" rel="noopener">Descargar ↓</a>{%- endif %}
+            {%- if page.descargar %}<a href="{{ page.descargar }}" class="btn btn-primary" rel="noopener">Descargar
+                ↓</a>{%- endif %}
             {%- if page.repo_url %}<a href="{{ page.repo_url }}" class="btn btn-primary" rel="noopener">Código
                 fuente</a>{%- endif %}
             {%- if page.solicitar %}
-                <a href="https://wa.me/{{ site.social.whatsapp }}?text=Hola%20Amaru%2C%20vi%20tu%20sitio%20inviertepe.com%20y%20quiero%20consultar%20sobre..."
-                    class="btn btn-wa"
-                    rel="noopener"
-                    target="_blank">
-                    💬 Escríbeme por WhatsApp
-                </a>      
-            {%- endif %}                
+            <a href="https://wa.me/{{ site.social.whatsapp }}?text=Hola%20Amaru%2C%20vi%20tu%20sitio%20inviertepe.com%20y%20quiero%20consultar%20sobre..."
+                class="btn btn-wa" rel="noopener" target="_blank">
+                💬 Escríbeme por WhatsApp
+            </a>
+            {%- endif %}
         </div>
 
         {%- if page.stack %}
@@ -36,6 +35,24 @@ layout: default
 
         <div class="post-content prose">
             {{ content }}
+            {%- if page.analysis_url %}
+            <section class="post-analysis">
+
+                <div class="analysis-header">
+                    <h2>Análisis interactivo</h2>
+                    <a href="{{ page.analysis_url | relative_url }}" target="_blank" rel="noopener">
+                        Abrir en pantalla completa ↗
+                    </a>
+                </div>
+
+                <div class="analysis-frame">
+                    <iframe src="{{ page.analysis_url | relative_url }}" title="{{ page.title | escape }}"
+                        loading="lazy" style="height: 500px; width: 100%;">
+                    </iframe>
+                </div>
+
+            </section>
+            {%- endif %}
         </div>
 
         <a href="{{ '/herramientas/' | relative_url }}" class="back-link">← Volver al portafolio</a>

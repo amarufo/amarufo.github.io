@@ -1,0 +1,26 @@
+<article class="card" ,
+    style="border: 1x; border-color: {{ include.color }}; background: color-mix(in srgb, {{ include.color }} 12%, white);">
+    <div class="card-body">
+        <h3 class="card-title" style="font-size: 1rem;color: {{include.color}};">{{ include.label }}</a></h3>
+        {%- if include.fecha %}<time class="card-date" style="color: {{include.color}}">{{ include.fecha | date: "%d %b
+            %Y" }}</time>{%- endif %}
+        <p class="card-text" style="font-size: 0.85rem;">{{ include.desc }}</p>
+    </div>
+
+    {%- if include.imagen %}
+    <a class="card-media">
+        <img src="{{ include.imagen | relative_url }}" alt="{{ include.titulo }}" loading="lazy"
+            style="height: 400px;width: auto;;">
+    </a>
+    {%- endif %}
+
+    <div class="project-actions">
+        {%- if include.url_descarga %}<a href="{{ include.descargar }}" class="btn btn-primary" rel="noopener">Descargar
+            gratis ↓</a>{%- endif %}
+        {%- if include.solicitar %}
+        <a href="https://wa.me/{{ site.social.whatsapp }}?text=Hola%20Amaru%2C%20vi%20tu%20sitio%20inviertepe.com%20y%20quiero%20consultar%20sobre..."
+            class="btn btn-wa" rel="noopener" target="_blank">
+            💬 Solicitar por WhatsApp
+        </a>{%- endif %}
+    </div>
+</article>
