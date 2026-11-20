@@ -9,8 +9,8 @@ const PROYECTOS = [
         "lng": -80.45,
         "cui": "2740191",
         "monto": 13986442.58,
-        "ejecutor": "DEPERU HUB EIRL",
-        "supervisor": "José Luis Díaz Lazo",
+        "ejecutor": "COSUDECO S.A.C.",
+        "supervisor": "Consorcio Supervisor Díaz (José Luis Díaz Lazo y Jean Pierre Díaz Ramos)",
         "estado": "Convenio suscrito",
         "tipo": "Defensas ribereñas y prevención"
     },
@@ -24,8 +24,8 @@ const PROYECTOS = [
         "lng": -80.45,
         "cui": "2740022",
         "monto": 4367418.18,
-        "ejecutor": "COSUDECO",
-        "supervisor": "José Jean Pierre Díaz Ramos",
+        "ejecutor": "DEPERU HUB E.I.R.L.",
+        "supervisor": "José Luis Díaz Lazo",
         "estado": "Convenio suscrito",
         "tipo": "Defensas ribereñas y prevención"
     },
@@ -39,7 +39,7 @@ const PROYECTOS = [
         "lng": -75.6,
         "cui": "002-MSC-2026",
         "monto": 2017415.58,
-        "ejecutor": "COSUDECO",
+        "ejecutor": "COSUDECO S.A.C.",
         "supervisor": "",
         "estado": "Convenio suscrito",
         "tipo": "Defensas ribereñas y prevención"
@@ -55,7 +55,7 @@ const PROYECTOS = [
         "cui": "SIN-CUI-chochope",
         "monto": 1512769.24,
         "ejecutor": "DEPERU HUB EIRL",
-        "supervisor": "Consorcio Supervisor Díaz Ingenieros (Jean Pierre Díaz Ramos y José Díaz Lazo)",
+        "supervisor": "Consorcio Supervisor Díaz Ingenieros (Jean Pierre Díaz Ramos y José Luis Díaz Lazo)",
         "estado": "Convenio suscrito",
         "tipo": "Defensas ribereñas y prevención"
     },
@@ -219,7 +219,7 @@ const PROYECTOS = [
         "lng": -75.6,
         "cui": "001-MDH-2026",
         "monto": 764919.95,
-        "ejecutor": "Consorcio Hualla Grande 01 ( Cosudeco S.A.C & Deperu Hub E. I. R. L)",
+        "ejecutor": "Consorcio Hualla Grande 01 ( DEPERU HUB E.I.R.L.  & DEPERU HUB Construcción S.A.C. & DL Group S.A.C.)",
         "supervisor": "",
         "estado": "Invitado",
         "tipo": "Defensas ribereñas y prevención"
@@ -234,7 +234,7 @@ const PROYECTOS = [
         "lng": -75.6,
         "cui": "002-MDH-2026",
         "monto": 2717821.69,
-        "ejecutor": "Consorcio Hualla Grande dos ( Cosudeco S.A.C & Deperu Hub E. I. R. L)",
+        "ejecutor": "Consorcio Hualla Grande Dos\nDEPERU HUB E.I.R.L. & DEPERU HUB Construcción S.A.C. & DL Group S.A.C.",
         "supervisor": "",
         "estado": "Invitado",
         "tipo": "Defensas ribereñas y prevención"
@@ -249,7 +249,7 @@ const PROYECTOS = [
         "lng": -75.6,
         "cui": "003-MDH-2026",
         "monto": 1219215.79,
-        "ejecutor": "Consorcio Humay ( Cosudeco S.A.C & Deperu Hub E. I. R. L)",
+        "ejecutor": "Consorcio Humay\nDEPERU HUB E.I.R.L. & DEPERU HUB Construcción S.A.C. & DL Group S.A.C.",
         "supervisor": "",
         "estado": "Invitado",
         "tipo": "Defensas ribereñas y prevención"
@@ -264,7 +264,7 @@ const PROYECTOS = [
         "lng": -75.6,
         "cui": "004-MDH-2026",
         "monto": 1547682.41,
-        "ejecutor": "Consorcio Pantayco ( Cosudeco S.A.C & Deperu Hub E. I. R. L)",
+        "ejecutor": "Consorcio Pantayco\nDEPERU HUB E.I.R.L. & DEPERU HUB Construcción S.A.C. & DL Group S.A.C.",
         "supervisor": "",
         "estado": "Invitado",
         "tipo": "Defensas ribereñas y prevención"
@@ -280,8 +280,8 @@ const PROYECTOS = [
         "cui": "",
         "monto": 7934949.56,
         "ejecutor": "DEPERU HUB EIRL",
-        "supervisor": "CONSORCIO SUPERVISOR LAZO",
-        "estado": "Invitado",
+        "supervisor": "Consorcio Supervisor Mochumi (Jean Pierre Díaz Ramos y José Luis Díaz Lazo)",
+        "estado": "Buena pro",
         "tipo": "Vial y transporte"
     },
     {
@@ -294,7 +294,7 @@ const PROYECTOS = [
         "lng": -76.6,
         "cui": "",
         "monto": 1807596.0,
-        "ejecutor": "Consorcio Zanca ( Deperu Hub E. I. R. L, Deperu Hub Construcción & DL Group SAC)",
+        "ejecutor": "DEPERU HUB E.I.R.L.",
         "supervisor": "",
         "estado": "Buena pro",
         "tipo": "Defensas ribereñas y prevención"
@@ -309,7 +309,7 @@ const PROYECTOS = [
         "lng": -76.6,
         "cui": "",
         "monto": 2008166.34,
-        "ejecutor": "Consorcio Oeste Puente ( Deperu Hub E. I. R. L, Deperu Hub Construcción & DL Group SAC)",
+        "ejecutor": "DEPERU HUB E.I.R.L.",
         "supervisor": "",
         "estado": "Buena pro",
         "tipo": "Defensas ribereñas y prevención"
@@ -324,7 +324,7 @@ const PROYECTOS = [
         "lng": -76.6,
         "cui": "",
         "monto": 1664984.62,
-        "ejecutor": "Consorcio Tramo I ( Deperu Hub E. I. R. L, Deperu Hub Construcción & DL Group SAC)",
+        "ejecutor": "DEPERU HUB E.I.R.L.",
         "supervisor": "",
         "estado": "Buena pro",
         "tipo": "Defensas ribereñas y prevención"
