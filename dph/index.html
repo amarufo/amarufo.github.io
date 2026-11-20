@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEPERU HUB CONSTRUCCIÓN — Cartera de Proyectos OXI</title>
+    <link rel="icon" type="image/png" href="images/icono_dph.png">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <style>
+        :root {
+            --navy: #0b3d6d;
+            --cyan: #0187b9;
+            --gray: #9a9a9a;
+            --dark: #4B4F58;
+            --light: #F5F5F5;
+            --white: #FFFFFF;
+            --yellow: #ffde59;
+            --black: #424242;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, Roboto, Arial, sans-serif;
+            color: var(--black);
+            background: var(--light);
+            line-height: 1.5
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: var(--navy);
+            line-height: 1.2
+        }
+
+        .container {
+            max-width: 1220px;
+            margin: 0 auto;
+            padding: 0 22px
+        }
+
+        section {
+            padding: 64px 0
+        }
+
+        /* ---------- NAV ---------- */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1200;
+            background: rgba(11, 61, 109, .97);
+            backdrop-filter: blur(6px);
+            box-shadow: 0 2px 14px rgba(0, 0, 0, .25)
+        }
+
+        nav .container {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+            height: 62px
+        }
+
+        nav img {
+            height: 40px;
+            width: auto;
+            background: #fff;
+            border-radius: 6px;
+            padding: 2px 6px
+        }
+
+        nav .brand {
+            color: #fff;
+            font-weight: 700;
+            font-size: .95rem;
+            letter-spacing: .5px;
+            white-space: nowrap
+        }
+
+        nav .links {
+            margin-left: auto;
+            display: flex;
+            gap: 4px;
+            flex-wrap: wrap
+        }
+
+        nav a {
+            color: #dce8f2;
+            text-decoration: none;
+            font-size: .82rem;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: .2s;
+            white-space: nowrap
+        }
+
+        nav a:hover {
+            background: var(--cyan);
+            color: #fff
+        }
+
+        /* ---------- HERO ---------- */
+        .hero {
+            background: linear-gradient(135deg, #0b3d6d 0%, #0e4f8a 55%, #0187b9 100%);
+            color: #fff;
+            padding: 74px 0 0;
+            position: relative;
+            overflow: hidden
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            right: -120px;
+            top: -120px;
+            width: 420px;
+            height: 420px;
+            border-radius: 50%;
+            background: rgba(255, 222, 89, .12)
+        }
+
+        .hero .kicker {
+            color: var(--yellow);
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            font-size: .78rem
+        }
+
+        .hero h1 {
+            color: #fff;
+            font-size: 2.5rem;
+            margin: 10px 0 14px;
+            max-width: 820px
+        }
+
+        .hero p.sub {
+            max-width: 760px;
+            color: #d7e6f2;
+            font-size: 1.05rem
+        }
+
+        .hero .meta {
+            margin-top: 16px;
+            font-size: .8rem;
+            color: #a9c6dd
+        }
+
+        .kpi-strip {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+            gap: 16px;
+            margin-top: 38px;
+            transform: translateY(34px);
+            position: relative;
+            z-index: 5
+        }
+
+        .kpi {
+            background: #fff;
+            border-radius: 14px;
+            padding: 20px 22px;
+            box-shadow: 0 10px 30px rgba(11, 61, 109, .16);
+            border-top: 4px solid var(--cyan)
+        }
+
+        .kpi.gold {
+            border-top-color: var(--yellow)
+        }
+
+        .kpi .num {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--navy)
+        }
+
+        .kpi .lbl {
+            font-size: .78rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--dark);
+            margin-top: 4px
+        }
+
+        .kpi .sub2 {
+            font-size: .72rem;
+            color: var(--gray);
+            margin-top: 2px
+        }
+
+        /* ---------- SECTION HEADERS ---------- */
+        .sec-head {
+            margin-bottom: 34px
+        }
+
+        .sec-head .tag {
+            display: inline-block;
+            background: var(--navy);
+            color: var(--yellow);
+            font-size: .72rem;
+            font-weight: 700;
+            letter-spacing: 1.6px;
+            padding: 5px 14px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            margin-bottom: 12px
+        }
+
+        .sec-head h2 {
+            font-size: 1.9rem
+        }
+
+        .sec-head p {
+            color: var(--dark);
+            max-width: 820px;
+            margin-top: 8px
+        }
+
+        /* ---------- OXI FLOW ---------- */
+        .flow {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 14px;
+            counter-reset: step
+        }
+
+        .step {
+            background: #fff;
+            border-radius: 12px;
+            padding: 18px 14px;
+            text-align: center;
+            box-shadow: 0 4px 14px rgba(11, 61, 109, .08);
+            position: relative;
+            border-bottom: 3px solid var(--cyan);
+            transition: transform .2s
+        }
+
+        .step:hover {
+            transform: translateY(-5px)
+        }
+
+        .step .n {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: var(--navy);
+            color: var(--yellow);
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            font-size: 1rem
+        }
+
+        .step h4 {
+            font-size: .86rem;
+            color: var(--navy);
+            margin-bottom: 6px
+        }
+
+        .step p {
+            font-size: .72rem;
+            color: var(--dark)
+        }
+
+        .oxi-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 28px;
+            margin-top: 34px
+        }
+
+        @media(max-width:900px) {
+            .oxi-grid {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .oxi-note {
+            background: #fff;
+            border-left: 5px solid var(--yellow);
+            border-radius: 10px;
+            padding: 22px 24px;
+            box-shadow: 0 4px 14px rgba(11, 61, 109, .08)
+        }
+
+        .oxi-note h3 {
+            font-size: 1.05rem;
+            margin-bottom: 10px
+        }
+
+        .oxi-note ul {
+            margin-left: 18px;
+            font-size: .88rem;
+            color: var(--dark)
+        }
+
+        .oxi-note li {
+            margin-bottom: 8px
+        }
+
+        .cprl-card {
+            background: linear-gradient(150deg, #0b3d6d, #0187b9);
+            color: #fff;
+            border-radius: 14px;
+            padding: 26px
+        }
+
+        .cprl-card h3 {
+            color: var(--yellow);
+            margin-bottom: 12px;
+            font-size: 1.05rem
+        }
+
+        .cprl-card p,
+        .cprl-card li {
+            font-size: .86rem;
+            color: #e3eef7
+        }
+
+        .cprl-card ul {
+            margin-left: 18px
+        }
+
+        .cprl-card li {
+            margin-bottom: 8px
+        }
+
+        .cprl-card .big {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #fff
+        }
+
+        /* ---------- ACTIVE PROJECTS ---------- */
+        .proj-card {
+            display: grid;
+            grid-template-columns: 340px 1fr;
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 26px rgba(11, 61, 109, .12);
+            margin-bottom: 30px
+        }
+
+        @media(max-width:860px) {
+            .proj-card {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .proj-card .ph {
+            position: relative;
+            min-height: 240px
+        }
+
+        .proj-card .ph img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block
+        }
+
+        .proj-card .ph .badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: var(--yellow);
+            color: var(--navy);
+            font-weight: 800;
+            font-size: .7rem;
+            letter-spacing: 1px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            text-transform: uppercase
+        }
+
+        .proj-card .bd {
+            padding: 26px 28px
+        }
+
+        .proj-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 4px
+        }
+
+        .proj-card .loc {
+            font-size: .8rem;
+            color: var(--cyan);
+            font-weight: 600;
+            margin-bottom: 14px
+        }
+
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px
+        }
+
+        .chip {
+            background: var(--light);
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 6px 12px;
+            font-size: .75rem;
+            color: var(--dark)
+        }
+
+        .chip b {
+            color: var(--navy)
+        }
+
+        .chip.money {
+            background: var(--navy);
+            color: #fff;
+            border-color: var(--navy)
+        }
+
+        .chip.money b {
+            color: var(--yellow)
+        }
+
+        .chip.cprl {
+            background: #fff7d6;
+            border-color: var(--yellow)
+        }
+
+        .progress-wrap {
+            margin: 6px 0 14px
+        }
+
+        .progress-wrap .lbls {
+            display: flex;
+            justify-content: space-between;
+            font-size: .72rem;
+            color: var(--dark);
+            margin-bottom: 5px
+        }
+
+        .progress {
+            height: 10px;
+            background: #e6ecf2;
+            border-radius: 6px;
+            overflow: hidden
+        }
+
+        .progress .fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--cyan), var(--navy));
+            border-radius: 6px;
+            transition: width 1.2s ease
+        }
+
+        .timeline {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0;
+            font-size: .72rem;
+            margin-top: 8px
+        }
+
+        .tl {
+            flex: 1;
+            min-width: 120px;
+            padding: 10px 10px;
+            border-top: 3px solid #d7dee6;
+            position: relative;
+            color: var(--dark)
+        }
+
+        .tl.done {
+            border-top-color: var(--cyan)
+        }
+
+        .tl.now {
+            border-top-color: var(--yellow)
+        }
+
+        .tl b {
+            display: block;
+            color: var(--navy);
+            font-size: .74rem
+        }
+
+        .tl.now b {
+            color: #b78a00
+        }
+
+        /* ---------- MAP ---------- */
+        #map {
+            height: 560px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(11, 61, 109, .15);
+            z-index: 1
+        }
+
+        .map-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 14px;
+            font-size: .78rem;
+            color: var(--dark)
+        }
+
+        .map-legend span {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px
+        }
+
+        .dot {
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            display: inline-block;
+            border: 2px solid #fff;
+            box-shadow: 0 0 3px rgba(0, 0, 0, .4)
+        }
+
+        .leaflet-popup-content {
+            font-size: .8rem
+        }
+
+        .pop h4 {
+            color: var(--navy);
+            font-size: .9rem;
+            margin-bottom: 6px
+        }
+
+        .pop table {
+            border-collapse: collapse;
+            width: 100%
+        }
+
+        .pop td {
+            padding: 2px 6px 2px 0;
+            vertical-align: top
+        }
+
+        .pop td:first-child {
+            color: var(--gray);
+            white-space: nowrap;
+            font-size: .72rem
+        }
+
+        /* ---------- PIPELINE ---------- */
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 24px
+        }
+
+        .fbtn {
+            border: 2px solid var(--navy);
+            background: #fff;
+            color: var(--navy);
+            border-radius: 22px;
+            padding: 7px 16px;
+            font-size: .78rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: .2s
+        }
+
+        .fbtn:hover {
+            background: #e8f2f9
+        }
+
+        .fbtn.active {
+            background: var(--navy);
+            color: var(--yellow)
+        }
+
+        .fbtn .cnt {
+            opacity: .7;
+            font-weight: 400
+        }
+
+        .pipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px
+        }
+
+        .pcard {
+            background: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px rgba(11, 61, 109, .1);
+            cursor: pointer;
+            transition: transform .2s, box-shadow .2s;
+            display: flex;
+            flex-direction: column
+        }
+
+        .pcard:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(11, 61, 109, .2)
+        }
+
+        .pcard .thumb {
+            height: 120px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff
+        }
+
+        .pcard .thumb img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover
+        }
+
+        .pcard .thumb .ov {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(11, 61, 109, .25), rgba(11, 61, 109, .75))
+        }
+
+        .pcard .thumb .ic {
+            position: relative;
+            font-size: 2rem;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, .5))
+        }
+
+        .pcard .thumb .est {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: .62rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            padding: 4px 10px;
+            border-radius: 14px;
+            color: #fff;
+            text-transform: uppercase
+        }
+
+        .pcard .bd2 {
+            padding: 16px 18px;
+            flex: 1;
+            display: flex;
+            flex-direction: column
+        }
+
+        .pcard h4 {
+            font-size: .92rem;
+            color: var(--navy);
+            margin-bottom: 6px
+        }
+
+        .pcard .ent {
+            font-size: .72rem;
+            color: var(--dark);
+            margin-bottom: 10px
+        }
+
+        .pcard .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+            padding-top: 10px;
+            border-top: 1px solid #eee
+        }
+
+        .pcard .val {
+            font-weight: 800;
+            color: var(--navy);
+            font-size: 1rem
+        }
+
+        .pcard .cat {
+            font-size: .66rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--cyan);
+            font-weight: 700
+        }
+
+        .tier {
+            display: inline-block;
+            font-size: .62rem;
+            font-weight: 700;
+            padding: 3px 9px;
+            border-radius: 12px;
+            margin-left: 6px
+        }
+
+        .tier.e {
+            background: #0b3d6d;
+            color: var(--yellow)
+        }
+
+        .tier.r {
+            background: #d9edf7;
+            color: var(--navy)
+        }
+
+        .tier.c {
+            background: #efefef;
+            color: var(--dark)
+        }
+
+        .pcard h4 {
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            overflow: hidden
+        }
+
+        .dlabel {
+            background: transparent;
+            border: 0;
+            box-shadow: none;
+            color: #fff;
+            font-weight: 700;
+            font-size: .68rem;
+            text-align: center;
+            line-height: 1.15;
+            text-shadow: 0 0 3px rgba(0, 0, 0, .8)
+        }
+
+        .dlabel::before {
+            display: none
+        }
+
+        /* ---------- CHARTS ---------- */
+        .charts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px
+        }
+
+        .chart-box {
+            background: #fff;
+            border-radius: 14px;
+            padding: 22px;
+            box-shadow: 0 5px 18px rgba(11, 61, 109, .1)
+        }
+
+        .chart-box h4 {
+            color: var(--navy);
+            font-size: .95rem;
+            margin-bottom: 14px
+        }
+
+        .chart-box canvas {
+            max-height: 300px
+        }
+
+        /* ---------- FOOTER ---------- */
+        footer {
+            background: var(--navy);
+            color: #cfe0ee;
+            padding: 44px 0 28px;
+            margin-top: 40px
+        }
+
+        footer .cols {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 28px
+        }
+
+        footer h4 {
+            color: var(--yellow);
+            font-size: .9rem;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase
+        }
+
+        footer p,
+        footer a {
+            font-size: .82rem;
+            color: #cfe0ee;
+            text-decoration: none
+        }
+
+        footer a:hover {
+            color: var(--yellow)
+        }
+
+        footer .fine {
+            margin-top: 30px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(255, 255, 255, .15);
+            font-size: .72rem;
+            color: #8fb0c9
+        }
+
+        .fade {
+            opacity: 0;
+            transform: translateY(22px);
+            transition: opacity .7s ease, transform .7s ease
+        }
+
+        .fade.vis {
+            opacity: 1;
+            transform: none
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="container">
+            <img src="images/icono_dph.png" alt="DPH">
+            <span class="brand">DEPERU HUB CONSTRUCCIÓN</span>
+            <div class="links">
+                <a href="#modelo">Modelo OXI</a>
+                <a href="#mapa">Mapa</a>
+                <a href="#cartera">Cartera</a>
+                <a href="#kpis">KPIs</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="kicker">Obras por Impuestos · Perú</div>
+            <h1>Cartera de proyectos gestionados por DEPERU HUB CONSTRUCCIÓN</h1>
+            <p class="sub">Presentamos nuestra cartera de proyectos OXI: convenios suscritos, buenas pros, invitaciones y
+                proyectos en priorización, distribuidos por departamento a nivel nacional.</p>
+            <div class="meta">Información actualizada a noviembre de 2026 · Gerencia de Proyectos y Finanzas</div>
+            <div class="kpi-strip" id="kpiStrip"></div>
+        </div>
+        <div style="height:70px"></div>
+    </header>
+
+    <!-- ============ MODELO OXI ============ -->
+    <section id="modelo" style="padding-top:100px">
+        <div class="container">
+            <div class="sec-head fade">
+                <span class="tag">Contexto</span>
+                <h2>El mecanismo Obras por Impuestos (OXI)</h2>
+                <p>Régimen especial (Ley N.° 29230) mediante el cual una empresa privada financia y ejecuta un proyecto
+                    de inversión pública de un Gobierno Regional o Local, y recupera su inversión a través del
+                    <b>CIPRL</b> (Certificado de Inversión Pública Regional y Local), pagado por la entidad pública en
+                    giros.</p>
+            </div>
+            <div class="flow fade">
+                <div class="step">
+                    <div class="n">1</div>
+                    <h4>Priorización</h4>
+                    <p>La entidad pública prioriza el proyecto para el mecanismo OXI.</p>
+                </div>
+                <div class="step">
+                    <div class="n">2</div>
+                    <h4>Actos previos / Convocatoria</h4>
+                    <p>ProInversión promueve y convoca a las empresas interesadas.</p>
+                </div>
+                <div class="step">
+                    <div class="n">3</div>
+                    <h4>Convenio</h4>
+                    <p>Se firma el convenio de inversión entre entidad pública y empresa.</p>
+                </div>
+                <div class="step">
+                    <div class="n">4</div>
+                    <h4>Buena pro</h4>
+                    <p>Se adjudica la elaboración del expediente técnico y/o ejecución de obra.</p>
+                </div>
+                <div class="step">
+                    <div class="n">5</div>
+                    <h4>Expediente técnico</h4>
+                    <p>La empresa financia y elabora el expediente técnico del proyecto.</p>
+                </div>
+                <div class="step">
+                    <div class="n">6</div>
+                    <h4>Ejecución de obra</h4>
+                    <p>La empresa financia y ejecuta la obra con supervisión independiente.</p>
+                </div>
+                <div class="step">
+                    <div class="n">7</div>
+                    <h4>Recepción y liquidación</h4>
+                    <p>La entidad recibe la obra y se liquida el contrato.</p>
+                </div>
+                <div class="step">
+                    <div class="n">8</div>
+                    <h4>Pago CIPRL / CPRL</h4>
+                    <p>La entidad pública paga el certificado con cargo a su presupuesto.</p>
+                </div>
+            </div>
+            <div class="oxi-grid fade">
+                <div class="oxi-note">
+                    <h3>¿Por qué es atractivo para inversionistas?</h3>
+                    <ul>
+                        <li><b>Obligación pública:</b> el pago del CIPRL tiene respaldo presupuestal de la entidad
+                            pública (gobierno regional o local), con prioridad normativa de atención.</li>
+                        <li><b>Certificado negociable:</b> el CIPRL es endosable y transferible, lo que habilita un
+                            mercado secundario de certificados (compra con descuento).</li>
+                        <li><b>Flujo predecible:</b> el cronograma de giros CPRL se define desde el convenio,
+                            permitiendo proyectar retornos con horizonte claro.</li>
+                        <li><b>Impacto medible:</b> cada certificado financia infraestructura pública real: riego, vías,
+                            deporte, seguridad ciudadana y saneamiento.</li>
+                    </ul>
+                </div>
+                <div class="cprl-card">
+                    <h3>Esquema de giros CPRL</h3>
+                    <ul>
+                        <li><b>Obra ≥ 6 meses:</b> el CPRL se entrega <b>trimestralmente</b> durante la ejecución.</li>
+                        <li><b>Obra &lt; 6 meses:</b> el CPRL se entrega <b>una sola vez</b>.</li>
+                        <li>En promedio, el CPRL se cobra <b>un mes después</b> de la fecha de liquidación del proyecto.
+                        </li>
+                    </ul>
+                    <p style="margin-top:14px">Monto total de la cartera:</p>
+                    <div class="big" id="cprlTotal">—</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ MAPA ============ -->
+    <section id="mapa" style="background:#fff">
+        <div class="container">
+            <div class="sec-head fade">
+                <span class="tag">Cobertura geográfica</span>
+                <h2>Mapa de proyectos por departamento</h2>
+                <p>Cada círculo agrupa los proyectos del departamento. El tamaño es proporcional al monto financiado y
+                    su color indica el estado más avanzado entre los proyectos visibles. Haz clic para ver el detalle.
+                </p>
+            </div>
+            <div class="fade">
+                <div id="map"></div>
+            </div>
+            <div class="map-legend" id="mapLegend"></div>
+        </div>
+    </section>
+
+    <!-- ============ CARTERA ============ -->
+    <section id="cartera">
+        <div class="container">
+            <div class="sec-head fade">
+                <span class="tag">Cartera</span>
+                <h2>Proyectos de la cartera OXI</h2>
+                <p>Procesos con convenio suscrito, buena pro, invitaciones y proyectos en priorización. Nivel:
+                    <span class="tier e">Estratégico ≥ S/ 20 M</span> <span class="tier r">Relevante S/ 5–20 M</span>
+                    <span class="tier c">Complementario &lt; S/ 5 M</span>
+                </p>
+            </div>
+            <div class="filters fade" id="filters"></div>
+            <div class="pipe-grid" id="pipeGrid"></div>
+        </div>
+    </section>
+
+    <!-- ============ KPIS ============ -->
+    <section id="kpis" style="background:#fff">
+        <div class="container">
+            <div class="sec-head fade">
+                <span class="tag">Indicadores</span>
+                <h2>KPIs de la cartera</h2>
+            </div>
+            <div class="charts fade">
+                <div class="chart-box">
+                    <h4>Monto por estado (S/ millones)</h4><canvas id="chEstado"></canvas>
+                </div>
+                <div class="chart-box">
+                    <h4>Monto por departamento (S/ millones)</h4><canvas id="chDpto"></canvas>
+                </div>
+                <div class="chart-box">
+                    <h4>Monto por tipo de proyecto (S/ millones)</h4><canvas id="chTipo"></canvas>
+                </div>
+                <div class="chart-box">
+                    <h4>Monto por modalidad (S/ millones)</h4><canvas id="chMod"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <div class="container">
+            <div class="cols">
+                <div>
+                    <h4>Deperu Hub Construcción</h4>
+                    <p>Empresa peruana ejecutora de proyectos de inversión pública bajo el mecanismo Obras por Impuestos
+                        (OXI).</p>
+                    <p style="margin-top:10px"><a href="https://deperuhubconstruccion.com/" target="_blank"
+                            rel="noopener">deperuhubconstruccion.com</a></p>
+                </div>
+                <div>
+                    <h4>Contacto</h4>
+                    <p>Gerencia de Proyectos y Finanzas</p>
+                    <p>Actualización de datos: Amaru Fernández — Evaluador de Proyectos</p>
+                </div>
+                <div>
+                    <h4>Notas metodológicas</h4>
+                    <p>Montos financiados según convenios, bases y fichas referenciales. La ubicación en el mapa
+                        corresponde al departamento del proyecto (referencial).</p>
+                </div>
+            </div>
+            <div class="fine">Información actualizada a noviembre de 2026 · Documento para fines informativos
+                dirigido a inversionistas y financistas · © DEPERU HUB CONSTRUCCIÓN</div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+    <script src="data.js"></script>
+    <script>
+        /* ================= CONFIG ================= */
+        const ESTADOS = {
+            'Convenio suscrito': '#f2b705',
+            'Buena pro': '#0b3d6d',
+            'Invitado': '#0187b9',
+            'Priorización': '#9a9a9a'
+        };
+        const TIPO_STYLE = {
+            'Defensas ribereñas y prevención': { icon: '🛡️', color: '#b3541e' },
+            'Vial y transporte': { icon: '🛣️', color: '#0b3d6d', img: 'images/carretera_ju104.jpg' },
+            'Deporte y recreación': { icon: '🏟️', color: '#4B4F58', img: 'images/polideportivo_huanta.png' },
+            'Riego': { icon: '🌱', color: '#2e8b57', img: 'images/iguain_01.jpeg' },
+            'Educación': { icon: '🎓', color: '#6b4fa1' },
+            'Otros': { icon: '🏗️', color: '#7a6c00' }
+        };
+        const IMG_POR_CUI = {
+            '2654810': 'images/carretera_ju104.jpg',
+            '2686704': 'images/polideportivo_huanta.png',
+            '2679339': 'images/iguain_01.jpeg'
+        };
+
+        /* ================= HELPERS ================= */
+        const fmtM = v => v >= 1e6 ? 'S/ ' + (v / 1e6).toLocaleString('es-PE', { maximumFractionDigits: 1 }) + ' M'
+            : 'S/ ' + v.toLocaleString('es-PE', { maximumFractionDigits: 0 });
+        const sum = (a, f) => a.reduce((t, x) => t + f(x), 0);
+        const tier = m => m >= 2e7 ? ['Estratégico', 'e'] : m >= 5e6 ? ['Relevante', 'r'] : ['Complementario', 'c'];
+        const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+        const estados = Object.keys(ESTADOS);
+        const por = (arr, e) => arr.filter(x => x.estado === e);
+
+        /* ================= KPI STRIP ================= */
+        const total = sum(PROYECTOS, x => x.monto);
+        const dptos = new Set(PROYECTOS.map(x => x.dpto));
+        document.getElementById('kpiStrip').innerHTML = `
+  <div class="kpi gold"><div class="num">${fmtM(total)}</div><div class="lbl">Monto total de cartera</div><div class="sub2">${PROYECTOS.length} proyectos</div></div>
+  ${estados.map((e, i) => {
+            const l = por(PROYECTOS, e);
+            return `<div class="kpi${i % 2 ? '' : ' gold'}"><div class="num">${l.length}</div><div class="lbl">${e}</div><div class="sub2">${fmtM(sum(l, x => x.monto))}</div></div>`;
+        }).join('')}
+  <div class="kpi"><div class="num">${dptos.size}</div><div class="lbl">Departamentos</div><div class="sub2">Cobertura nacional</div></div>`;
+        document.getElementById('cprlTotal').textContent = fmtM(total);
+
+        /* ================= MAPA ================= */
+        const map = L.map('map', { scrollWheelZoom: false }).setView([-9.4, -76.0], 5.6);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '© OpenStreetMap' }).addTo(map);
+        const layer = L.layerGroup().addTo(map);
+        const rad = m => Math.max(20, Math.min(48, Math.sqrt(m) / 400));
+
+        document.getElementById('mapLegend').innerHTML = estados.map(e =>
+            `<span><span class="dot" style="background:${ESTADOS[e]}"></span> ${e}</span>`).join('');
+
+        function popup(d, lista) {
+            return `<div class="pop"><h4>${d} — ${lista.length} proyecto${lista.length > 1 ? 's' : ''} · ${fmtM(sum(lista, x => x.monto))}</h4>
+      <table>${lista.sort((a, b) => b.monto - a.monto).map(p => `<tr><td><span class="dot" style="background:${ESTADOS[p.estado]};display:inline-block;width:9px;height:9px;border-radius:50%"></span></td>
+        <td>${esc(p.nombre.length > 80 ? p.nombre.slice(0, 80) + '…' : p.nombre)}<br><span style="color:#9a9a9a">${p.estado} · <b>${fmtM(p.monto)}</b></span></td></tr>`).join('')}</table></div>`;
+        }
+        function syncMap() {
+            layer.clearLayers();
+            const grupos = {};
+            visible().forEach(p => (grupos[p.dpto] = grupos[p.dpto] || []).push(p));
+            Object.entries(grupos).forEach(([d, lista]) => {
+                const principal = estados.find(e => lista.some(p => p.estado === e));
+                L.circleMarker([lista[0].lat, lista[0].lng], { radius: rad(sum(lista, x => x.monto)), color: '#fff', weight: 2, fillColor: ESTADOS[principal], fillOpacity: .88 })
+                    .bindTooltip(`<b>${d}</b><br>${lista.length} proy.`, { permanent: true, direction: 'center', className: 'dlabel' })
+                    .bindPopup(popup(d, lista), { maxWidth: 420 })
+                    .addTo(layer);
+            });
+        }
+
+        /* ================= FILTROS + TARJETAS ================= */
+        const cur = { e: 'TODOS', m: 'TODAS', d: 'TODOS' };
+        const modalidades = [...new Set(PROYECTOS.map(x => x.modalidad))];
+        const dpts = [...new Set(PROYECTOS.map(x => x.dpto))].sort();
+        const campo = { e: 'estado', m: 'modalidad', d: 'dpto' };
+
+        function visible() {
+            return PROYECTOS.filter(p => Object.keys(cur).every(g => cur[g].startsWith('TOD') || p[campo[g]] === cur[g]));
+        }
+        function filterBar() {
+            const btn = (label, g, v, n) => `<button class="fbtn ${cur[g] === v ? 'active' : ''}" data-g="${g}" data-v="${v}">${label} ${n !== undefined ? `<span class="cnt">(${n})</span>` : ''}</button>`;
+            const cuenta = (g, v) => PROYECTOS.filter(p => p[campo[g]] === v).length;
+            const br = '<span style="flex-basis:100%;height:0"></span>';
+            const f = document.getElementById('filters');
+            f.innerHTML = btn('Todos los estados', 'e', 'TODOS') + estados.map(e => btn(e, 'e', e, cuenta('e', e))).join('') + br +
+                btn('Todas las modalidades', 'm', 'TODAS') + modalidades.map(m => btn(m, 'm', m, cuenta('m', m))).join('') + br +
+                btn('Todos los departamentos', 'd', 'TODOS') + dpts.map(d => btn(d, 'd', d, cuenta('d', d))).join('');
+            f.querySelectorAll('.fbtn').forEach(b => b.onclick = () => {
+                cur[b.dataset.g] = b.dataset.v;
+                filterBar(); renderCards(); syncMap();
+            });
+        }
+        function renderCards() {
+            const g = document.getElementById('pipeGrid');
+            const list = visible().sort((a, b) => b.monto - a.monto);
+            g.innerHTML = list.length ? list.map(p => {
+                const ts = TIPO_STYLE[p.tipo], t = tier(p.monto), img = IMG_POR_CUI[p.cui];
+                const thumb = img
+                    ? `<img src="${img}" alt="${esc(p.tipo)}" loading="lazy"><div class="ov"></div>`
+                    : `<div style="position:absolute;inset:0;background:linear-gradient(150deg,${ts.color},#0b3d6d)"></div>`;
+                return `<div class="pcard" data-lat="${p.lat}" data-lng="${p.lng}">
+      <div class="thumb" style="background:${ts.color}">${thumb}
+        <span class="ic">${ts.icon}</span>
+        <span class="est" style="background:${ESTADOS[p.estado]};color:${p.estado === 'Convenio suscrito' ? '#0b3d6d' : '#fff'}">${p.estado}</span>
+      </div>
+      <div class="bd2">
+        <span class="cat">${p.modalidad}<span class="tier ${t[1]}">${t[0]}</span></span>
+        <h4 title="${esc(p.nombre)}">${esc(p.nombre)}</h4>
+        <div class="ent">${esc(p.entidad)} · ${p.dpto}</div>
+        <div class="ent"><b>Financista / ejecutor:</b> ${esc(p.ejecutor)}${p.supervisor ? `<br><b>Supervisor:</b> ${esc(p.supervisor)}` : ''}</div>
+        <div class="row"><span class="val">${fmtM(p.monto)}</span><span style="font-size:.68rem;color:var(--gray)">${p.cui ? 'CUI / Cód. ' + esc(p.cui) : 'Sin CUI'}</span></div>
+      </div>
+    </div>`;
+            }).join('') : '<p style="color:var(--gray)">No hay proyectos para los filtros seleccionados.</p>';
+            g.querySelectorAll('.pcard').forEach(c => c.onclick = () => {
+                map.flyTo([+c.dataset.lat, +c.dataset.lng], 8, { duration: 1.2 });
+                document.getElementById('mapa').scrollIntoView({ behavior: 'smooth' });
+            });
+        }
+        filterBar(); renderCards(); syncMap();
+
+        /* ================= GRÁFICOS ================= */
+        Chart.defaults.font.family = "'Segoe UI',system-ui,sans-serif";
+        const agrupa = campo => {
+            const o = {};
+            PROYECTOS.forEach(p => o[p[campo]] = (o[p[campo]] || 0) + p.monto / 1e6);
+            return Object.entries(o).sort((a, b) => b[1] - a[1]);
+        };
+        const tip = { callbacks: { label: c => ' ' + fmtM(c.raw * 1e6) } };
+
+        new Chart(chEstado, {
+            type: 'doughnut',
+            data: { labels: estados, datasets: [{ data: estados.map(e => sum(por(PROYECTOS, e), x => x.monto) / 1e6), backgroundColor: estados.map(e => ESTADOS[e]), borderWidth: 2, borderColor: '#fff' }] },
+            options: { plugins: { legend: { position: 'bottom' }, tooltip: tip }, cutout: '58%' }
+        });
+
+        const dLabels = agrupa('dpto').map(x => x[0]);
+        new Chart(chDpto, {
+            type: 'bar',
+            data: {
+                labels: dLabels, datasets: estados.map(e => ({
+                    label: e, backgroundColor: ESTADOS[e],
+                    data: dLabels.map(d => sum(PROYECTOS.filter(p => p.dpto === d && p.estado === e), x => x.monto) / 1e6)
+                }))
+            },
+            options: { indexAxis: 'y', scales: { x: { stacked: true }, y: { stacked: true } }, plugins: { legend: { position: 'bottom' }, tooltip: tip } }
+        });
+
+        const tp = agrupa('tipo');
+        new Chart(chTipo, {
+            type: 'bar',
+            data: { labels: tp.map(x => x[0]), datasets: [{ data: tp.map(x => x[1]), backgroundColor: tp.map(x => TIPO_STYLE[x[0]].color) }] },
+            options: { indexAxis: 'y', plugins: { legend: { display: false }, tooltip: tip }, scales: { x: { title: { display: true, text: 'S/ millones' } } } }
+        });
+
+        const md = agrupa('modalidad');
+        new Chart(chMod, {
+            type: 'doughnut',
+            data: { labels: md.map(x => x[0]), datasets: [{ data: md.map(x => x[1]), backgroundColor: ['#0b3d6d', '#ffde59'], borderWidth: 2, borderColor: '#fff' }] },
+            options: { plugins: { legend: { position: 'bottom' }, tooltip: tip }, cutout: '58%' }
+        });
+
+        /* ================= ANIMACIONES ================= */
+        const io = new IntersectionObserver(es => es.forEach(e => {
+            if (e.isIntersecting) { e.target.classList.add('vis'); io.unobserve(e.target); }
+        }), { threshold: .12 });
+        document.querySelectorAll('.fade').forEach(el => io.observe(el));
+    </script>
+</body>
+
+</html>

@@ -2,7 +2,7 @@
 title: "Idea proyecto Mancomunidad Lima Sur"
 subtitle: "Visualización de indicadores delictivos y de seguridad, propone una integración interoperable del sistema de información de la Mancomunidad Lima Sur."
 estado: ["Dashboard", "Idea de proyecto"]
-orden: [3]
+# orden: ""
 solicitar : true
 image: /images/dash_idea_mancomunidadlimasur.png
 app_url: "https://mancomunidadlimasur-app.streamlit.app/"

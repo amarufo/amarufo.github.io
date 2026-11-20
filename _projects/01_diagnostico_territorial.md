@@ -2,12 +2,11 @@
 title: "Automatización: diagnóstico territorial para PIPs"
 subtitle: "Aplicación beta que automatiza el diagnóstico territorial para proyectos de inversión pública en Perú."
 estado: ["Aplicativo", "Descargar", "Funcionando", "Libre"]
-orden: [2]
+# orden: ""
 image: images/diag_territorial/animacion.webp
 app_url: "https://amarufo-diagterritorial.streamlit.app/"
 # repo_url: ""
 # dataset_url: ""
-analysis_url: "/assets/analyses/poblacion/boxplot.html"
 solicitar: true
 stack: ["Python", "Streamlit", "Geopandas", "Folium", "Matplotlib", "Pandas", "NumPy"]
 description: "Aplicación que, dada la ubicación de un proyecto de inversión pública (PIP) en Perú, ejecuta un pipeline georreferenciado y entrega un documento Word listo para integrar en el expediente técnico, con mapas, tablas e indicadores producidos por más de 50 motores de análisis territorial y de riesgo."

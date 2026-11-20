@@ -2,7 +2,7 @@
 title: "Dashboard de control de obras con BIM"
 subtitle: "Valor ganado, modelo IFC 4D, financiamiento con préstamos a distintas tasas, personal y metrados de una obra, en una sola pantalla."
 estado: ["Dashboard", "Solicitar"]
-orden: [0]
+# orden: ""
 solicitar : true
 image: /images/dashboard_obras/animacion.webp
 # app_url: ""

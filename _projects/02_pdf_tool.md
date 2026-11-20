@@ -2,7 +2,7 @@
 title: "PDF Tool"
 subtitle: "Herramienta en CLI visual para trabajar con PDFs: numerar, firmar, unir, dividir, proteger, convertir a texto y generar salidas Markdown/JSON para agentes IA."
 estado: ["Aplicativo", "Descargar", "Funcionando", "Libre"]
-orden: [1]
+# orden: ""
 image: images/pdf_tool/animacion.webp
 # app_url: ""
 # repo_url: "https://github.com/amarufo/amaru_fo_pdf_tool/archive/refs/heads/main.zip"

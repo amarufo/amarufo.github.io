@@ -1,7 +1,8 @@
 ---
 layout: default
 title: "Invierte.pe Recursos para proyectos de inversión en el Perú | inviertepe.com"
-description: "Recursos y servicios de formulación de estudios de preinversión, diagnóstico territorial y banco de proyectos bajo el marco INVIERTEPE (MEF, Perú). Por Amaru Fernandez."
+description: "Recursos y servicios de formulación de estudios de preinversión, diagnóstico territorial y banco de
+proyectos bajo el marco INVIERTEPE (MEF, Perú). Por Amaru Fernandez."
 keywords: [Inviertepe, formulación PIP, ficha técnica, IOARR, diagnóstico territorial, banco de proyectos, inversión
 pública, Perú]
 body_class: home
@@ -29,9 +30,7 @@ body_class: home
 
             <div class="hero-actions">
                 <a href="https://wa.me/{{ site.social.whatsapp }}?text=Hola%20Amaru%2C%20vi%20tu%20sitio%20inviertepe.com%20y%20quiero%20consultar%20sobre..."
-                    class="btn btn-wa"
-                    rel="noopener"
-                    target="_blank">
+                    class="btn btn-wa" rel="noopener" target="_blank">
                     💬 Escríbeme por WhatsApp
                 </a>
 
@@ -133,20 +132,20 @@ body_class: home
 <section class="section soft-bg" aria-labelledby="proceso-title">
     <div class="section-head">
         <h2 id="proceso-title">Últimos proyectos</h2>
-    </div>    
+    </div>
     <div class="grid grid-3">
-        {%- assign proyectos = site.projects | sort: 'orden' -%}
+        {%- assign proyectos = site.projects | reverse -%}
         {%- for p in proyectos limit:3 %}
-            {% include card.html
-                titulo=p.title
-                descripcion=p.subtitle
-                url=p.url
-                imagen=p.image
-                etiqueta=p.estado %}
+        {% include card.html
+        titulo=p.title
+        descripcion=p.subtitle
+        url=p.url
+        imagen=p.image
+        etiqueta=p.estado %}
         {%- endfor %}
-    {%- if site.projects.size == 0 %}
-    <p>Pronto publicaré los proyectos.</p>
-    {%- endif %}
+        {%- if site.projects.size == 0 %}
+        <p>Pronto publicaré los proyectos.</p>
+        {%- endif %}
     </div>
 </section>
 

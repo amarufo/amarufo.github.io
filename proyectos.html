@@ -9,7 +9,7 @@ keywords: [portafolio, Invierte IA, Streamlit, Python, ciencia de datos, apps, b
 ---
 
 <div class="grid grid-2">
-    {%- assign proyectos = site.projects | sort: 'orden' -%}
+    {%- assign proyectos = site.projects | reverse-%}
     {%- for p in proyectos %}
     {% include card.html
     titulo=p.title
