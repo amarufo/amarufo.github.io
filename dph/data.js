@@ -52,7 +52,7 @@ const PROYECTOS = [
         "dpto": "Lambayeque",
         "lat": -6.48,
         "lng": -79.9,
-        "cui": "",
+        "cui": "SIN-CUI-chochope",
         "monto": 1512769.24,
         "ejecutor": "DEPERU HUB EIRL",
         "supervisor": "Consorcio Supervisor Díaz Ingenieros (Jean Pierre Díaz Ramos y José Díaz Lazo)",
