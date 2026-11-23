@@ -28,5 +28,5 @@
 #   url: "/blog/"
 - title: "Sobre mí"
   url: "/sobre-mi/"
-- title: "Prueba"
-  url: "/prueba/"
+# - title: "Prueba"
+#   url: "/prueba/"
